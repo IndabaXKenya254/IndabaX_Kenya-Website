@@ -1,0 +1,357 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - PREVIOUS EDITIONS STYLES
+// ═══════════════════════════════════════════════════════════════════════
+
+.previous-editions-area {
+  .section-description {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: $text-secondary;
+    font-size: $font-size-lg;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  // Year Tabs
+  .edition-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    .edition-tab {
+      background: $background;
+      border: 2px solid #e8e8e8;
+      border-radius: $radius-xl;
+      padding: 15px 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 120px;
+
+      .year {
+        font-size: 28px;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        line-height: 1;
+      }
+
+      .edition-name {
+        font-size: 12px;
+        color: $text-secondary;
+        margin-top: 5px;
+      }
+
+      &:hover {
+        border-color: $primary;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      &.active {
+        background: $gradient-primary;
+        border-color: transparent;
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba($primary, 0.3);
+
+        .year,
+        .edition-name {
+          color: $text-white;
+        }
+      }
+    }
+  }
+
+  // Edition Content
+  .edition-content {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+  }
+
+  // Edition Header
+  .edition-header {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    .edition-title {
+      font-size: 32px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 15px;
+
+      .badge {
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+        vertical-align: middle;
+      }
+    }
+
+    .edition-date,
+    .edition-location,
+    .edition-theme {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: $text-secondary;
+
+      i {
+        color: $primary;
+        font-size: 18px;
+        width: 24px;
+      }
+    }
+
+    .edition-theme {
+      font-style: italic;
+      color: $secondary;
+    }
+  }
+
+  // Edition Description
+  .edition-description {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: $text-secondary;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 30px;
+
+    p {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Stats
+  .edition-stats {
+    padding: 30px 0;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 30px;
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+
+      i {
+        font-size: 40px;
+        color: $primary;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .stat-number {
+        display: block;
+        font-size: 36px;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        font-size: 14px;
+        color: $text-secondary;
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+
+  // Gallery
+  .edition-gallery {
+    padding-top: 20px;
+
+    h4 {
+      font-size: 22px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        color: $primary;
+      }
+    }
+
+    .gallery-thumb {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      border-radius: $radius-lg;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+        .gallery-image {
+          transform: scale(1.1);
+        }
+      }
+
+      .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+
+  // No photos/editions
+  .no-photos,
+  .no-editions {
+    background: #f8f9fa;
+    border-radius: $radius-xl;
+    padding: 60px 20px;
+  }
+
+  // CTA Card
+  .history-cta {
+    .cta-card {
+      background: $gradient-primary;
+      border-radius: $radius-xl;
+      padding: 50px;
+      color: $text-white;
+
+      h3 {
+        font-size: 28px;
+        font-weight: $font-weight-bold;
+        margin-bottom: 15px;
+        color: $text-white;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 0;
+        opacity: 0.9;
+
+        strong {
+          color: $text-white;
+        }
+      }
+
+      .btn-primary {
+        background: $text-white;
+        color: $primary;
+        border: none;
+
+        &:hover {
+          background: darken($text-white, 5%);
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+// Mobile
+@include mobile {
+  .previous-editions-area {
+    .section-description {
+      font-size: $font-size-base;
+      margin-bottom: 30px;
+    }
+
+    .edition-tabs {
+      gap: 10px;
+      margin-bottom: 30px;
+
+      .edition-tab {
+        padding: 12px 20px;
+        min-width: 100px;
+
+        .year {
+          font-size: 22px;
+        }
+
+        .edition-name {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .edition-content {
+      padding: 25px 20px;
+    }
+
+    .edition-header {
+      .edition-title {
+        font-size: 24px;
+
+        .badge {
+          display: block;
+          margin: 10px 0 0 0;
+          width: fit-content;
+        }
+      }
+
+      .edition-date,
+      .edition-location,
+      .edition-theme {
+        font-size: 14px;
+      }
+    }
+
+    .edition-stats {
+      .stat-item {
+        padding: 15px 10px;
+        margin-bottom: 15px;
+
+        i {
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+
+        .stat-number {
+          font-size: 28px;
+        }
+
+        .stat-label {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .edition-gallery {
+      h4 {
+        font-size: 18px;
+      }
+
+      .gallery-thumb {
+        height: 150px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .history-cta {
+      .cta-card {
+        padding: 30px 25px;
+        text-align: center;
+
+        h3 {
+          font-size: 22px;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

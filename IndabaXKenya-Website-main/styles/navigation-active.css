@@ -1,0 +1,113 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   INDABAX KENYA - ACTIVE NAVIGATION STYLES
+   ═══════════════════════════════════════════════════════════════════════
+   Enhanced active link styling for better navigation feedback
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ============================================
+   PUBLIC NAVIGATION ACTIVE STATE
+   ============================================ */
+
+.elkevent-nav .navbar-nav .nav-item a.nav-link.active {
+  color: #e30045 !important;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Add underline indicator for active main nav links */
+.elkevent-nav .navbar-nav .nav-item > a.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: #e30045;
+  border-radius: 2px;
+}
+
+/* Active state for dropdown menu items */
+.elkevent-nav .navbar-nav .dropdown-menu a.nav-link.active {
+  background-color: rgba(227, 0, 69, 0.1);
+  color: #e30045 !important;
+  font-weight: 600;
+  padding-left: 20px;
+  border-left: 3px solid #e30045;
+}
+
+/* ============================================
+   ADMIN SIDEBAR ACTIVE STATE
+   ============================================ */
+
+.admin-sidebar .nav-link.active {
+  background-color: rgba(227, 0, 69, 0.15);
+  color: #e30045 !important;
+  font-weight: 600;
+  border-left: 4px solid #e30045;
+  padding-left: calc(1rem - 4px);
+}
+
+.admin-sidebar .nav-link.active i {
+  color: #e30045;
+}
+
+/* Hover state should not override active state */
+.admin-sidebar .nav-link.active:hover {
+  background-color: rgba(227, 0, 69, 0.2);
+  color: #e30045 !important;
+}
+
+/* Smooth transition for active state */
+.admin-sidebar .nav-link,
+.elkevent-nav .navbar-nav .nav-item a.nav-link {
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   STICKY NAVIGATION ACTIVE STATE
+   ============================================ */
+
+.elkevent-nav.is-sticky .navbar-nav .nav-item > a.nav-link.active::after {
+  bottom: -3px;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 991px) {
+  /* Mobile navigation active state */
+  .elkevent-nav .navbar-nav .nav-item > a.nav-link.active::after {
+    display: none;
+  }
+
+  .elkevent-nav .navbar-nav .nav-item a.nav-link.active {
+    background-color: rgba(227, 0, 69, 0.1);
+    padding-left: 20px;
+    border-left: 3px solid #e30045;
+  }
+
+  /* Mobile admin sidebar active state */
+  .admin-sidebar.show .nav-link.active {
+    border-left-width: 5px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Focus state for keyboard navigation */
+.nav-link.active:focus {
+  outline: 2px solid #e30045;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .nav-link.active {
+    border-color: currentColor;
+    text-decoration: underline;
+  }
+}

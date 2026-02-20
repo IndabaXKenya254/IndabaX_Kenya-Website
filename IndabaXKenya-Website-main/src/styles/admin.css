@@ -1,0 +1,910 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   INDABAX KENYA - ADMIN PANEL STYLES
+   ═══════════════════════════════════════════════════════════════════════
+   Custom styles for admin panel
+   Created: Admin UI Phase 1 - Foundation
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Admin Layout */
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Issue #34 FIX: Flexbox layout for proper scroll management */
+.admin-sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content {
+  flex: 1;
+  margin-left: 250px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.admin-sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.admin-sidebar .nav-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left-color: #fff;
+}
+
+.admin-sidebar .nav-link.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left-color: #0d6efd;
+}
+
+.admin-sidebar .nav-link i {
+  margin-right: 0.5rem;
+  width: 20px;
+}
+
+/* Issue #34 FIX: Sidebar section layout */
+.admin-sidebar > .p-4:first-child,
+.admin-sidebar > div:first-child {
+  flex-shrink: 0;
+}
+
+.admin-sidebar .sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.admin-sidebar .sidebar-footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* Header */
+.admin-header {
+  background-color: #fff;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 997;
+}
+
+/* Admin Header Mobile Menu Toggle Button - MUST BE VISIBLE */
+.admin-header .btn-link {
+  color: #333 !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+.admin-header .btn-link i,
+.admin-header .btn-link .icofont-navigation-menu {
+  color: #333 !important;
+  font-size: 1.5rem !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+}
+
+/* Main Content */
+.admin-main {
+  padding: 2rem;
+}
+
+/* Cards */
+.stat-card {
+  border-left: 4px solid #0d6efd;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.stat-card .card-body {
+  padding: 1.5rem;
+}
+
+.stat-card .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.stat-card .stat-label {
+  color: #6c757d;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tables */
+.table-responsive {
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Buttons - Fix visibility issue */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Override theme button colors for admin panel visibility */
+/* Only solid buttons should have white text - outline buttons need colored text */
+.admin-wrapper .btn:not([class*="btn-outline-"]),
+.admin-content .btn:not([class*="btn-outline-"]) {
+  /* Ensure solid buttons have visible text colors */
+  color: #fff !important;
+}
+
+.admin-wrapper .btn-outline-secondary,
+.admin-content .btn-outline-secondary {
+  color: #6c757d !important;
+  border-color: #6c757d !important;
+  background-color: transparent !important;
+}
+
+.admin-wrapper .btn-outline-secondary i,
+.admin-wrapper .btn-outline-secondary .bi,
+.admin-content .btn-outline-secondary i,
+.admin-content .btn-outline-secondary .bi {
+  color: #6c757d !important;
+}
+
+.admin-wrapper .btn-outline-secondary:hover,
+.admin-content .btn-outline-secondary:hover {
+  color: #fff !important;
+  background-color: #6c757d !important;
+}
+
+.admin-wrapper .btn-outline-secondary:hover i,
+.admin-wrapper .btn-outline-secondary:hover .bi,
+.admin-content .btn-outline-secondary:hover i,
+.admin-content .btn-outline-secondary:hover .bi {
+  color: #fff !important;
+}
+
+/* Input group outline buttons (password toggle, etc.) */
+.input-group .btn-outline-secondary,
+.admin-wrapper .input-group .btn-outline-secondary,
+.admin-content .input-group .btn-outline-secondary {
+  color: #6c757d !important;
+  border-color: #6c757d !important;
+  background-color: transparent !important;
+}
+
+.input-group .btn-outline-secondary i,
+.input-group .btn-outline-secondary .bi,
+.admin-wrapper .input-group .btn-outline-secondary i,
+.admin-wrapper .input-group .btn-outline-secondary .bi,
+.admin-content .input-group .btn-outline-secondary i,
+.admin-content .input-group .btn-outline-secondary .bi {
+  color: #6c757d !important;
+}
+
+.input-group .btn-outline-secondary:hover,
+.admin-wrapper .input-group .btn-outline-secondary:hover,
+.admin-content .input-group .btn-outline-secondary:hover {
+  color: #fff !important;
+  background-color: #6c757d !important;
+}
+
+.input-group .btn-outline-secondary:hover i,
+.input-group .btn-outline-secondary:hover .bi,
+.admin-wrapper .input-group .btn-outline-secondary:hover i,
+.admin-wrapper .input-group .btn-outline-secondary:hover .bi,
+.admin-content .input-group .btn-outline-secondary:hover i,
+.admin-content .input-group .btn-outline-secondary:hover .bi {
+  color: #fff !important;
+}
+
+/* Ensure Bootstrap Icons are visible in buttons */
+.btn .bi,
+.btn i[class^="bi-"],
+.btn i[class*=" bi-"] {
+  color: inherit !important;
+}
+
+/* Specifically for outline-secondary buttons - BLACK icon by default */
+.btn-outline-secondary .bi,
+.btn-outline-secondary i {
+  color: #212529 !important;
+}
+
+.btn-outline-secondary:hover .bi,
+.btn-outline-secondary:hover i,
+.btn-outline-secondary:focus .bi,
+.btn-outline-secondary:focus i {
+  color: #fff !important;
+}
+
+.admin-wrapper .btn-outline-primary,
+.admin-content .btn-outline-primary {
+  color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.admin-wrapper .btn-outline-primary:hover,
+.admin-content .btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #0d6efd !important;
+}
+
+.admin-wrapper .btn-outline-danger,
+.admin-content .btn-outline-danger {
+  color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+.admin-wrapper .btn-outline-danger:hover,
+.admin-content .btn-outline-danger:hover {
+  color: #fff !important;
+  background-color: #dc3545 !important;
+}
+
+.admin-wrapper .btn-outline-success,
+.admin-content .btn-outline-success {
+  color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.admin-wrapper .btn-outline-success:hover,
+.admin-content .btn-outline-success:hover {
+  color: #fff !important;
+  background-color: #28a745 !important;
+}
+
+.admin-wrapper .btn-outline-warning,
+.admin-content .btn-outline-warning {
+  color: #856404 !important;
+  border-color: #ffc107 !important;
+}
+
+.admin-wrapper .btn-outline-warning:hover,
+.admin-content .btn-outline-warning:hover {
+  color: #212529 !important;
+  background-color: #ffc107 !important;
+}
+
+.admin-wrapper .btn-outline-info,
+.admin-content .btn-outline-info {
+  color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+}
+
+.admin-wrapper .btn-outline-info:hover,
+.admin-content .btn-outline-info:hover {
+  color: #fff !important;
+  background-color: #17a2b8 !important;
+}
+
+/* Solid buttons - ensure proper backgrounds */
+.admin-wrapper .btn-primary,
+.admin-content .btn-primary {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  color: #fff !important;
+}
+
+.admin-wrapper .btn-secondary,
+.admin-content .btn-secondary {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  color: #fff !important;
+}
+
+.admin-wrapper .btn-success,
+.admin-content .btn-success {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: #fff !important;
+}
+
+.admin-wrapper .btn-danger,
+.admin-content .btn-danger {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.admin-wrapper .btn-warning,
+.admin-content .btn-warning {
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.admin-wrapper .btn-info,
+.admin-content .btn-info {
+  background-color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+  color: #fff !important;
+}
+
+.admin-wrapper .btn-light,
+.admin-content .btn-light {
+  background-color: #f8f9fa !important;
+  border-color: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+.admin-wrapper .btn-dark,
+.admin-content .btn-dark {
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+  color: #fff !important;
+}
+
+/* Remove conflicting ::before and ::after pseudo-elements from theme */
+.admin-wrapper .btn::before,
+.admin-wrapper .btn::after,
+.admin-content .btn::before,
+.admin-content .btn::after {
+  display: none !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 250px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .admin-sidebar.show {
+    transform: translateX(0);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .admin-content {
+    margin-left: 0;
+  }
+
+  .admin-main {
+    padding: 1rem;
+  }
+
+  /* Mobile backdrop overlay */
+  .mobile-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Ensure sidebar is above backdrop */
+  .admin-sidebar {
+    z-index: 1000;
+  }
+
+  /* Hide user email in header on small screens */
+  .admin-header .text-muted {
+    display: none;
+  }
+
+  /* Adjust table responsiveness */
+  .table-responsive {
+    margin: 0 -1rem;
+  }
+
+  /* Stack columns on mobile */
+  .col-lg-8,
+  .col-lg-4,
+  .col-md-8,
+  .col-md-6,
+  .col-md-4 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Modal adjustments */
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .modal-lg {
+    max-width: 100%;
+  }
+}
+
+/* Badge Colors */
+.badge-draft {
+  background-color: #6c757d;
+}
+
+.badge-published {
+  background-color: #28a745;
+}
+
+.badge-archived {
+  background-color: #dc3545;
+}
+
+.badge-pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.badge-accepted {
+  background-color: #28a745;
+}
+
+.badge-rejected {
+  background-color: #dc3545;
+}
+
+/* Loading State */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* File Upload Area */
+.file-upload-area {
+  border: 2px dashed #dee2e6;
+  border-radius: 0.25rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-upload-area:hover {
+  border-color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+.file-upload-area.dragover {
+  border-color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+/* Image Preview */
+.image-preview {
+  max-width: 200px;
+  border-radius: 0.25rem;
+  border: 1px solid #dee2e6;
+}
+
+/* Modal Scrolling (All Screen Sizes) */
+.modal-dialog-scrollable .modal-content {
+  display: flex !important;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.modal-dialog-scrollable .modal-content > form {
+  display: flex !important;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.modal-dialog-scrollable .modal-header {
+  flex-shrink: 0;
+}
+
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto !important;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.modal-dialog-scrollable .modal-footer {
+  flex-shrink: 0;
+}
+
+/* Additional Mobile Responsiveness */
+@media (max-width: 576px) {
+  /* Extra small screens (phones) */
+  .admin-main {
+    padding: 0.75rem;
+  }
+
+  .admin-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .card {
+    margin-bottom: 1rem !important;
+  }
+
+  .card-header h5 {
+    font-size: 1rem;
+  }
+
+  /* Reduce button sizes on small screens */
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Stack form rows */
+  .row > [class*='col-'] {
+    margin-bottom: 0.75rem;
+  }
+
+  /* Adjust stat cards */
+  .stat-card .stat-value {
+    font-size: 1.5rem;
+  }
+
+  /* Full width modals on small screens */
+  .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .modal-content {
+    max-height: 95vh;
+    border-radius: 0.25rem;
+  }
+
+  /* For scrollable modals */
+  .modal-dialog-scrollable .modal-content {
+    max-height: 90vh;
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  /* Handle forms inside modal-content */
+  .modal-dialog-scrollable .modal-content > form {
+    display: flex !important;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .modal-dialog-scrollable .modal-header {
+    flex-shrink: 0;
+  }
+
+  .modal-dialog-scrollable .modal-body {
+    overflow-y: auto !important;
+    flex: 1 1 auto;
+    min-height: 0; /* Important for flexbox scrolling */
+  }
+
+  .modal-dialog-scrollable .modal-footer {
+    flex-shrink: 0;
+  }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .admin-sidebar {
+    width: 220px;
+  }
+
+  .admin-content {
+    margin-left: 220px;
+  }
+
+  .admin-main {
+    padding: 1.5rem;
+  }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Sticky elements on mobile */
+@media (max-width: 768px) {
+  .sticky-top {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+
+/* Touch-friendly table actions */
+@media (max-width: 768px) {
+  .btn-group-sm .btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .table td,
+  .table th {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Responsive badge adjustments */
+@media (max-width: 576px) {
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   DASHBOARD EVENT CARDS
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Equal height event card columns */
+.dashboard-events-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard-events-row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Event card styling */
+.dashboard-event-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.dashboard-event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.dashboard-event-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-event-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  min-height: 48px; /* 2 lines at 24px line-height */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+.dashboard-event-card .event-description {
+  flex: 1;
+  margin-bottom: 1rem;
+  min-height: 60px; /* ~3 lines */
+  max-height: 60px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  color: #6c757d;
+}
+
+/* Style rich text content from QuillJS */
+.dashboard-event-card .event-description p {
+  margin: 0;
+  display: inline;
+}
+
+.dashboard-event-card .event-description strong,
+.dashboard-event-card .event-description b {
+  font-weight: 600;
+  color: #495057;
+}
+
+.dashboard-event-card .event-description em,
+.dashboard-event-card .event-description i {
+  font-style: italic;
+}
+
+.dashboard-event-card .event-description a {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+.dashboard-event-card .event-description ul,
+.dashboard-event-card .event-description ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.dashboard-event-card .card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.dashboard-event-card img.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .dashboard-event-card .card-title {
+    font-size: 0.9rem;
+    min-height: 42px;
+  }
+
+  .dashboard-event-card .event-description {
+    font-size: 0.8rem;
+    min-height: 54px;
+    max-height: 54px;
+  }
+
+  .dashboard-event-card img.card-img-top {
+    height: 150px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   GROUPED NAVIGATION (Collapsible Sidebar Groups)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Navigation group container */
+.nav-grouped {
+  padding: 0;
+}
+
+.nav-group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-group:last-child {
+  border-bottom: none;
+}
+
+/* Group toggle button */
+.nav-group-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-group-toggle:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-group-toggle.has-active {
+  color: #fff;
+  background-color: rgba(13, 110, 253, 0.15);
+}
+
+.nav-group-label {
+  display: flex;
+  align-items: center;
+}
+
+.nav-group-label i {
+  width: 20px;
+  text-align: center;
+}
+
+.nav-group-arrow {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+/* Group items container */
+.nav-group-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.nav-group-items.expanded {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+
+/* Sub-navigation links */
+.nav-link-sub {
+  padding: 0.5rem 1.5rem 0.5rem 2.75rem !important;
+  font-size: 0.85rem;
+  border-left: none !important;
+}
+
+.nav-link-sub i {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.nav-link-sub:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.nav-link-sub.active {
+  background-color: rgba(13, 110, 253, 0.2) !important;
+  color: #fff !important;
+  border-left: none !important;
+  position: relative;
+}
+
+.nav-link-sub.active::before {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+}
+
+/* Mobile adjustments for grouped navigation */
+@media (max-width: 768px) {
+  .nav-group-toggle {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-link-sub {
+    padding: 0.75rem 1.5rem 0.75rem 2.75rem !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-group-toggle {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-link-sub {
+    padding: 0.4rem 1rem 0.4rem 2.25rem !important;
+    font-size: 0.8rem;
+  }
+}

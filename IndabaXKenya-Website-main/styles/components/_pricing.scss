@@ -1,0 +1,268 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - PRICING SECTION STYLES
+// ═══════════════════════════════════════════════════════════════════════
+
+.pricing-area {
+  .row {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-description {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: $text-secondary;
+    font-size: $font-size-lg;
+    line-height: 1.8;
+  }
+
+  .pricing-table-box {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    min-height: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    position: relative;
+
+    &.featured {
+      border-color: $primary;
+      border-width: 3px;
+      box-shadow: 0 15px 50px rgba(255, 45, 85, 0.25);
+      background: linear-gradient(to bottom, rgba(255, 45, 85, 0.02), $background);
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    &.featured:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 70px rgba(255, 45, 85, 0.3);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: $gradient-primary;
+      color: $text-white;
+      padding: 5px 15px;
+      border-radius: $radius-md;
+      font-size: 12px;
+      font-weight: $font-weight-semibold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pricingTable-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 30px 15px 10px;
+      background: $primary;
+      clip-path: polygon(50% 100%, 100% 60%, 100% 0, 0 0, 0 60%);
+      position: relative;
+      margin-left: -30px;
+      margin-right: -30px;
+      margin-top: -40px;
+
+      .title {
+        font-size: 24px;
+        font-weight: $font-weight-bold;
+        color: $text-white !important;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .tier-description {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9) !important;
+        margin-bottom: 20px;
+      }
+
+      .price-value {
+        font-size: 48px;
+        font-weight: $font-weight-bold;
+        color: $text-white !important;
+        margin-bottom: 10px;
+
+        sup {
+          font-size: 24px;
+          margin-right: 5px;
+          color: $text-white !important;
+        }
+
+        .free-text {
+          color: $text-white !important;
+          font-size: 48px;
+        }
+
+        span {
+          color: $text-white !important;
+        }
+      }
+
+      .period {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9) !important;
+        display: block;
+      }
+    }
+
+    .pricing-content {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px;
+      flex: 1;
+
+      li {
+        padding: 12px 0;
+        font-size: 15px;
+        color: $text-secondary;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        i {
+          color: $secondary;
+          font-size: 18px;
+          margin-top: 2px;
+          flex-shrink: 0;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .requirements {
+      background: rgba(0, 172, 238, 0.05);
+      padding: 15px;
+      border-radius: $radius-md;
+      margin-bottom: 30px;
+
+      .requirements-title {
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+          color: $secondary;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-size: 13px;
+          color: $text-secondary;
+          padding: 5px 0;
+          padding-left: 20px;
+          position: relative;
+
+          &::before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: $secondary;
+          }
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 15px;
+      font-weight: $font-weight-semibold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      i {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .pricing-note {
+    font-size: 14px;
+    color: $text-secondary;
+    background: rgba(0, 172, 238, 0.05);
+    padding: 20px;
+    border-radius: $radius-md;
+    display: inline-block;
+
+    i {
+      color: $secondary;
+      margin-right: 8px;
+    }
+
+    a {
+      color: $primary;
+      font-weight: $font-weight-semibold;
+      text-decoration: underline;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+// Tablet adjustments
+@include tablet {
+  .pricing-area {
+    .pricing-table-box {
+      min-height: 500px;
+    }
+  }
+}
+
+@include mobile {
+  .pricing-area {
+    .pricing-table-box {
+      padding: 30px 20px;
+      min-height: auto;
+      margin: 0 auto 20px;
+
+      &.featured {
+        transform: scale(1);
+      }
+
+      .pricingTable-header {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: -30px;
+        padding: 25px 15px 10px;
+
+        .title {
+          font-size: 20px;
+        }
+
+        .price-value {
+          font-size: 40px;
+
+          sup {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

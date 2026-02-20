@@ -1,0 +1,328 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - SPEAKER FLIP CARD STYLES
+// ═══════════════════════════════════════════════════════════════════════
+// 3D flip card animation with front and back views
+// ═══════════════════════════════════════════════════════════════════════
+
+.speaker-flip-card {
+  perspective: 1000px;
+  height: 520px;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+  }
+
+  &.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: $radius-xl;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    background: $background;
+  }
+
+  // Front of card
+  .flip-card-front {
+    .speaker-image-wrapper {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+      background: $gradient-primary;
+
+      .speaker-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .speaker-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+        padding: 30px 20px 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        .flip-hint {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          color: $text-white;
+          font-size: 14px;
+          font-weight: $font-weight-semibold;
+
+          i {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .speaker-info {
+      padding: 25px 20px;
+      text-align: center;
+
+      .speaker-name {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        margin-bottom: 8px;
+        line-height: 1.3;
+      }
+
+      .speaker-title {
+        font-size: 15px;
+        color: $primary;
+        font-weight: $font-weight-semibold;
+        margin-bottom: 5px;
+      }
+
+      .speaker-org {
+        font-size: 14px;
+        color: $text-secondary;
+        margin: 0;
+      }
+    }
+
+    &:hover {
+      .speaker-image-wrapper .speaker-image {
+        transform: scale(1.1);
+      }
+
+      .speaker-overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Back of card
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+
+    .back-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      color: $text-white;
+    }
+
+    .back-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+      .speaker-name {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        color: $text-white;
+        margin: 0;
+        flex: 1;
+        text-align: left;
+      }
+
+      .flip-back-btn {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 10px;
+
+        i {
+          color: $text-white;
+          font-size: 18px;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.3);
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .speaker-bio {
+      flex: 1;
+      margin-bottom: 20px;
+      overflow-y: auto;
+
+      p {
+        font-size: 14px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.95);
+        margin: 0;
+      }
+    }
+
+    .speaker-expertise {
+      margin-bottom: 20px;
+
+      h4 {
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        color: $text-white;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      .expertise-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .expertise-tag {
+          background: rgba(255, 255, 255, 0.2);
+          padding: 5px 12px;
+          border-radius: $radius-sm;
+          font-size: 12px;
+          font-weight: $font-weight-semibold;
+          color: $text-white;
+          backdrop-filter: blur(10px);
+        }
+      }
+    }
+
+    .speaker-actions {
+      margin-bottom: 15px;
+
+      .linkedin-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: $text-white;
+        color: $primary;
+        padding: 12px 20px;
+        border-radius: $radius-md;
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        width: 100%;
+        justify-content: center;
+
+        i {
+          font-size: 18px;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.95);
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    .country-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.8);
+      justify-content: center;
+
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Mobile responsiveness
+@include mobile {
+  .speaker-flip-card {
+    height: 480px;
+    margin-bottom: 25px;
+
+    .flip-card-front {
+      .speaker-image-wrapper {
+        height: 300px;
+
+        .speaker-overlay {
+          opacity: 1; // Always show on mobile
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+        }
+      }
+
+      .speaker-info {
+        padding: 20px 15px;
+
+        .speaker-name {
+          font-size: 18px;
+        }
+
+        .speaker-title {
+          font-size: 14px;
+        }
+
+        .speaker-org {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .flip-card-back {
+      padding: 25px 20px;
+
+      .back-header .speaker-name {
+        font-size: 18px;
+      }
+
+      .speaker-bio p {
+        font-size: 13px;
+      }
+
+      .speaker-expertise {
+        h4 {
+          font-size: 13px;
+        }
+
+        .expertise-tags .expertise-tag {
+          font-size: 11px;
+          padding: 4px 10px;
+        }
+      }
+
+      .speaker-actions .linkedin-btn {
+        font-size: 13px;
+        padding: 10px 16px;
+      }
+    }
+  }
+}
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .speaker-flip-card {
+    height: 500px;
+  }
+}

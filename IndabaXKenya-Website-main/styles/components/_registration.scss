@@ -1,0 +1,338 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - REGISTRATION FORM STYLES
+// ═══════════════════════════════════════════════════════════════════════
+
+.registration-form-area {
+  .section-description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: $text-secondary;
+    font-size: $font-size-lg;
+  }
+
+  .registration-form-wrapper {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    margin-top: 50px;
+  }
+
+  .registration-form {
+    .form-section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 2px solid #f0f0f0;
+
+      &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:before {
+          content: "";
+          width: 4px;
+          height: 24px;
+          background: $gradient-primary;
+          border-radius: $radius-sm;
+        }
+      }
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-size: 15px;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: 8px;
+
+        .required {
+          color: $secondary;
+        }
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: $radius-md;
+        font-size: 15px;
+        transition: all 0.3s ease;
+
+        &:focus {
+          outline: none;
+          border-color: $primary;
+          box-shadow: 0 0 0 3px rgba(255, 87, 51, 0.1);
+        }
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      // Password input wrapper with toggle button
+      .password-input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .form-control {
+          padding-right: 45px;
+        }
+
+        .password-toggle {
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #999;
+          cursor: pointer;
+          padding: 5px;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i {
+            font-size: 18px;
+          }
+
+          &:hover {
+            color: $text-primary;
+          }
+
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    // Ticket Type Selection
+    .ticket-types {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      .ticket-option {
+        cursor: pointer;
+
+        input[type="radio"] {
+          position: absolute;
+          opacity: 0;
+
+          &:checked + .ticket-card {
+            border-color: $primary;
+            background: linear-gradient(
+              135deg,
+              rgba(255, 87, 51, 0.05) 0%,
+              rgba(255, 87, 51, 0.02) 100%
+            );
+            box-shadow: 0 10px 30px rgba(255, 87, 51, 0.15);
+            transform: translateY(-5px);
+
+            h4 {
+              color: $primary;
+            }
+          }
+        }
+
+        .ticket-card {
+          padding: 25px;
+          border: 2px solid #e0e0e0;
+          border-radius: $radius-lg;
+          text-align: center;
+          transition: all 0.3s ease;
+          background: $background;
+
+          &:hover {
+            border-color: $primary;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          }
+
+          h4 {
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+            color: $text-primary;
+            margin-bottom: 10px;
+          }
+
+          .price {
+            font-size: 28px;
+            font-weight: $font-weight-bold;
+            color: $primary;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 14px;
+            color: $text-secondary;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    // Checkbox Label
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      color: $text-secondary;
+
+      input[type="checkbox"] {
+        margin-top: 4px;
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+      }
+
+      a {
+        color: $primary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // Form Actions
+    .form-actions {
+      text-align: center;
+      margin-top: 30px;
+
+      .btn {
+        min-width: 250px;
+        padding: 15px 40px;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        gap: 10px;
+
+        i {
+          font-size: 20px;
+        }
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+
+        .icofont-spin {
+          animation: spin 1s linear infinite;
+        }
+      }
+    }
+  }
+
+  // Success Message
+  .registration-success {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 80px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-top: 50px;
+
+    .success-icon {
+      i {
+        font-size: 100px;
+        color: #10b981;
+        margin-bottom: 20px;
+      }
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $text-secondary;
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .ticket-info {
+      margin-top: 20px;
+      padding: 15px 25px;
+      background: #f0f0f0;
+      border-radius: $radius-md;
+      display: inline-block;
+
+      strong {
+        color: $primary;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// Mobile Styles
+@include mobile {
+  .registration-form-area {
+    .registration-form-wrapper {
+      padding: 30px 20px;
+    }
+
+    .registration-form {
+      .form-section h3 {
+        font-size: 20px;
+      }
+
+      .ticket-types {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .form-actions .btn {
+        min-width: 100%;
+      }
+    }
+
+    .registration-success {
+      padding: 60px 25px;
+
+      .success-icon i {
+        font-size: 80px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

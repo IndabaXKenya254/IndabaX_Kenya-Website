@@ -1,0 +1,104 @@
+[
+  {
+    "id": "price-1",
+    "title": "Student Pass",
+    "price": "FREE",
+    "currency": "KSH",
+    "period": "3 Days",
+    "featured": true,
+    "badge": "Most Popular",
+    "description": "Perfect for undergraduate and graduate students",
+    "features": [
+      "Access to all conference sessions",
+      "All workshop sessions",
+      "Conference materials & swag bag",
+      "Lunch on all 3 days",
+      "Coffee breaks & networking",
+      "Certificate of attendance",
+      "Access to poster session",
+      "Career fair access"
+    ],
+    "requirements": [
+      "Valid student ID required",
+      "Must register by March 1, 2026",
+      "Limited to 300 spots"
+    ],
+    "buttonText": "Register Now",
+    "buttonLink": "/register"
+  },
+  {
+    "id": "price-2",
+    "title": "Academic Pass",
+    "price": "5,000",
+    "currency": "KSH",
+    "period": "3 Days",
+    "featured": false,
+    "description": "For faculty, researchers, and postdocs",
+    "features": [
+      "Everything in Student Pass",
+      "VIP networking reception",
+      "Priority workshop registration",
+      "Access to speaker dinner (Day 2)",
+      "Private Q&A with keynote speakers",
+      "Research collaboration opportunities",
+      "1-year AI Kenya membership",
+      "Digital proceedings access"
+    ],
+    "requirements": [
+      "Academic affiliation verification required"
+    ],
+    "buttonText": "Register Now",
+    "buttonLink": "/register"
+  },
+  {
+    "id": "price-3",
+    "title": "Industry Pass",
+    "price": "15,000",
+    "currency": "KSH",
+    "period": "3 Days",
+    "featured": false,
+    "description": "For professionals and industry practitioners",
+    "features": [
+      "Everything in Academic Pass",
+      "Company logo in conference materials",
+      "Priority seating in main hall",
+      "Access to all networking events",
+      "Meet the speakers sessions",
+      "Exclusive industry roundtable",
+      "Hiring booth at career fair (optional)",
+      "Post-conference video recordings",
+      "Invoice for reimbursement"
+    ],
+    "requirements": [
+      "For working professionals"
+    ],
+    "buttonText": "Register Now",
+    "buttonLink": "/register"
+  },
+  {
+    "id": "price-4",
+    "title": "Virtual Pass",
+    "price": "2,000",
+    "currency": "KSH",
+    "period": "3 Days",
+    "featured": false,
+    "badge": "New",
+    "description": "Join us remotely from anywhere",
+    "features": [
+      "Live stream of all main sessions",
+      "Live stream of keynotes",
+      "Access to virtual workshops",
+      "Digital conference materials",
+      "Recording access (30 days)",
+      "Virtual networking platform",
+      "Certificate of attendance",
+      "Chat with attendees"
+    ],
+    "requirements": [
+      "Stable internet connection required",
+      "Registration closes March 14"
+    ],
+    "buttonText": "Register Now",
+    "buttonLink": "/register"
+  }
+]

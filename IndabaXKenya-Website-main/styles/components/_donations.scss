@@ -1,0 +1,579 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - DONATIONS PAGE STYLES
+// ═══════════════════════════════════════════════════════════════════════
+// Issue #20: Donations/Sponsorship page styles
+// ═══════════════════════════════════════════════════════════════════════
+
+// Donations page - reduced section padding
+.why-support-area,
+.impact-area,
+.payment-methods-area,
+.donate-contact-area {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+// Why Support Section (Light background with cards)
+.why-support-area {
+  background: $secondary-lighter;
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-description {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    color: $text-secondary;
+    font-size: $font-size-base;
+    line-height: 1.7;
+  }
+
+  .row {
+    row-gap: 24px;
+  }
+}
+
+// Why Support Card
+.donation-why-card {
+  background: $background;
+  border-radius: $radius-lg;
+  padding: 30px 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 20px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: $primary;
+  }
+
+  .icon-wrapper {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba($primary, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    i {
+      font-size: 28px;
+      color: $primary;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .icon-wrapper {
+    background: $primary;
+
+    i {
+      color: $text-white;
+      transform: scale(1.1);
+    }
+  }
+
+  .content {
+    flex: 1;
+
+    h3 {
+      font-size: 20px;
+      font-weight: $font-weight-semibold;
+      margin-bottom: 10px;
+      color: $text-primary;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 14px;
+      color: $text-secondary;
+      line-height: 1.7;
+      margin: 0;
+    }
+  }
+}
+
+// Impact/Where Support Goes Section
+.impact-area {
+  background: $background;
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-description {
+    max-width: 700px;
+    margin: 0 auto 15px;
+    color: $text-secondary;
+    font-size: $font-size-base;
+    line-height: 1.7;
+  }
+
+  .row {
+    row-gap: 24px;
+  }
+}
+
+// Impact Card with number
+.donation-impact-card {
+  background: $secondary-lighter;
+  border-radius: $radius-lg;
+  padding: 30px 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 2px solid transparent;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: $primary;
+    background: $background;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .number-badge {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+    color: $text-white;
+    font-size: 22px;
+    font-weight: $font-weight-bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 15px rgba($primary, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  &:hover .number-badge {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba($primary, 0.4);
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 10px;
+    color: $text-primary;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 14px;
+    color: $text-secondary;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+// Payment Methods Section
+.payment-methods-area {
+  background: $secondary-lighter;
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-description {
+    max-width: 600px;
+    margin: 0 auto 15px;
+    color: $text-secondary;
+    font-size: $font-size-base;
+  }
+
+  .row {
+    row-gap: 24px;
+  }
+}
+
+// Payment Method Card
+.payment-method-card {
+  background: $background;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .icon-wrapper {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 24px;
+        color: $text-white;
+      }
+    }
+
+    .header-text {
+      flex: 1;
+
+      h3 {
+        font-size: 18px;
+        font-weight: $font-weight-semibold;
+        margin: 0 0 4px;
+        color: $text-white;
+      }
+
+      small {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  .card-body {
+    padding: 20px;
+
+    .payment-details {
+      margin-bottom: 12px;
+
+      p {
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: $text-primary;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          color: $text-secondary;
+          font-weight: $font-weight-medium;
+          display: inline-block;
+          min-width: 120px;
+        }
+      }
+    }
+
+    .payment-instructions {
+      background: $secondary-lighter;
+      border-radius: $radius-md;
+      padding: 15px;
+      margin-top: 15px;
+
+      h6 {
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+          color: $primary;
+        }
+      }
+
+      p {
+        font-size: 13px;
+        color: $text-secondary;
+        line-height: 1.7;
+        margin: 0;
+        white-space: pre-line;
+      }
+    }
+  }
+}
+
+// No Payment Methods Message
+.no-payment-area {
+  background: $secondary-lighter;
+
+  .no-results {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    text-align: center;
+    background: $background;
+    border-radius: $radius-lg;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+
+    i {
+      font-size: 60px;
+      color: $text-secondary;
+      opacity: 0.5;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: $font-weight-semibold;
+      color: $text-primary;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 15px;
+      color: $text-secondary;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+// Contact Section
+.donate-contact-area {
+  background: $background;
+
+  .section-title {
+    margin-bottom: 15px;
+  }
+
+  .lead {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    color: $text-secondary;
+    font-size: $font-size-lg;
+    line-height: 1.7;
+  }
+}
+
+// Loading state
+.donations-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Error state
+.donations-error {
+  min-height: 200px;
+}
+
+// Mobile responsiveness
+@include mobile {
+  // Reduce excessive section padding
+  .why-support-area,
+  .impact-area,
+  .payment-methods-area,
+  .donate-contact-area {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+
+    .section-title {
+      margin-bottom: 25px;
+    }
+
+    .section-description {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .donation-why-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+    margin-bottom: 16px;
+
+    .icon-wrapper {
+      margin: 0 auto 15px;
+      width: 55px;
+      height: 55px;
+
+      i {
+        font-size: 24px;
+      }
+    }
+
+    .content {
+      h3 {
+        font-size: 17px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .donation-impact-card {
+    padding: 20px 16px;
+    margin-bottom: 16px;
+
+    .number-badge {
+      width: 42px;
+      height: 42px;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .payment-method-card {
+    margin-bottom: 16px;
+
+    .card-header {
+      padding: 15px;
+
+      .icon-wrapper {
+        width: 42px;
+        height: 42px;
+
+        i {
+          font-size: 18px;
+        }
+      }
+
+      .header-text {
+        h3 {
+          font-size: 15px;
+        }
+
+        small {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 16px;
+
+      .payment-details p {
+        font-size: 13px;
+        margin-bottom: 6px;
+
+        strong {
+          min-width: 100px;
+          font-size: 12px;
+        }
+      }
+
+      .payment-instructions {
+        padding: 12px;
+        margin-top: 12px;
+
+        h6 {
+          font-size: 13px;
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  // Contact section on donations page
+  .donate-contact-area {
+    .lead {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    // Fix for contact boxes appearing as colored bars
+    .contact-box,
+    .info-box,
+    .single-contact-info {
+      background: $background !important;
+      padding: 16px !important;
+      margin-bottom: 12px !important;
+      border-radius: $radius-lg !important;
+      box-shadow: $shadow-sm !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+
+      // Remove any gradient/colored bar styling
+      &::before,
+      &::after {
+        display: none !important;
+      }
+
+      .icon-wrapper,
+      .contact-icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba($primary, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 18px;
+          color: $primary;
+        }
+      }
+
+      .content,
+      .contact-text {
+        flex: 1;
+
+        h4, h5 {
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
+
+        p, a {
+          font-size: 13px;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+
+  // No payment methods message
+  .no-payment-area {
+    .no-results {
+      padding: 40px 20px;
+
+      i {
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

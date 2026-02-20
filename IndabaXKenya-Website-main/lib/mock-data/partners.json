@@ -1,0 +1,98 @@
+[
+  {
+    "id": "partner-1",
+    "name": "Google AI",
+    "logo": "/images/platinum-partner1.png",
+    "tier": "platinum",
+    "website": "https://ai.google",
+    "description": "Platinum Sponsor"
+  },
+  {
+    "id": "partner-2",
+    "name": "Microsoft Africa",
+    "logo": "/images/platinum-partner2.png",
+    "tier": "platinum",
+    "website": "https://microsoft.com",
+    "description": "Platinum Sponsor"
+  },
+  {
+    "id": "partner-3",
+    "name": "Deep Learning Indaba",
+    "logo": "/images/platinum-partner3.png",
+    "tier": "organizer",
+    "website": "https://deeplearningindaba.com",
+    "description": "Co-Organizer"
+  },
+  {
+    "id": "partner-4",
+    "name": "Safaricom PLC",
+    "logo": "/images/gold-partner1.png",
+    "tier": "gold",
+    "website": "https://safaricom.co.ke",
+    "description": "Gold Sponsor"
+  },
+  {
+    "id": "partner-5",
+    "name": "M-Pesa Foundation",
+    "logo": "/images/gold-partner2.png",
+    "tier": "gold",
+    "website": "https://mpesafoundation.or.ke",
+    "description": "Gold Sponsor"
+  },
+  {
+    "id": "partner-6",
+    "name": "University of Nairobi",
+    "logo": "/images/gold-partner3.png",
+    "tier": "organizer",
+    "website": "https://uonbi.ac.ke",
+    "description": "Host Institution"
+  },
+  {
+    "id": "partner-7",
+    "name": "Strathmore University",
+    "logo": "/images/platinum-partner4.png",
+    "tier": "organizer",
+    "website": "https://strathmore.edu",
+    "description": "Academic Partner"
+  },
+  {
+    "id": "partner-8",
+    "name": "NVIDIA",
+    "logo": "/images/platinum-partner5.png",
+    "tier": "silver",
+    "website": "https://nvidia.com",
+    "description": "Silver Sponsor"
+  },
+  {
+    "id": "partner-9",
+    "name": "IBM Research Africa",
+    "logo": "/images/gold-partner4.png",
+    "tier": "silver",
+    "website": "https://ibm.com/research",
+    "description": "Silver Sponsor"
+  },
+  {
+    "id": "partner-10",
+    "name": "African AI Foundation",
+    "logo": "/images/gold-partner5.png",
+    "tier": "community",
+    "website": "https://example.com",
+    "description": "Community Partner"
+  },
+  {
+    "id": "partner-11",
+    "name": "AI Kenya",
+    "logo": "/images/platinum-partner1.png",
+    "tier": "community",
+    "website": "https://example.com",
+    "description": "Community Partner"
+  },
+  {
+    "id": "partner-12",
+    "name": "Kenya Climate Innovation Center",
+    "logo": "/images/platinum-partner2.png",
+    "tier": "community",
+    "website": "https://example.com",
+    "description": "Community Partner"
+  }
+]

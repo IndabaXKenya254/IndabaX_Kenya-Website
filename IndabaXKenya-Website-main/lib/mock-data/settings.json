@@ -1,0 +1,15 @@
+{
+  "popup": {
+    "enabled": true,
+    "title": "Register for IndabaX Kenya 2026",
+    "content": "Join Africa's Premier AI & Machine Learning Conference!<br><br>• Connect with 500+ AI enthusiasts<br>• Learn from 50+ expert speakers<br>• Network with researchers from 20+ countries<br>• Attend hands-on workshops & keynotes<br><br><strong>Early bird registration ends soon!</strong>",
+    "buttonText": "Register Now - It's FREE",
+    "buttonLink": "/register",
+    "delay": 3
+  },
+  "eventDate": "2026-03-15",
+  "eventEndDate": "2026-03-17",
+  "videoUrl": "bk7McNUjWgw",
+  "registrationUrl": "/register",
+  "submitPaperUrl": "/submit"
+}

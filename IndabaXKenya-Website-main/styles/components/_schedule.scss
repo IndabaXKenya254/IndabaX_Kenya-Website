@@ -1,0 +1,299 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - SCHEDULE SECTION STYLES
+// ═══════════════════════════════════════════════════════════════════════
+// Timeline-style schedule with modern tabs
+// ═══════════════════════════════════════════════════════════════════════
+
+.schedule-area {
+  .section-description {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: $text-secondary;
+    font-size: $font-size-lg;
+    line-height: 1.8;
+  }
+
+  .schedule-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 50px;
+    flex-wrap: wrap;
+
+    li {
+      background: $background;
+      border-radius: $radius-lg;
+      padding: 20px 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      border: 2px solid transparent;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      &.react-tabs__tab--selected {
+        background: $gradient-primary;
+        color: $text-white;
+        border-color: $primary;
+        box-shadow: 0 10px 30px rgba(255, 45, 85, 0.3);
+
+        .day-label,
+        .date-label {
+          color: $text-white;
+        }
+      }
+
+      .tab-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .day-label {
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+      }
+
+      .date-label {
+        font-size: 14px;
+        color: $text-secondary;
+      }
+    }
+  }
+
+  .schedule-timeline {
+    position: relative;
+    padding-left: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 80px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, $primary, $secondary);
+      opacity: 0.3;
+    }
+  }
+
+  .single-schedule-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+
+    .schedule-time {
+      min-width: 120px;
+      text-align: right;
+      padding-top: 5px;
+
+      span {
+        font-size: 16px;
+        font-weight: $font-weight-semibold;
+        color: $primary;
+        background: rgba(255, 45, 85, 0.1);
+        padding: 8px 15px;
+        border-radius: $radius-md;
+        display: inline-block;
+      }
+    }
+
+    .schedule-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 2;
+      background: $background;
+
+      i {
+        font-size: 28px;
+      }
+    }
+
+    &:hover .schedule-icon {
+      transform: scale(1.15) rotate(5deg);
+    }
+
+    .schedule-content {
+      flex: 1;
+      background: $background;
+      padding: 25px 30px;
+      border-radius: $radius-lg;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+
+      &:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        transform: translateX(5px);
+        border-left-color: $primary;
+      }
+
+      .schedule-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        h3 {
+          font-size: 20px;
+          font-weight: $font-weight-bold;
+          color: $text-primary;
+          margin: 0;
+          flex: 1;
+        }
+
+        .session-type-badge {
+          padding: 5px 15px;
+          border-radius: $radius-md;
+          font-size: 12px;
+          font-weight: $font-weight-semibold;
+          color: $text-white;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+
+      .speaker-name,
+      .session-location {
+        font-size: 14px;
+        color: $text-secondary;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+          color: $primary;
+          font-size: 16px;
+        }
+      }
+
+      .speaker-name {
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+      }
+
+      .session-description {
+        font-size: 15px;
+        color: $text-secondary;
+        line-height: 1.7;
+        margin: 0;
+      }
+    }
+  }
+
+  .text-center .btn {
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: $font-weight-semibold;
+    border-radius: $radius-lg;
+    box-shadow: 0 10px 30px rgba(255, 45, 85, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 15px 40px rgba(255, 45, 85, 0.5);
+      transform: translateY(-3px);
+    }
+
+    i {
+      margin-left: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover i {
+      transform: translateX(5px);
+    }
+  }
+}
+
+// Mobile responsiveness
+@include mobile {
+  .schedule-area {
+    .section-description {
+      font-size: $font-size-base;
+      margin-bottom: 30px;
+    }
+
+    .schedule-tabs {
+      gap: 10px;
+      margin-bottom: 30px;
+
+      li {
+        padding: 15px 25px;
+
+        .day-label {
+          font-size: 16px;
+        }
+
+        .date-label {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .schedule-timeline::before {
+      left: 20px;
+    }
+
+    .single-schedule-item {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+
+      .schedule-time {
+        min-width: auto;
+        text-align: left;
+
+        span {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+      }
+
+      .schedule-icon {
+        width: 50px;
+        height: 50px;
+
+        i {
+          font-size: 24px;
+        }
+      }
+
+      .schedule-content {
+        padding: 20px;
+        margin-left: 0;
+
+        .schedule-header h3 {
+          font-size: 18px;
+        }
+
+        .session-description {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .text-center .btn {
+      padding: 14px 32px;
+      font-size: 15px;
+    }
+  }
+}

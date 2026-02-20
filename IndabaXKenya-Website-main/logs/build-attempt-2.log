@@ -1,0 +1,726 @@
+
+> evnia@1.4.0 build
+> next build
+
+   ▲ Next.js 14.1.3
+   - Environments: .env.local
+   - Experiments (use at your own risk):
+     · optimizeCss
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+./src/app/admin/analytics/compare/page.tsx
+61:6  Warning: React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/analytics/page.tsx
+152:6  Warning: React Hook useEffect has a missing dependency: 'fetchAnalytics'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/checkin/page.tsx
+75:6  Warning: React Hook useEffect has a missing dependency: 'fetchStats'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/email-templates/[id]/edit/page.tsx
+31:6  Warning: React Hook useEffect has a missing dependency: 'fetchTemplate'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/email-templates/[id]/page.tsx
+43:6  Warning: React Hook useEffect has a missing dependency: 'fetchTemplate'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/events/[id]/page.tsx
+59:6  Warning: React Hook useEffect has a missing dependency: 'loadEvent'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/gallery/page.tsx
+418:27  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+519:25  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+603:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/admin/papers/[id]/page.tsx
+108:6  Warning: React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/papers/page.tsx
+118:6  Warning: React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/posts/[id]/page.tsx
+59:6  Warning: React Hook useEffect has a missing dependency: 'loadPost'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/posts/page.tsx
+90:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/admin/responses/page.tsx
+53:6  Warning: React Hook useEffect has a missing dependency: 'fetchResponses'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/reviewers/page.tsx
+148:6  Warning: React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+339:5  Warning: React Hook useMemo has a missing dependency: 'handleRemoveReviewer'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/settings/page.tsx
+540:27  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/admin/speakers/page.tsx
+46:27  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/admin/sponsors/page.tsx
+48:26  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/admin/survey-deadlines/page.tsx
+127:6  Warning: React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/team/page.tsx
+249:27  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/admin/templates/[id]/page.tsx
+27:6  Warning: React Hook useEffect has a missing dependency: 'fetchTemplate'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/templates/page.tsx
+37:6  Warning: React Hook useEffect has a missing dependency: 'fetchTemplates'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/tickets/export/page.tsx
+88:6  Warning: React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/admin/venues/page.tsx
+422:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/dashboard/applications/page.tsx
+343:27  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/dashboard/page.tsx
+273:31  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+351:31  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/dashboard/tickets/[ticketId]/page.tsx
+48:6  Warning: React Hook useEffect has a missing dependency: 'fetchTicket'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+190:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/dashboard/tickets/page.tsx
+152:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/events/[slug]/register/page.tsx
+51:6  Warning: React Hook useEffect has a missing dependency: 'checkAuthAndLoadForm'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/reviewer/applications/[id]/page.tsx
+69:6  Warning: React Hook useEffect has a missing dependency: 'fetchApplication'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/reviewer/applications/page.tsx
+36:6  Warning: React Hook useEffect has a missing dependency: 'fetchApplications'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/survey/[token]/complete/page.tsx
+22:6  Warning: React Hook useEffect has a missing dependency: 'fetchSurveyInfo'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/survey/[token]/page.tsx
+49:6  Warning: React Hook useEffect has a missing dependency: 'fetchSurveyData'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/app/tickets/[id]/page.tsx
+67:6  Warning: React Hook useEffect has a missing dependency: 'fetchTicket'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+234:23  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/venue/[slug]/page.tsx
+51:6  Warning: React Hook useEffect has a missing dependency: 'fetchVenue'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/components/Dashboard/UserDashboard.tsx
+250:27  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/NOAI/NOAIYearDetails.tsx
+34:6  Warning: React Hook useEffect has a missing dependency: 'fetchEventByYear'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/components/admin/EventPreviewModal.tsx
+123:23  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/admin/PostPreviewModal.tsx
+103:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/admin/TemplateSelector.tsx
+45:6  Warning: React Hook useEffect has a missing dependency: 'loadTemplates'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/components/admin/selectors/EventSelector.tsx
+58:6  Warning: React Hook useEffect has a missing dependency: 'fetchEvents'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/components/admin/selectors/SpeakerSelector.tsx
+166:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+269:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/admin/selectors/TagSelector.tsx
+60:6  Warning: React Hook useEffect has a missing dependency: 'fetchTags'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/components/admin/ui/FileUpload.tsx
+122:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/forms/question-types/ImageDisplay.tsx
+79:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+100:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+   Collecting page data ...
+ ⚠ Using edge runtime on a page currently disables static generation for that page
+   Generating static pages (0/151) ...
+Email logs fetch error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/3792.js:629:756)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/emails/logs/route.js:1:801)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/3792.js:629:756)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/emails/logs/route.js:1:801)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Admin middleware error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/[id]/lock/route.js:1:7352)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/[id]/lock/route.js:1:5827)
+    at u (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/route.js:1:815)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Admin middleware error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/9831.js:1:11790)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/7187.js:1:1398)
+    at l (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/contact-submissions/route.js:1:815)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Admin middleware error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/3792.js:629:756)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/[id]/decision/route.js:1:5740)
+    at l (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/form-templates/route.js:1:815)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Admin middleware error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/form-templates/route.js:7:3822)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/form-templates/route.js:7:2297)
+    at u (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/analytics/route.js:1:815)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/3792.js:629:756)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/responses/route.js:1:803)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Time 25.140379
+Time 25.174214
+Admin middleware error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/3792.js:629:756)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/[id]/send-email/route.js:120:606)
+    at l (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/settings/route.js:1:815)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Admin middleware error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/form-templates/route.js:7:3822)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/form-templates/route.js:7:2297)
+    at l (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/subscribers/export/route.js:1:815)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+   Generating static pages (37/151) 
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/9831.js:1:11790)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/auth/session/route.js:1:803)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+🔐 [VERIFY] Email verification request received
+Verification error: ex [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `nextUrl.searchParams`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at Object.eP [as staticGenerationBailout] (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:29358)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:33712)
+    at Object.get (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:34359)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/auth/verify-email/route.js:1:1439)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `nextUrl.searchParams`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/3792.js:629:756)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/dashboard/stats/route.js:1:803)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/[id]/lock/route.js:1:7352)
+    at m (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/faqs/route.js:1:814)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+[API] Error fetching current NOAI event: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at a (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/analytics/route.js:1:6937)
+    at p (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/events/noai/current/route.js:1:823)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/9831.js:1:11790)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/pricing/route.js:1:802)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/[id]/lock/route.js:1:7352)
+    at u (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/schedule-items/route.js:1:802)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/form-templates/route.js:7:3822)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/stats/route.js:1:802)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at a (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/analytics/route.js:1:6937)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/team/route.js:1:802)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/9831.js:1:11790)
+    at m (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/sponsors/route.js:1:813)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+User applications API error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at a (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/analytics/route.js:1:6937)
+    at p (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/user/applications/route.js:1:792)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+[API] Error in ticket search: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at i (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/3792.js:629:756)
+    at u (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/tickets/search/route.js:1:797)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at o (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/[id]/route.js:1:5489)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/user/registrations/route.js:1:802)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Internal error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/applications/[id]/lock/route.js:1:7352)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/venues/route.js:1:802)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+User tickets API error: o [Error]: Dynamic server usage: Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at c (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:11681)
+    at d (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/chunks/8677.js:5:9159)
+    at n (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/admin/form-templates/route.js:7:3822)
+    at u (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/.next/server/app/api/user/tickets/route.js:1:792)
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:42490
+    at /home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/server/lib/trace/tracer.js:133:36
+    at NoopContextManager.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/de-coder/Documents/Side-Gigs/deeplearningindaba/indabax-kenya-website/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Page couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+   Generating static pages (75/151) 
+   Generating static pages (113/151) 
+Error fetching banner settings: null
+Error fetching banner settings: null
+ ✓ Generating static pages (151/151) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                  Size     First Load JS
+┌ ○ /                                        2.43 kB        1.09 MB
+├ ○ /_not-found                              0 B                0 B
+├ ○ /403                                     136 B           964 kB
+├ ○ /about-us                                1.99 kB        1.03 MB
+├ ○ /admin/admins                            2.13 kB         966 kB
+├ ○ /admin/analytics                         2.75 kB         966 kB
+├ ○ /admin/analytics/compare                 3.19 kB         967 kB
+├ ○ /admin/applications                      5.71 kB        1.05 MB
+├ λ /admin/applications/[id]                 7.42 kB         971 kB
+├ ○ /admin/applications/responses            3.17 kB        1.04 MB
+├ ○ /admin/checkin                           4.05 kB         968 kB
+├ ○ /admin/contact-submissions               2.47 kB        1.03 MB
+├ ○ /admin/dashboard                         1.18 kB        1.03 MB
+├ ○ /admin/email-templates                   2.42 kB        1.03 MB
+├ λ /admin/email-templates/[id]              1.58 kB         965 kB
+├ λ /admin/email-templates/[id]/edit         1.92 kB        1.01 MB
+├ ○ /admin/email-templates/new               1.66 kB        1.01 MB
+├ ○ /admin/emails/compose                    4.43 kB        1.02 MB
+├ ○ /admin/emails/logs                       1.76 kB        1.03 MB
+├ λ /admin/emails/logs/[id]                  1.96 kB         965 kB
+├ ○ /admin/events                            1.58 kB        1.03 MB
+├ λ /admin/events/[id]                       4.69 kB        1.02 MB
+├ ○ /admin/events/new                        3.19 kB        1.01 MB
+├ ○ /admin/expertise                         2.57 kB        1.03 MB
+├ ○ /admin/faqs                              1.09 kB        1.03 MB
+├ λ /admin/faqs/[id]                         1.43 kB        1.01 MB
+├ ○ /admin/faqs/new                          1.28 kB        1.01 MB
+├ ○ /admin/gallery                           3.89 kB        1.03 MB
+├ ○ /admin/login                             1.15 kB         965 kB
+├ ○ /admin/papers                            3.03 kB        1.03 MB
+├ λ /admin/papers/[id]                       2.93 kB         966 kB
+├ ○ /admin/posts                             1.66 kB        1.03 MB
+├ λ /admin/posts/[id]                        2.6 kB         1.01 MB
+├ ○ /admin/posts/new                         2.42 kB        1.01 MB
+├ ○ /admin/pricing                           3.42 kB        1.03 MB
+├ ○ /admin/responses                         2.29 kB         966 kB
+├ ○ /admin/reviewers                         3.69 kB        1.03 MB
+├ ○ /admin/schedule                          4.14 kB        1.03 MB
+├ ○ /admin/settings                          6.74 kB        1.02 MB
+├ ○ /admin/speakers                          1.26 kB        1.03 MB
+├ λ /admin/speakers/[id]                     2.98 kB        1.01 MB
+├ ○ /admin/speakers/new                      1.58 kB        1.01 MB
+├ ○ /admin/sponsors                          1.29 kB        1.03 MB
+├ λ /admin/sponsors/[id]                     1.34 kB         965 kB
+├ ○ /admin/sponsors/new                      1.22 kB         965 kB
+├ ○ /admin/stats                             2.69 kB        1.03 MB
+├ ○ /admin/subscribers                       896 B          1.03 MB
+├ ○ /admin/survey-deadlines                  4.12 kB        1.03 MB
+├ ○ /admin/tags                              2.52 kB        1.03 MB
+├ ○ /admin/team                              3.23 kB        1.03 MB
+├ ○ /admin/templates                         1.94 kB         977 kB
+├ λ /admin/templates/[id]                    1.24 kB         976 kB
+├ ○ /admin/templates/new                     988 B           976 kB
+├ ○ /admin/tickets/export                    3.08 kB        1.01 MB
+├ ○ /admin/venues                            5.21 kB        1.08 MB
+├ λ /api/admin/admins                        0 B                0 B
+├ λ /api/admin/admins/[id]                   0 B                0 B
+├ λ /api/admin/analytics                     0 B                0 B
+├ λ /api/admin/applications                  0 B                0 B
+├ λ /api/admin/applications/[id]             0 B                0 B
+├ λ /api/admin/applications/[id]/decision    0 B                0 B
+├ λ /api/admin/applications/[id]/lock        0 B                0 B
+├ λ /api/admin/applications/[id]/send-email  0 B                0 B
+├ λ /api/admin/applications/[id]/shortlist   0 B                0 B
+├ λ /api/admin/applications/[id]/timeline    0 B                0 B
+├ λ /api/admin/applications/bulk/accept      0 B                0 B
+├ λ /api/admin/applications/bulk/reject      0 B                0 B
+├ λ /api/admin/applications/bulk/shortlist   0 B                0 B
+├ λ /api/admin/contact-submissions           0 B                0 B
+├ λ /api/admin/contact-submissions/[id]      0 B                0 B
+├ λ /api/admin/emails/logs                   0 B                0 B
+├ λ /api/admin/emails/logs/[id]              0 B                0 B
+├ λ /api/admin/emails/send                   0 B                0 B
+├ λ /api/admin/events                        0 B                0 B
+├ λ /api/admin/events/[id]                   0 B                0 B
+├ λ /api/admin/expertise                     0 B                0 B
+├ λ /api/admin/expertise/[id]                0 B                0 B
+├ λ /api/admin/faqs                          0 B                0 B
+├ λ /api/admin/faqs/[id]                     0 B                0 B
+├ λ /api/admin/form-templates                0 B                0 B
+├ λ /api/admin/photos                        0 B                0 B
+├ λ /api/admin/photos/[id]                   0 B                0 B
+├ λ /api/admin/posts                         0 B                0 B
+├ λ /api/admin/posts/[id]                    0 B                0 B
+├ λ /api/admin/pricing                       0 B                0 B
+├ λ /api/admin/pricing/[id]                  0 B                0 B
+├ λ /api/admin/responses                     0 B                0 B
+├ λ /api/admin/responses/[id]                0 B                0 B
+├ λ /api/admin/schedules                     0 B                0 B
+├ λ /api/admin/schedules/[id]                0 B                0 B
+├ λ /api/admin/settings                      0 B                0 B
+├ λ /api/admin/settings/[key]                0 B                0 B
+├ λ /api/admin/speakers                      0 B                0 B
+├ λ /api/admin/speakers/[id]                 0 B                0 B
+├ λ /api/admin/sponsors                      0 B                0 B
+├ λ /api/admin/sponsors/[id]                 0 B                0 B
+├ λ /api/admin/stats                         0 B                0 B
+├ λ /api/admin/stats/[id]                    0 B                0 B
+├ λ /api/admin/subscribers                   0 B                0 B
+├ λ /api/admin/subscribers/export            0 B                0 B
+├ λ /api/admin/tags/events                   0 B                0 B
+├ λ /api/admin/tags/events/[id]              0 B                0 B
+├ λ /api/admin/tags/posts                    0 B                0 B
+├ λ /api/admin/tags/posts/[id]               0 B                0 B
+├ λ /api/admin/team                          0 B                0 B
+├ λ /api/admin/tickets/backfill              0 B                0 B
+├ λ /api/admin/upload/[bucket]/[...path]     0 B                0 B
+├ λ /api/admin/upload/event-image            0 B                0 B
+├ λ /api/admin/upload/gallery-photo          0 B                0 B
+├ λ /api/admin/upload/post-image             0 B                0 B
+├ λ /api/admin/upload/site-logo              0 B                0 B
+├ λ /api/admin/upload/speaker-photo          0 B                0 B
+├ λ /api/admin/upload/sponsor-logo           0 B                0 B
+├ λ /api/admin/upload/team-photo             0 B                0 B
+├ λ /api/admin/upload/venue-image            0 B                0 B
+├ λ /api/admin/venues                        0 B                0 B
+├ λ /api/applications/call-for-papers        0 B                0 B
+├ λ /api/applications/registration           0 B                0 B
+├ λ /api/auth/login                          0 B                0 B
+├ λ /api/auth/logout                         0 B                0 B
+├ λ /api/auth/register                       0 B                0 B
+├ λ /api/auth/session                        0 B                0 B
+├ λ /api/auth/verify-email                   0 B                0 B
+├ λ /api/contact                             0 B                0 B
+├ λ /api/dashboard/stats                     0 B                0 B
+├ λ /api/email-templates                     0 B                0 B
+├ λ /api/email-templates/[id]                0 B                0 B
+├ ℇ /api/events                              0 B                0 B
+├ λ /api/events/[slug]                       0 B                0 B
+├ λ /api/events/noai/current                 0 B                0 B
+├ λ /api/faqs                                0 B                0 B
+├ λ /api/forms/responses                     0 B                0 B
+├ λ /api/forms/templates                     0 B                0 B
+├ λ /api/forms/templates/[id]                0 B                0 B
+├ λ /api/forms/templates/[id]/questions      0 B                0 B
+├ ℇ /api/gallery                             0 B                0 B
+├ λ /api/papers                              0 B                0 B
+├ λ /api/papers/[id]                         0 B                0 B
+├ ℇ /api/posts                               0 B                0 B
+├ λ /api/posts/[slug]                        0 B                0 B
+├ λ /api/pricing                             0 B                0 B
+├ λ /api/reviewer/applications               0 B                0 B
+├ λ /api/reviewer/applications/[id]          0 B                0 B
+├ λ /api/schedule-items                      0 B                0 B
+├ λ /api/settings                            0 B                0 B
+├ λ /api/settings/[key]                      0 B                0 B
+├ ℇ /api/speakers                            0 B                0 B
+├ λ /api/sponsors                            0 B                0 B
+├ λ /api/stats                               0 B                0 B
+├ λ /api/subscribe                           0 B                0 B
+├ λ /api/survey-deadlines                    0 B                0 B
+├ λ /api/survey/[token]                      0 B                0 B
+├ λ /api/survey/[token]/save                 0 B                0 B
+├ λ /api/survey/[token]/submit               0 B                0 B
+├ λ /api/team                                0 B                0 B
+├ λ /api/test-email                          0 B                0 B
+├ λ /api/test-supabase                       0 B                0 B
+├ λ /api/tickets/[id]                        0 B                0 B
+├ λ /api/tickets/checkin                     0 B                0 B
+├ λ /api/tickets/export                      0 B                0 B
+├ λ /api/tickets/generate                    0 B                0 B
+├ λ /api/tickets/search                      0 B                0 B
+├ λ /api/user/applications                   0 B                0 B
+├ λ /api/user/profile                        0 B                0 B
+├ λ /api/user/registrations                  0 B                0 B
+├ λ /api/user/tickets                        0 B                0 B
+├ λ /api/user/tickets/generate               0 B                0 B
+├ λ /api/venues                              0 B                0 B
+├ λ /api/venues/[slug]                       0 B                0 B
+├ ○ /apple-icon.png                          0 B                0 B
+├ ○ /contact                                 141 B          1.03 MB
+├ ○ /contact-us                              141 B          1.03 MB
+├ ○ /dashboard                               2.35 kB         966 kB
+├ ○ /dashboard/applications                  2.83 kB         966 kB
+├ ○ /dashboard/profile                       1.97 kB         965 kB
+├ ○ /dashboard/tickets                       1.68 kB         965 kB
+├ λ /dashboard/tickets/[ticketId]            1.8 kB          965 kB
+├ ○ /events                                  2.41 kB        1.03 MB
+├ λ /events/[slug]                           2.17 kB        1.03 MB
+├ λ /events/[slug]/register                  2.68 kB         966 kB
+├ ○ /faq                                     1.88 kB        1.03 MB
+├ ○ /gallery                                 2.21 kB        1.03 MB
+├ ○ /icon.png                                0 B                0 B
+├ ○ /login                                   2.03 kB        1.03 MB
+├ ○ /maintenance                             136 B           964 kB
+├ ○ /news                                    1.95 kB        1.03 MB
+├ λ /news/[id]                               2.46 kB        1.03 MB
+├ ○ /noai                                    1.42 kB        1.03 MB
+├ λ /noai/[year]                             2.03 kB        1.03 MB
+├ ○ /noai/apply                              2.85 kB        1.03 MB
+├ ○ /noai/faq                                1.81 kB        1.03 MB
+├ ○ /noai/gallery                            2.17 kB        1.03 MB
+├ ○ /noai/ioai                               3.9 kB         1.03 MB
+├ ○ /noai/kenya                              1.6 kB         1.03 MB
+├ ○ /privacy-policy                          141 B          1.03 MB
+├ ○ /register                                2.69 kB        1.03 MB
+├ ○ /reviewer/applications                   1.41 kB         965 kB
+├ λ /reviewer/applications/[id]              2.45 kB         966 kB
+├ ○ /reviewer/dashboard                      1.24 kB         965 kB
+├ ○ /schedule                                210 B          1.08 MB
+├ ○ /speakers                                2.12 kB        1.03 MB
+├ λ /speakers/[id]                           2.52 kB        1.03 MB
+├ ○ /sponsors                                204 B          1.03 MB
+├ ○ /submit                                  2.87 kB        1.03 MB
+├ λ /survey/[token]                          2.45 kB         977 kB
+├ λ /survey/[token]/complete                 1.3 kB          927 kB
+├ ○ /team                                    2.92 kB        1.03 MB
+├ ○ /terms-conditions                        141 B          1.03 MB
+├ λ /tickets/[id]                            2.06 kB        1.03 MB
+├ ○ /venue                                   1.47 kB        1.03 MB
+├ λ /venue/[slug]                            2.74 kB        1.03 MB
+└ ○ /verify-email                            1.81 kB        1.03 MB
++ First Load JS shared by all                925 kB
+  ├ chunks/lib-cba07c790d81e785.js           923 kB
+  └ other shared chunks (total)              2.59 kB
+
+
+ƒ Middleware                                 77.5 kB
+
+○  (Static)        prerendered as static content
+λ  (Dynamic)       server-rendered on demand using Node.js
+ℇ  (Edge Runtime)  server-rendered on demand using the Edge Runtime
+

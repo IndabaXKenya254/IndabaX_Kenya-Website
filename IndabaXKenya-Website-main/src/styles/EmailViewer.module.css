@@ -1,0 +1,264 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   INDABAX KENYA - PROFESSIONAL EMAIL VIEWER STYLES
+   ═══════════════════════════════════════════════════════════════════════
+   Based on Gmail, Outlook, Stripe, and GitHub email design patterns */
+
+.emailViewerWrapper {
+  background: #f5f7fa;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.emailViewer {
+  background: #ffffff;
+  border: 1px solid #e4e7eb;
+  border-radius: 8px;
+  padding: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.65;
+  color: #374151;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Typography - Professional email heading styles */
+.emailViewer h1,
+.emailViewer h2,
+.emailViewer h3,
+.emailViewer h4,
+.emailViewer h5,
+.emailViewer h6 {
+  margin-top: 28px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.emailViewer h1 {
+  font-size: 32px;
+  color: #0f172a;
+  border-bottom: 3px solid #3b82f6;
+  padding-bottom: 12px;
+}
+
+.emailViewer h2 {
+  font-size: 26px;
+  color: #1e293b;
+}
+
+.emailViewer h3 {
+  font-size: 22px;
+  color: #334155;
+}
+
+.emailViewer h4 { font-size: 18px; }
+.emailViewer h5 { font-size: 16px; }
+.emailViewer h6 { font-size: 14px; }
+
+.emailViewer h1:first-child,
+.emailViewer h2:first-child,
+.emailViewer h3:first-child,
+.emailViewer h4:first-child,
+.emailViewer h5:first-child,
+.emailViewer h6:first-child {
+  margin-top: 0;
+}
+
+/* Paragraphs - Gmail/Outlook style */
+.emailViewer p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+.emailViewer p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links - Professional blue */
+.emailViewer a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-decoration-color: rgba(37, 99, 235, 0.3);
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.emailViewer a:hover {
+  color: #1d4ed8;
+  text-decoration-color: #1d4ed8;
+}
+
+/* Strong/Bold */
+.emailViewer strong,
+.emailViewer b {
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Lists */
+.emailViewer ul,
+.emailViewer ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.emailViewer li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+
+/* Blockquotes - Gmail style */
+.emailViewer blockquote {
+  margin: 24px 0;
+  padding: 20px 24px;
+  border-left: 4px solid #3b82f6;
+  background: linear-gradient(to right, #eff6ff, #ffffff);
+  font-style: italic;
+  color: #1e40af;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 1px 3px rgba(59, 130, 246, 0.1);
+}
+
+.emailViewer blockquote p {
+  color: #1e40af;
+  margin-bottom: 0;
+}
+
+/* Tables - Professional data tables */
+.emailViewer table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 24px 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.emailViewer th,
+.emailViewer td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.emailViewer th {
+  background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+  font-weight: 700;
+  color: #111827;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.emailViewer tbody tr:hover {
+  background: #f9fafb;
+}
+
+.emailViewer tr:last-child td {
+  border-bottom: none;
+}
+
+/* Horizontal Rule */
+.emailViewer hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  margin: 32px 0;
+}
+
+/* Images */
+.emailViewer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
+/* Buttons - Modern CTA styling */
+.emailViewer .btn,
+.emailViewer button,
+.emailViewer a.button {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white !important;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.emailViewer .btn:hover,
+.emailViewer button:hover,
+.emailViewer a.button:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Alert boxes */
+.emailViewer .alert,
+.emailViewer .info-box {
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border-left: 4px solid #3b82f6;
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+.emailViewer .alert-success {
+  background: #f0fdf4;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.emailViewer .alert-warning {
+  background: #fffbeb;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+.emailViewer .alert-danger {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .emailViewerWrapper {
+    padding: 16px;
+  }
+
+  .emailViewer {
+    padding: 24px;
+  }
+
+  .emailViewer h1 { font-size: 26px; }
+  .emailViewer h2 { font-size: 22px; }
+  .emailViewer h3 { font-size: 18px; }
+
+  .emailViewer .btn,
+  .emailViewer button {
+    width: 100%;
+    text-align: center;
+  }
+}

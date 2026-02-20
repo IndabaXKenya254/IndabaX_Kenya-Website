@@ -1,0 +1,334 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - SPONSORS GRID WITH YEAR AND EVENT FILTERING
+// ═══════════════════════════════════════════════════════════════════════
+// Dynamic sponsors listing grouped by year (no tier categories)
+// Updated: Jan 3, 2026 - Added event filter dropdown
+// ═══════════════════════════════════════════════════════════════════════
+
+"use client";
+
+import React, { useState, useMemo, useEffect } from "react";
+import type { Sponsor, Event, ApiSuccessResponse } from "@/types/api";
+
+const CURRENT_YEAR = new Date().getFullYear();
+
+const SponsorsGrid: React.FC = () => {
+  const [sponsors, setSponsors] = useState<Sponsor[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [yearFilter, setYearFilter] = useState<number | 'all'>(CURRENT_YEAR);
+  const [eventFilter, setEventFilter] = useState<string>('all');
+
+  // Fetch events for dropdown
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('/api/events');
+        if (response.ok) {
+          const result: ApiSuccessResponse<Event[]> = await response.json();
+          setEvents(result.data);
+        }
+      } catch (err) {
+        console.error('Error fetching events:', err);
+      }
+    };
+    fetchEvents();
+  }, []);
+
+  // Fetch sponsors from API (with optional event_id filter)
+  useEffect(() => {
+    const fetchSponsors = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const url = eventFilter !== 'all'
+          ? `/api/sponsors?event_id=${eventFilter}`
+          : '/api/sponsors';
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch sponsors');
+        }
+
+        const result: ApiSuccessResponse<Sponsor[]> = await response.json();
+        setSponsors(result.data);
+
+        // Auto-select tab based on available years (only when not filtered by event)
+        if (eventFilter === 'all') {
+          const hasCurrentYearSponsors = result.data.some(s => s.sponsor_year === CURRENT_YEAR);
+          if (!hasCurrentYearSponsors && result.data.length > 0) {
+            // Find the most recent year with sponsors
+            const years = result.data
+              .map(s => s.sponsor_year)
+              .filter((y): y is number => y !== null);
+            const maxYear = Math.max(...years);
+            setYearFilter(maxYear || CURRENT_YEAR);
+          }
+        } else {
+          setYearFilter('all'); // Show all when filtered by event
+        }
+      } catch (err) {
+        console.error('Error fetching sponsors:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load sponsors');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSponsors();
+  }, [eventFilter]);
+
+  // Get unique years from sponsors
+  const availableYears = useMemo(() => {
+    const years = sponsors
+      .map(s => s.sponsor_year)
+      .filter((year): year is number => year !== null)
+      .filter((year, index, self) => self.indexOf(year) === index)
+      .sort((a, b) => b - a); // Sort descending (newest first)
+    return years;
+  }, [sponsors]);
+
+  // Count sponsors by year
+  const sponsorsByYear = useMemo(() => {
+    const counts: Record<number, number> = {};
+    sponsors.forEach(s => {
+      if (s.sponsor_year) {
+        counts[s.sponsor_year] = (counts[s.sponsor_year] || 0) + 1;
+      }
+    });
+    return counts;
+  }, [sponsors]);
+
+  // Filter sponsors by year
+  const filteredSponsors = useMemo(() => {
+    return sponsors.filter((sponsor) => {
+      if (yearFilter === 'all') {
+        return true;
+      } else {
+        return sponsor.sponsor_year === yearFilter;
+      }
+    });
+  }, [sponsors, yearFilter]);
+
+  return (
+    <div className="sponsors-grid-area ptb-120">
+      <div className="container">
+        <div className="section-title">
+          <span>Check Who Makes This Event Possible!</span>
+          <h2>
+            Our Event <b>Sponsors</b>
+          </h2>
+          <div className="bar"></div>
+          <p className="section-description">
+            We are grateful to our sponsors and partners who make IndabaX Kenya possible.
+            Their support enables us to bring world-class AI education and community building to Kenya.
+          </p>
+        </div>
+
+        {/* Filters Row - Dropdown Style like Speakers */}
+        <div className="sponsors-filters mb-5" data-aos="fade-up">
+          <div className="card shadow-sm">
+            <div className="card-body py-4">
+              <div className="row align-items-end justify-content-center g-3">
+                {/* Event Dropdown */}
+                <div className="col-lg-4 col-md-6">
+                  <div className="filter-group">
+                    <label htmlFor="eventFilter" className="form-label fw-semibold">
+                      <i className="icofont-ui-calendar me-2"></i>Event
+                    </label>
+                    <select
+                      id="eventFilter"
+                      className="form-select"
+                      value={eventFilter}
+                      onChange={(e) => setEventFilter(e.target.value)}
+                    >
+                      <option value="all">All Events</option>
+                      {events.map(event => (
+                        <option key={event.id} value={event.id}>
+                          {event.title} {event.start_date ? `(${new Date(event.start_date).getFullYear()})` : ''}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Year Dropdown */}
+                <div className="col-lg-4 col-md-6">
+                  <div className="filter-group">
+                    <label htmlFor="yearFilter" className="form-label fw-semibold">
+                      <i className="icofont-calendar me-2"></i>Year
+                    </label>
+                    <select
+                      id="yearFilter"
+                      className="form-select"
+                      value={yearFilter}
+                      onChange={(e) => setYearFilter(e.target.value === 'all' ? 'all' : parseInt(e.target.value))}
+                      disabled={eventFilter !== 'all'}
+                    >
+                      <option value="all">All Years ({sponsors.length} sponsors)</option>
+                      {availableYears.map(year => (
+                        <option key={year} value={year}>
+                          {year} ({sponsorsByYear[year] || 0} sponsors)
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Active Filters Summary */}
+              {(eventFilter !== 'all' || yearFilter !== 'all') && (
+                <div className="text-center mt-3 pt-3 border-top">
+                  <span className="text-muted me-2">
+                    Showing {filteredSponsors.length} of {sponsors.length} sponsors
+                  </span>
+                  <button
+                    className="btn btn-outline-secondary btn-sm"
+                    onClick={() => {
+                      setEventFilter('all');
+                      setYearFilter('all');
+                    }}
+                  >
+                    <i className="icofont-close-circled me-1"></i>
+                    Clear Filters
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Loading State */}
+        {loading && (
+          <div className="text-center py-5" data-aos="fade-up">
+            <div className="spinner-border text-primary" role="status">
+              <span className="visually-hidden">Loading sponsors...</span>
+            </div>
+            <p className="mt-3">Loading sponsors...</p>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="alert alert-danger" data-aos="fade-up">
+            <i className="icofont-warning"></i> {error}
+          </div>
+        )}
+
+        {/* Sponsors Grid - No tier grouping */}
+        {!loading && !error && (
+          <>
+            {filteredSponsors.length > 0 ? (
+              <div className="sponsors-section" data-aos="fade-up">
+                <div className="partner-title mb-4">
+                  <h3>
+                    <i className="icofont-handshake-deal me-2"></i>
+                    {yearFilter !== 'all' ? `${yearFilter} ` : ''}Sponsors & Partners
+                    <span className="badge bg-primary ms-2">{filteredSponsors.length}</span>
+                  </h3>
+                </div>
+
+                <div className="row justify-content-center">
+                  {filteredSponsors.map((sponsor, index) => (
+                    <div
+                      key={sponsor.id}
+                      className="col-lg-3 col-md-4 col-sm-6 col-6 mb-4"
+                      data-aos="zoom-in"
+                      data-aos-delay={index * 50}
+                    >
+                      <div className="sponsor-card">
+                        <a
+                          href={sponsor.website_url || '#'}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="sponsor-link"
+                        >
+                          <div className="sponsor-logo-wrapper">
+                            {sponsor.logo_url ? (
+                              /* Using native img to bypass Next.js Image issues in production */
+                              /* eslint-disable-next-line @next/next/no-img-element */
+                              <img
+                                src={sponsor.logo_url}
+                                alt={sponsor.name}
+                                loading="eager"
+                                decoding="async"
+                                style={{
+                                  display: 'block',
+                                  maxWidth: '150px',
+                                  maxHeight: '80px',
+                                  minWidth: '50px',
+                                  minHeight: '40px',
+                                  width: 'auto',
+                                  height: 'auto',
+                                  objectFit: 'contain',
+                                }}
+                                onError={(e) => {
+                                  console.error('Image failed to load:', sponsor.name, sponsor.logo_url);
+                                  const target = e.target as HTMLImageElement;
+                                  target.style.display = 'none';
+                                  // Show placeholder on error
+                                  const placeholder = target.parentElement?.querySelector('.error-placeholder');
+                                  if (placeholder) (placeholder as HTMLElement).style.display = 'flex';
+                                }}
+                              />
+                            ) : (
+                              <div className="sponsor-placeholder">
+                                <i className="icofont-building"></i>
+                                <span>{sponsor.name}</span>
+                              </div>
+                            )}
+                          </div>
+                          <div className="sponsor-info">
+                            <h5>{sponsor.name}</h5>
+                            {sponsor.sponsor_year && (
+                              <span className="year-badge">{sponsor.sponsor_year}</span>
+                            )}
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="no-results text-center py-5" data-aos="fade-up">
+                <i className="icofont-building" style={{ fontSize: '60px', color: '#ddd' }}></i>
+                <h3 className="mt-3">No sponsors found</h3>
+                <p className="text-muted">
+                  {yearFilter === 'all'
+                    ? 'No sponsors available.'
+                    : `No sponsors have been added for ${yearFilter} yet. Check back soon!`}
+                </p>
+                {yearFilter !== 'all' && (
+                  <button
+                    className="btn btn-primary mt-3"
+                    onClick={() => setYearFilter('all')}
+                  >
+                    View All Sponsors
+                  </button>
+                )}
+              </div>
+            )}
+
+            {/* Become a Sponsor CTA */}
+            <div className="sponsor-cta text-center mt-5" data-aos="fade-up">
+              <div className="cta-card p-5" style={{ background: 'linear-gradient(135deg, #006700 0%, #004d00 100%)', borderRadius: '20px' }}>
+                <h3 className="text-white mb-3">Interested in Sponsoring?</h3>
+                <p className="text-white mb-4">
+                  Join our community of sponsors and help shape the future of AI in Kenya.
+                </p>
+                <a href="/contact" className="btn btn-light btn-lg">
+                  <i className="icofont-envelope me-2"></i>
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default SponsorsGrid;

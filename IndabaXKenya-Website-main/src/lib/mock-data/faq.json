@@ -1,0 +1,152 @@
+[
+  {
+    "id": "faq-1",
+    "category": "Registration",
+    "question": "How do I register for IndabaX Kenya 2026?",
+    "answer": "Registration is available through our website. Click the 'Register Now' button on the homepage or visit the registration page. You'll need to provide your name, email, affiliation, and select your registration tier (Student, Academic, Professional, or Industry). Student passes are FREE but require verification."
+  },
+  {
+    "id": "faq-2",
+    "category": "Registration",
+    "question": "Are student passes really free?",
+    "answer": "Yes! Student passes are completely FREE for currently enrolled students. You'll need to provide proof of enrollment (student ID or verification letter from your institution) during registration. Student passes include access to all main conference sessions, workshops, and networking events."
+  },
+  {
+    "id": "faq-3",
+    "category": "Registration",
+    "question": "What's the deadline for early bird registration?",
+    "answer": "Early bird registration closes on March 1, 2026. After this date, standard registration rates apply. We recommend registering early as spots are limited, especially for workshops which have capacity constraints."
+  },
+  {
+    "id": "faq-4",
+    "category": "Registration",
+    "question": "Can I get a refund if I can't attend?",
+    "answer": "Yes, refunds are available up to 30 days before the conference (February 13, 2026). After this date, registrations are non-refundable but can be transferred to another person. Please contact us at registration@deeplearningindabaxkenya.com for refund requests."
+  },
+  {
+    "id": "faq-5",
+    "category": "Event Details",
+    "question": "What are the conference dates and location?",
+    "answer": "IndabaX Kenya 2026 will take place March 15-17, 2026 at the Kenyatta International Convention Centre (KICC) in Nairobi, Kenya. The pre-conference NOAI workshop is on March 14, 2026 at Strathmore University."
+  },
+  {
+    "id": "faq-6",
+    "category": "Event Details",
+    "question": "What should I bring to the conference?",
+    "answer": "Bring your laptop for workshops, your conference badge (will be provided at registration), business cards for networking, notebook and pen, and power adapters. We recommend comfortable shoes as you'll be moving between sessions. All conference materials will be provided digitally."
+  },
+  {
+    "id": "faq-7",
+    "category": "Event Details",
+    "question": "Is there a dress code?",
+    "answer": "The conference has a business casual dress code. We recommend comfortable, professional attire. The venue is climate-controlled, but bring a light jacket as meeting rooms can be cool."
+  },
+  {
+    "id": "faq-8",
+    "category": "Event Details",
+    "question": "Will meals be provided?",
+    "answer": "Yes! Your registration includes daily breakfast, lunch, coffee breaks, and light refreshments. We accommodate dietary restrictions - please indicate any requirements during registration. Dinner is not included, but we'll provide restaurant recommendations nearby."
+  },
+  {
+    "id": "faq-9",
+    "category": "Accommodation",
+    "question": "Do you have hotel recommendations?",
+    "answer": "Yes, we have negotiated discounted rates with several hotels near KICC including Sarova Stanley, Hilton Nairobi, and Norfolk Hotel. Booking details and discount codes are sent after registration. We recommend booking early as Nairobi hotels fill up quickly during March."
+  },
+  {
+    "id": "faq-10",
+    "category": "Accommodation",
+    "question": "Is airport pickup available?",
+    "answer": "We don't provide official airport pickup, but we'll share information about reliable taxi services and ride-sharing apps. KICC is approximately 30 minutes from Jomo Kenyatta International Airport (JKIA). Estimated cost: $15-25 USD."
+  },
+  {
+    "id": "faq-11",
+    "category": "Workshops",
+    "question": "How do I register for workshops?",
+    "answer": "Workshop registration opens after you complete your main conference registration. You'll receive an email with a link to select your preferred workshops. Workshops have limited capacity and are first-come, first-served. Some workshops may require prerequisite knowledge."
+  },
+  {
+    "id": "faq-12",
+    "category": "Workshops",
+    "question": "What equipment do I need for hands-on workshops?",
+    "answer": "Bring a laptop with at least 8GB RAM, Python 3.8+ installed, and popular ML libraries (PyTorch, TensorFlow, scikit-learn). Detailed setup instructions will be sent 1 week before the conference. Power outlets and WiFi will be available in all workshop rooms."
+  },
+  {
+    "id": "faq-13",
+    "category": "Workshops",
+    "question": "Are workshop materials provided?",
+    "answer": "Yes! All workshop materials including code, datasets, slides, and notebooks will be available through our GitHub repository. You'll receive access links before the workshop. Materials remain available after the conference for continued learning."
+  },
+  {
+    "id": "faq-14",
+    "category": "Papers & Presentations",
+    "question": "Can I submit a paper or poster?",
+    "answer": "The call for papers for 2026 has closed, but accepted papers will be presented during the conference. We accept research papers, posters, and lightning talks. Check our website in early 2027 for the 2027 call for papers."
+  },
+  {
+    "id": "faq-15",
+    "category": "Papers & Presentations",
+    "question": "Will presentations be recorded?",
+    "answer": "Yes, keynote presentations and selected talks will be recorded and made available on our YouTube channel after the conference. Workshop sessions are not typically recorded. Presenters can opt-out of recording if desired."
+  },
+  {
+    "id": "faq-16",
+    "category": "Networking",
+    "question": "Are there networking opportunities?",
+    "answer": "Absolutely! We have dedicated networking sessions, coffee breaks designed for mingling, a conference dinner (separate ticket), career fair with companies hiring, and social events. We also have a conference app for connecting with other attendees."
+  },
+  {
+    "id": "faq-17",
+    "category": "Networking",
+    "question": "Will there be a career fair?",
+    "answer": "Yes! Companies looking to hire AI talent will have booths during the conference. Bring your CV and be prepared for informal interviews. Past participants have received job offers and internship opportunities. Professional attire recommended for career fair visits."
+  },
+  {
+    "id": "faq-18",
+    "category": "Visas & Travel",
+    "question": "Do I need a visa to attend?",
+    "answer": "Most visitors need a visa to enter Kenya. Check Kenya's e-visa website for requirements based on your nationality. We can provide invitation letters for visa applications - request through your registration portal. Apply for your visa at least 4 weeks before travel."
+  },
+  {
+    "id": "faq-19",
+    "category": "Visas & Travel",
+    "question": "Can you provide an invitation letter?",
+    "answer": "Yes! After completing your registration and payment, you can request an official invitation letter through your registration dashboard. The letter includes conference details and your registration confirmation, which you can submit with your visa application."
+  },
+  {
+    "id": "faq-20",
+    "category": "Certificates",
+    "question": "Will I receive a certificate of attendance?",
+    "answer": "Yes! All registered attendees receive a digital certificate of attendance. Certificates are issued within 2 weeks after the conference and can be downloaded from your registration portal. Workshop participants receive separate workshop completion certificates."
+  },
+  {
+    "id": "faq-21",
+    "category": "Technical",
+    "question": "Will WiFi be available?",
+    "answer": "Yes, high-speed WiFi is available throughout KICC. Network credentials will be provided in your welcome packet. We have dedicated bandwidth for workshops requiring cloud computing or large dataset downloads."
+  },
+  {
+    "id": "faq-22",
+    "category": "Technical",
+    "question": "Are there power outlets in session rooms?",
+    "answer": "Yes, all conference rooms and workshop spaces have accessible power outlets. However, we recommend bringing a portable charger as outlets may be limited during popular sessions."
+  },
+  {
+    "id": "faq-23",
+    "category": "Sponsorship",
+    "question": "How can my company sponsor IndabaX Kenya?",
+    "answer": "We offer various sponsorship packages including Platinum, Gold, Silver, and Community tiers. Sponsors receive booth space, logo placement, speaking opportunities, and more. Contact sponsors@deeplearningindabaxkenya.com for our sponsorship prospectus and available packages."
+  },
+  {
+    "id": "faq-24",
+    "category": "General",
+    "question": "Who should attend IndabaX Kenya?",
+    "answer": "IndabaX Kenya is perfect for AI/ML researchers, students, data scientists, software engineers, entrepreneurs, policy makers, and anyone interested in artificial intelligence. We welcome all experience levels from beginners to experts. Our diverse program has something for everyone."
+  },
+  {
+    "id": "faq-25",
+    "category": "General",
+    "question": "How can I stay updated on conference news?",
+    "answer": "Subscribe to our newsletter on the website, follow us on Twitter (@IndabaXKenya), LinkedIn, and join our Slack community. We send regular updates about speakers, schedule changes, and important announcements."
+  }
+]

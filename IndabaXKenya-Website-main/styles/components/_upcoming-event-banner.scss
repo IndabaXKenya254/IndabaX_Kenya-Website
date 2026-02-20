@@ -1,0 +1,161 @@
+// ═══════════════════════════════════════════════════════════════════════
+// UPCOMING EVENT BANNER - Events Page Banner with Countdown
+// ═══════════════════════════════════════════════════════════════════════
+
+.upcoming-event-banner {
+  background: $gradient-hero-overlay, url('/images/main-bg2.jpg') center/cover no-repeat;
+  padding: $space-3xl $space-md;
+  margin-bottom: $space-3xl;
+  position: relative;
+
+  @include mobile {
+    padding: $space-2xl $space-md;
+    margin-bottom: $space-2xl;
+  }
+
+  .event-info {
+    color: $text-white;
+
+    .event-badge {
+      display: inline-block;
+      background-color: $primary;
+      color: $text-white;
+      padding: $space-xs $space-md;
+      border-radius: $radius-full;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: $space-md;
+    }
+
+    h2 {
+      color: $text-white;
+      font-size: $font-size-4xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $space-sm;
+      line-height: $line-height-tight;
+
+      @include mobile {
+        font-size: $font-size-2xl;
+      }
+    }
+
+    .event-subtitle {
+      color: $text-light;
+      font-size: $font-size-lg;
+      margin-bottom: $space-lg;
+      opacity: 0.9;
+
+      @include mobile {
+        font-size: $font-size-base;
+      }
+    }
+
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-lg;
+      margin-bottom: $space-xl;
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: $space-sm;
+        color: $text-light;
+        font-size: $font-size-base;
+
+        i {
+          color: $primary-light;
+          font-size: $font-size-lg;
+        }
+      }
+    }
+
+    .event-cta {
+      .btn-primary {
+        background-color: $primary;
+        border-color: $primary;
+        padding: $space-sm $space-xl;
+        font-weight: $font-weight-semibold;
+        transition: $transition-base;
+
+        &:hover {
+          background-color: $primary-light;
+          border-color: $primary-light;
+          transform: translateY(-2px);
+        }
+
+        i {
+          margin-left: $space-sm;
+        }
+      }
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// EVENT COUNTDOWN BOX - Timer Display
+// ═══════════════════════════════════════════════════════════════════════
+
+.event-countdown-box {
+  display: flex;
+  justify-content: flex-end;
+
+  @include mobile {
+    justify-content: center;
+    margin-top: $space-xl;
+  }
+
+  .countdown-wrapper {
+    display: flex;
+    gap: $space-md;
+
+    @include mobile {
+      gap: $space-sm;
+    }
+  }
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($text-white, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba($text-white, 0.2);
+    border-radius: $radius-lg;
+    padding: $space-lg $space-xl;
+    min-width: 90px;
+
+    @include mobile {
+      padding: $space-md $space-lg;
+      min-width: 70px;
+    }
+
+    .countdown-value {
+      display: block;
+      color: $text-white;
+      font-size: $font-size-4xl;
+      font-weight: $font-weight-bold;
+      line-height: 1;
+      margin-bottom: $space-xs;
+
+      @include mobile {
+        font-size: $font-size-2xl;
+      }
+    }
+
+    .countdown-label {
+      display: block;
+      color: $text-light;
+      font-size: $font-size-sm;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.85;
+
+      @include mobile {
+        font-size: $font-size-xs;
+      }
+    }
+  }
+}

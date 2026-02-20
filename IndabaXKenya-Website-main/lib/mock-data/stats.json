@@ -1,0 +1,34 @@
+{
+  "attendees": {
+    "id": "stat-1",
+    "label": "Attendees",
+    "value": 500,
+    "suffix": "+",
+    "icon": "icofont-users-alt-4",
+    "color": "#FF5733"
+  },
+  "speakers": {
+    "id": "stat-2",
+    "label": "Speakers",
+    "value": 50,
+    "suffix": "+",
+    "icon": "icofont-microphone",
+    "color": "#3498DB"
+  },
+  "countries": {
+    "id": "stat-3",
+    "label": "Countries",
+    "value": 20,
+    "suffix": "+",
+    "icon": "icofont-globe",
+    "color": "#1ABC9C"
+  },
+  "years": {
+    "id": "stat-4",
+    "label": "Years",
+    "value": 4,
+    "suffix": "",
+    "icon": "icofont-calendar",
+    "color": "#F39C12"
+  }
+}

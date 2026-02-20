@@ -1,0 +1,328 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - CENTRALIZED THEME SYSTEM
+// ═══════════════════════════════════════════════════════════════════════
+// Version: 2.0 (Ultra-Verified)
+// Date: October 16, 2025
+// Description: Unified color system, typography, spacing, and design tokens
+// ═══════════════════════════════════════════════════════════════════════
+
+// ───────────────────────────────────────────────────────────────────────
+// 1. PRIMARY COLORS (IndabaX Tech-Forward Branding - Green Dominant)
+// ───────────────────────────────────────────────────────────────────────
+$primary: #006700;          // Forest green - Main brand color (dominant)
+$primary-light: #008f00;    // Brighter green for hover states
+$primary-lighter: #00ba00;  // Even lighter for backgrounds/success
+$primary-dark: #004100;     // Darker green for active states
+$primary-subtle: #bfffbf;   // Very light green for subtle backgrounds
+$primary-rgb: 0, 103, 0;    // RGB for opacity variations
+
+// ───────────────────────────────────────────────────────────────────────
+// 2. SECONDARY COLORS (Tech-Forward Teal/Seafoam)
+// ───────────────────────────────────────────────────────────────────────
+$secondary: #91C1C5;        // Soft teal - Cards, badges, tech elements
+$secondary-light: #b7e9ee;  // Light teal for backgrounds
+$secondary-lighter: #F8FFFC; // Near-white with cool tint (primary bg)
+$secondary-dark: #72999c;   // Muted teal for depth
+$secondary-darker: #557376; // Dark teal for accents on light
+$secondary-rgb: 145, 193, 197;
+
+// ───────────────────────────────────────────────────────────────────────
+// 3. ACCENT COLORS (Balanced Energy + Warmth)
+// ───────────────────────────────────────────────────────────────────────
+$accent-1: #BE511F;  // Burnt orange - Secondary CTAs, highlights
+$accent-2: #f86c2c;  // Brighter orange - Energy & emphasis
+$accent-3: #e2b273;  // Muted gold - Awards, special badges, prestige
+$accent-4: #B80101;  // Bold red - Errors, urgent alerts only
+
+// ───────────────────────────────────────────────────────────────────────
+// 4. NEUTRAL COLORS (Navy/Dark + Warm Neutrals for Visual Interest)
+// ───────────────────────────────────────────────────────────────────────
+// Backgrounds
+$background: #F8FFFC;           // Near-white with cool tint (main background)
+$background-warm: #F5DFC9;      // Warm neutral - Alternate sections, human content
+$background-warm-light: #E9DFDA; // Light warm neutral - Card backgrounds
+$background-dark: #02000D;      // Very dark navy - Footer, dark sections
+$background-dark-alt: #02002A;  // Dark navy alternate - Stats, impact sections
+$background-overlay: rgba(2, 0, 13, 0.7); // Dark overlay for modals
+
+// Text Colors
+$text-primary: #02000D;         // Very dark navy - Primary headings, body text
+$text-secondary: #636380;       // Medium gray - Secondary text, captions
+$text-tertiary: #aeaebf;        // Light gray - Metadata, disabled text
+$text-warm: #5f4a2d;            // Dark brown - Text on warm backgrounds
+$text-warm-medium: #896b43;     // Medium brown - Secondary text on warm
+$text-light: #d6d6de;           // Very light gray - Text on dark backgrounds
+$text-white: #FFFFFF;           // Pure white for dark backgrounds
+
+// Borders & Dividers
+$border: #aeaebf;               // Default border - Medium gray
+$border-light: #d6d6de;         // Light borders - Subtle dividers
+$border-dark: #636380;          // Dark borders - Emphasis
+$border-warm: #cfb4a5;          // Warm borders for warm sections
+
+// ───────────────────────────────────────────────────────────────────────
+// 5. GRADIENTS (Tech-Forward Smooth Gradients)
+// ───────────────────────────────────────────────────────────────────────
+$gradient-primary: linear-gradient(135deg, $primary 0%, $primary-dark 100%); // Green depth
+$gradient-secondary: linear-gradient(135deg, $secondary-light 0%, $secondary 100%); // Teal smooth
+$gradient-tech: linear-gradient(135deg, $secondary-darker 0%, $primary 50%, $secondary 100%); // Teal to Green - tech vibe
+$gradient-warm: linear-gradient(135deg, $accent-3 0%, $accent-1 100%); // Gold to burnt orange
+$gradient-energy: linear-gradient(135deg, $primary-light 0%, $accent-2 100%); // Green to orange - vibrant
+$gradient-overlay: linear-gradient(to bottom, rgba(2,0,13,0) 0%, rgba(2,0,13,0.8) 100%); // Dark navy overlay
+// Issue #31 FIX: Stronger horizontal gradient - darker on left where text is, lighter on right to show image
+$gradient-hero-overlay: linear-gradient(to right, rgba(2,0,13,0.85) 0%, rgba(2,0,13,0.75) 40%, rgba(0,103,0,0.5) 100%); // Dark left to green right
+
+// ───────────────────────────────────────────────────────────────────────
+// 6. SHADOWS (Depth & Elevation)
+// ───────────────────────────────────────────────────────────────────────
+$shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+$shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.15);
+$shadow-card: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+// ───────────────────────────────────────────────────────────────────────
+// 7. SPACING SCALE (Consistent Spacing System)
+// ───────────────────────────────────────────────────────────────────────
+$space-xs: 0.25rem;   // 4px
+$space-sm: 0.5rem;    // 8px
+$space-md: 1rem;      // 16px
+$space-lg: 1.5rem;    // 24px
+$space-xl: 2rem;      // 32px
+$space-2xl: 3rem;     // 48px
+$space-3xl: 4rem;     // 64px
+$space-4xl: 6rem;     // 96px
+$space-5xl: 8rem;     // 128px
+
+// ───────────────────────────────────────────────────────────────────────
+// 8. TYPOGRAPHY (Font System)
+// ───────────────────────────────────────────────────────────────────────
+// Font Families
+$font-family-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-secondary: 'Figtree', sans-serif;
+$font-family-accent: 'Space Grotesk', monospace;
+
+// Font Sizes
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 3rem;      // 48px
+$font-size-6xl: 3.75rem;   // 60px
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+$line-height-loose: 2;
+
+// ───────────────────────────────────────────────────────────────────────
+// 9. BORDER RADIUS (Rounded Corners)
+// ───────────────────────────────────────────────────────────────────────
+$radius-none: 0;
+$radius-sm: 0.25rem;   // 4px
+$radius-md: 0.5rem;    // 8px
+$radius-lg: 1rem;      // 16px
+$radius-xl: 1.5rem;    // 24px
+$radius-2xl: 2rem;     // 32px
+$radius-full: 9999px;  // Fully rounded (pills, circles)
+
+// ───────────────────────────────────────────────────────────────────────
+// 10. TRANSITIONS (Smooth Animations)
+// ───────────────────────────────────────────────────────────────────────
+$transition-fast: 150ms ease-in-out;
+$transition-base: 300ms ease-in-out;
+$transition-slow: 500ms ease-in-out;
+$transition-all: all 300ms ease-in-out;
+
+// Easing Functions
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-out: cubic-bezier(0, 0, 0.2, 1);
+$ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+// ───────────────────────────────────────────────────────────────────────
+// 11. BREAKPOINTS (Responsive Design)
+// ───────────────────────────────────────────────────────────────────────
+$breakpoint-xs: 375px;   // Mobile small
+$breakpoint-sm: 576px;   // Mobile large
+$breakpoint-md: 768px;   // Tablet
+$breakpoint-lg: 1024px;  // Laptop
+$breakpoint-xl: 1440px;  // Desktop
+$breakpoint-2xl: 1920px; // Large desktop
+
+// ───────────────────────────────────────────────────────────────────────
+// 12. Z-INDEX SCALE (Layering System)
+// ───────────────────────────────────────────────────────────────────────
+$z-base: 1;
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;
+
+// ───────────────────────────────────────────────────────────────────────
+// 13. CSS CUSTOM PROPERTIES (Runtime Access - Tech-Forward Theme)
+// ───────────────────────────────────────────────────────────────────────
+:root {
+  // Primary Colors (Green Dominant)
+  --color-primary: #{$primary};
+  --color-primary-light: #{$primary-light};
+  --color-primary-lighter: #{$primary-lighter};
+  --color-primary-dark: #{$primary-dark};
+  --color-primary-subtle: #{$primary-subtle};
+
+  // Secondary Colors (Teal/Tech)
+  --color-secondary: #{$secondary};
+  --color-secondary-light: #{$secondary-light};
+  --color-secondary-dark: #{$secondary-dark};
+  --color-secondary-darker: #{$secondary-darker};
+
+  // Accent Colors
+  --color-accent-1: #{$accent-1};  // Burnt orange
+  --color-accent-2: #{$accent-2};  // Bright orange
+  --color-accent-3: #{$accent-3};  // Gold
+  --color-accent-4: #{$accent-4};  // Red
+
+  // Backgrounds
+  --bg-primary: #{$background};
+  --bg-warm: #{$background-warm};
+  --bg-warm-light: #{$background-warm-light};
+  --bg-dark: #{$background-dark};
+  --bg-dark-alt: #{$background-dark-alt};
+
+  // Text
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-tertiary: #{$text-tertiary};
+  --text-warm: #{$text-warm};
+  --text-light: #{$text-light};
+  --text-white: #{$text-white};
+
+  // Borders
+  --border-default: #{$border};
+  --border-light: #{$border-light};
+  --border-dark: #{$border-dark};
+  --border-warm: #{$border-warm};
+
+  // Spacing
+  --space-xs: #{$space-xs};
+  --space-sm: #{$space-sm};
+  --space-md: #{$space-md};
+  --space-lg: #{$space-lg};
+  --space-xl: #{$space-xl};
+
+  // Fonts
+  --font-primary: #{$font-family-primary};
+  --font-size-base: #{$font-size-base};
+
+  // Transitions
+  --transition-base: #{$transition-base};
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// 14. UTILITY MIXINS
+// ───────────────────────────────────────────────────────────────────────
+
+// Responsive Breakpoint Mixins
+@mixin mobile {
+  @media (max-width: $breakpoint-md - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// Container Mixin
+@mixin container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 $space-md;
+
+  @include desktop {
+    padding: 0 $space-xl;
+  }
+}
+
+// Card Mixin
+@mixin card {
+  background: $background;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  padding: $space-lg;
+  transition: $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+    transform: translateY(-4px);
+  }
+}
+
+// Button Reset Mixin
+@mixin button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+// Truncate Text Mixin
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Flex Center Mixin
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Absolute Center Mixin
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// END OF THEME SYSTEM
+// ═══════════════════════════════════════════════════════════════════════

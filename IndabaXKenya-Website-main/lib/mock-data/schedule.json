@@ -1,0 +1,194 @@
+[
+  {
+    "id": "day-1",
+    "day": "Day 1",
+    "date": "March 15, 2026",
+    "sessions": [
+      {
+        "id": "session-1-1",
+        "time": "08:00 - 09:00",
+        "title": "Registration & Welcome Coffee",
+        "type": "registration",
+        "location": "KICC Main Lobby",
+        "description": "Check-in, collect your conference badge and materials. Network over coffee and light breakfast."
+      },
+      {
+        "id": "session-1-2",
+        "time": "09:00 - 10:00",
+        "title": "Opening Ceremony & Keynote",
+        "type": "keynote",
+        "speaker": "Dr. Amina Wanjiru",
+        "speakerId": "1",
+        "location": "Main Hall",
+        "description": "Welcome address and opening keynote on 'The Future of AI in Africa: Opportunities and Challenges'"
+      },
+      {
+        "id": "session-1-3",
+        "time": "10:15 - 11:45",
+        "title": "Track A: NLP for African Languages",
+        "type": "track",
+        "speaker": "Multiple Speakers",
+        "location": "Hall A",
+        "description": "Research presentations on natural language processing for low-resource African languages. 4 paper presentations."
+      },
+      {
+        "id": "session-1-4",
+        "time": "10:15 - 11:45",
+        "title": "Track B: Computer Vision Applications",
+        "type": "track",
+        "speaker": "Prof. David Odhiambo",
+        "speakerId": "2",
+        "location": "Hall B",
+        "description": "Computer vision for agriculture, healthcare, and wildlife conservation. Live demos included."
+      },
+      {
+        "id": "session-1-5",
+        "time": "12:00 - 13:00",
+        "title": "Lunch Break & Networking",
+        "type": "break",
+        "location": "KICC Garden",
+        "description": "Buffet lunch and networking session"
+      },
+      {
+        "id": "session-1-6",
+        "time": "13:00 - 15:00",
+        "title": "Workshop: Deep Learning with PyTorch",
+        "type": "workshop",
+        "speaker": "Dr. Mariam Nduta",
+        "speakerId": "7",
+        "location": "Workshop Room 1",
+        "description": "Hands-on workshop building neural networks from scratch. Bring your laptop!"
+      },
+      {
+        "id": "session-1-7",
+        "time": "15:30 - 17:00",
+        "title": "Panel: AI Ethics in Africa",
+        "type": "panel",
+        "speaker": "Dr. Zainab Abiola & Others",
+        "speakerId": "3",
+        "location": "Main Hall",
+        "description": "Expert panel discussion on responsible AI deployment, bias, and governance frameworks for Africa."
+      }
+    ]
+  },
+  {
+    "id": "day-2",
+    "day": "Day 2",
+    "date": "March 16, 2026",
+    "sessions": [
+      {
+        "id": "session-2-1",
+        "time": "09:00 - 10:00",
+        "title": "Keynote: Healthcare AI",
+        "type": "keynote",
+        "speaker": "Dr. Fatima Hassan",
+        "speakerId": "5",
+        "location": "Main Hall",
+        "description": "AI-powered diagnostics for low-resource healthcare settings"
+      },
+      {
+        "id": "session-2-2",
+        "time": "10:15 - 12:00",
+        "title": "AI for Healthcare Symposium",
+        "type": "special",
+        "location": "Hall B",
+        "description": "Specialized symposium on medical AI applications in Africa"
+      },
+      {
+        "id": "session-2-3",
+        "time": "12:00 - 13:00",
+        "title": "Lunch & Poster Session",
+        "type": "break",
+        "location": "Exhibition Hall",
+        "description": "View 50+ research posters while enjoying lunch"
+      },
+      {
+        "id": "session-2-4",
+        "time": "13:00 - 15:00",
+        "title": "Workshop: Building NLP Models for African Languages",
+        "type": "workshop",
+        "speaker": "Dr. Amina Wanjiru",
+        "speakerId": "1",
+        "location": "Workshop Room 1",
+        "description": "Learn to build NLP models for Swahili, Yoruba, and other African languages"
+      },
+      {
+        "id": "session-2-5",
+        "time": "15:30 - 17:00",
+        "title": "Women in AI Kenya Meetup",
+        "type": "special",
+        "location": "Networking Lounge",
+        "description": "Networking and mentorship event for women in AI"
+      },
+      {
+        "id": "session-2-6",
+        "time": "18:00 - 20:00",
+        "title": "Evening Reception & Networking",
+        "type": "social",
+        "location": "KICC Rooftop",
+        "description": "Cocktail reception with live music and city views"
+      }
+    ]
+  },
+  {
+    "id": "day-3",
+    "day": "Day 3",
+    "date": "March 17, 2026",
+    "sessions": [
+      {
+        "id": "session-3-1",
+        "time": "09:00 - 10:30",
+        "title": "AI Startup Pitch Competition",
+        "type": "special",
+        "location": "Innovation Stage",
+        "description": "10 African AI startups compete for $20,000 in prizes"
+      },
+      {
+        "id": "session-3-2",
+        "time": "11:00 - 12:30",
+        "title": "Track C: Reinforcement Learning & Optimization",
+        "type": "track",
+        "speaker": "Dr. Michael Otieno",
+        "speakerId": "16",
+        "location": "Hall A",
+        "description": "Latest research in RL applications for energy, logistics, and finance"
+      },
+      {
+        "id": "session-3-3",
+        "time": "12:30 - 13:30",
+        "title": "Lunch & Career Fair",
+        "type": "break",
+        "location": "Exhibition Hall",
+        "description": "Meet with companies hiring AI talent across Africa"
+      },
+      {
+        "id": "session-3-4",
+        "time": "13:30 - 15:00",
+        "title": "Workshop: Deploying ML Models in Production",
+        "type": "workshop",
+        "speaker": "James Kimani",
+        "speakerId": "4",
+        "location": "Workshop Room 1",
+        "description": "Best practices for taking your ML models from research to production"
+      },
+      {
+        "id": "session-3-5",
+        "time": "15:30 - 16:30",
+        "title": "Closing Keynote & Awards",
+        "type": "keynote",
+        "speaker": "Samuel Mwangi",
+        "speakerId": "6",
+        "location": "Main Hall",
+        "description": "Conference wrap-up, best paper awards, and future of IndabaX Kenya"
+      },
+      {
+        "id": "session-3-6",
+        "time": "16:30 - 17:00",
+        "title": "Closing Remarks & Group Photo",
+        "type": "closing",
+        "location": "Main Hall",
+        "description": "Final words and official conference photo"
+      }
+    ]
+  }
+]

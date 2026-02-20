@@ -1,0 +1,242 @@
+[
+  {
+    "id": "photo-1",
+    "title": "Opening Keynote 2024",
+    "imageUrl": "/images/main-bg1.jpg",
+    "year": "2024",
+    "category": "Keynotes",
+    "description": "Prof. Sarah Njenga delivering the opening keynote on AI for Climate Change",
+    "photographer": "John Kamau",
+    "date": "2024-03-15"
+  },
+  {
+    "id": "photo-2",
+    "title": "Workshop Session 2024",
+    "imageUrl": "/images/main-bg2.jpg",
+    "year": "2024",
+    "category": "Workshops",
+    "description": "Hands-on deep learning workshop with 50+ participants",
+    "photographer": "Mary Wanjiku",
+    "date": "2024-03-16"
+  },
+  {
+    "id": "photo-3",
+    "title": "Panel Discussion 2024",
+    "imageUrl": "/images/main-bg3.jpg",
+    "year": "2024",
+    "category": "Panels",
+    "description": "AI Ethics panel featuring leading researchers from across Africa",
+    "photographer": "David Ochieng",
+    "date": "2024-03-16"
+  },
+  {
+    "id": "photo-4",
+    "title": "Networking Session 2024",
+    "imageUrl": "/images/main-bg4.jpg",
+    "year": "2024",
+    "category": "Networking",
+    "description": "Attendees networking during coffee break at KICC",
+    "photographer": "Grace Akinyi",
+    "date": "2024-03-15"
+  },
+  {
+    "id": "photo-5",
+    "title": "Poster Presentations 2024",
+    "imageUrl": "/images/main-bg5.jpg",
+    "year": "2024",
+    "category": "Posters",
+    "description": "Research poster session showcasing 30+ AI projects",
+    "photographer": "Peter Maina",
+    "date": "2024-03-17"
+  },
+  {
+    "id": "photo-6",
+    "title": "Speaker: Dr. Amina Wanjiru",
+    "imageUrl": "/images/speakers1.jpg",
+    "year": "2024",
+    "category": "Speakers",
+    "description": "Dr. Amina Wanjiru presenting on NLP for African languages",
+    "photographer": "Sarah Otieno",
+    "date": "2024-03-15"
+  },
+  {
+    "id": "photo-7",
+    "title": "Speaker: Prof. David Odhiambo",
+    "imageUrl": "/images/speakers2.jpg",
+    "year": "2024",
+    "category": "Speakers",
+    "description": "Prof. Odhiambo on Computer Vision for Agriculture",
+    "photographer": "James Kiptoo",
+    "date": "2024-03-15"
+  },
+  {
+    "id": "photo-8",
+    "title": "Speaker: Dr. Zainab Abiola",
+    "imageUrl": "/images/speakers3.jpg",
+    "year": "2024",
+    "category": "Speakers",
+    "description": "Dr. Abiola discussing AI Ethics and Policy",
+    "photographer": "Lucy Njoki",
+    "date": "2024-03-16"
+  },
+  {
+    "id": "photo-9",
+    "title": "ML Workshop 2023",
+    "imageUrl": "/images/blog1.jpg",
+    "year": "2023",
+    "category": "Workshops",
+    "description": "Introduction to Machine Learning workshop for beginners",
+    "photographer": "Michael Otieno",
+    "date": "2023-03-20"
+  },
+  {
+    "id": "photo-10",
+    "title": "Conference Opening 2023",
+    "imageUrl": "/images/blog2.jpg",
+    "year": "2023",
+    "category": "Keynotes",
+    "description": "IndabaX Kenya 2023 opening ceremony at KICC",
+    "photographer": "Anne Wambui",
+    "date": "2023-03-18"
+  },
+  {
+    "id": "photo-11",
+    "title": "Team Building 2023",
+    "imageUrl": "/images/blog3.jpg",
+    "year": "2023",
+    "category": "Social",
+    "description": "Team building activities and social mixer",
+    "photographer": "Daniel Kipchirchir",
+    "date": "2023-03-19"
+  },
+  {
+    "id": "photo-12",
+    "title": "Hackathon Finals 2023",
+    "imageUrl": "/images/blog4.jpg",
+    "year": "2023",
+    "category": "Hackathon",
+    "description": "AI Hackathon final presentations and judging",
+    "photographer": "Rachel Chebet",
+    "date": "2023-03-21"
+  },
+  {
+    "id": "photo-13",
+    "title": "Awards Ceremony 2023",
+    "imageUrl": "/images/blog5.jpg",
+    "year": "2023",
+    "category": "Awards",
+    "description": "Best Paper and Best Poster award ceremony",
+    "photographer": "Francis Mutua",
+    "date": "2023-03-21"
+  },
+  {
+    "id": "photo-14",
+    "title": "Group Photo 2023",
+    "imageUrl": "/images/blog6.jpg",
+    "year": "2023",
+    "category": "Social",
+    "description": "All attendees group photo at conference closing",
+    "photographer": "Susan Auma",
+    "date": "2023-03-21"
+  },
+  {
+    "id": "photo-15",
+    "title": "Lightning Talks 2023",
+    "imageUrl": "/images/blog7.jpg",
+    "year": "2023",
+    "category": "Talks",
+    "description": "5-minute lightning talks by young researchers",
+    "photographer": "Kevin Ngugi",
+    "date": "2023-03-20"
+  },
+  {
+    "id": "photo-16",
+    "title": "Opening Day 2022",
+    "imageUrl": "/images/about1.jpg",
+    "year": "2022",
+    "category": "Keynotes",
+    "description": "First-ever IndabaX Kenya conference opening",
+    "photographer": "Timothy Kimani",
+    "date": "2022-04-10"
+  },
+  {
+    "id": "photo-17",
+    "title": "Workshop Session 2022",
+    "imageUrl": "/images/about2.jpg",
+    "year": "2022",
+    "category": "Workshops",
+    "description": "Deep Learning fundamentals workshop",
+    "photographer": "Betty Wairimu",
+    "date": "2022-04-11"
+  },
+  {
+    "id": "photo-18",
+    "title": "Networking 2022",
+    "imageUrl": "/images/about3.jpg",
+    "year": "2022",
+    "category": "Networking",
+    "description": "Participants networking over lunch",
+    "photographer": "Joseph Omondi",
+    "date": "2022-04-11"
+  },
+  {
+    "id": "photo-19",
+    "title": "Panel 2022",
+    "imageUrl": "/images/about4.jpg",
+    "year": "2022",
+    "category": "Panels",
+    "description": "Women in AI panel discussion",
+    "photographer": "Faith Njeri",
+    "date": "2022-04-12"
+  },
+  {
+    "id": "photo-20",
+    "title": "Closing Keynote 2022",
+    "imageUrl": "/images/speakers4.jpg",
+    "year": "2022",
+    "category": "Keynotes",
+    "description": "Closing keynote on Future of AI in Africa",
+    "photographer": "George Kariuki",
+    "date": "2022-04-12"
+  },
+  {
+    "id": "photo-21",
+    "title": "Research Posters 2022",
+    "imageUrl": "/images/speakers5.jpg",
+    "year": "2022",
+    "category": "Posters",
+    "description": "Student research poster exhibition",
+    "photographer": "Esther Wangari",
+    "date": "2022-04-11"
+  },
+  {
+    "id": "photo-22",
+    "title": "Sponsor Booth 2024",
+    "imageUrl": "/images/speakers6.jpg",
+    "year": "2024",
+    "category": "Sponsors",
+    "description": "Sponsor booths and exhibitions",
+    "photographer": "Martin Odhiambo",
+    "date": "2024-03-16"
+  },
+  {
+    "id": "photo-23",
+    "title": "Code Sprint 2024",
+    "imageUrl": "/images/speakers7.jpg",
+    "year": "2024",
+    "category": "Hackathon",
+    "description": "24-hour AI code sprint challenge",
+    "photographer": "Alice Muthoni",
+    "date": "2024-03-17"
+  },
+  {
+    "id": "photo-24",
+    "title": "Student Presentations 2023",
+    "imageUrl": "/images/speakers8.jpg",
+    "year": "2023",
+    "category": "Talks",
+    "description": "Undergraduate AI project presentations",
+    "photographer": "Brian Kibet",
+    "date": "2023-03-19"
+  }
+]

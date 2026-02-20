@@ -1,0 +1,370 @@
+// ═══════════════════════════════════════════════════════════════════════
+// FOOTER ENHANCEMENTS - Issue #35 Redesign
+// ═══════════════════════════════════════════════════════════════════════
+// Improved 4-column footer layout with better styling
+
+// ───────────────────────────────────────────────────────────────────────
+// Main Footer Styles
+// ───────────────────────────────────────────────────────────────────────
+.footer-area.footer-redesigned {
+  background: linear-gradient(180deg, #0a0a12 0%, #0d0d1a 100%);
+  padding-top: 70px;
+
+  // Footer Logo Styling - Keep it simple
+  .footer-logo {
+    margin-bottom: 20px;
+
+    .logo-image {
+      display: block;
+    }
+  }
+
+  // Footer Description
+  .footer-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  // Section Titles
+  .single-footer-widget {
+    h3 {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 12px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 2px;
+        background: linear-gradient(90deg, #00ba00, #006700);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  // Footer Links Styling
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 12px;
+
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        transition: all 0.3s ease;
+        display: inline-block;
+        position: relative;
+        padding-left: 0;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 0;
+          height: 1px;
+          background: #00ba00;
+          transition: width 0.3s ease;
+        }
+
+        &:hover {
+          color: #00ba00;
+          padding-left: 5px;
+
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // Contact List Styling
+  .footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 18px;
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, rgba(0, 186, 0, 0.15), rgba(0, 103, 0, 0.15));
+        border: 1px solid rgba(0, 186, 0, 0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+
+        i {
+          color: #00ba00;
+          font-size: 16px;
+        }
+      }
+
+      .contact-text {
+        .contact-label {
+          display: block;
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 4px;
+        }
+
+        a, span {
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 14px;
+          transition: color 0.3s ease;
+        }
+
+        a:hover {
+          color: #00ba00;
+        }
+      }
+    }
+  }
+
+  // Social Links Enhancement
+  .social-links {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin: 0;
+
+      a {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+
+        &.twitter {
+          background: rgba(29, 161, 242, 0.15);
+          border: 1px solid rgba(29, 161, 242, 0.3);
+          color: #1DA1F2;
+
+          &:hover {
+            background: #1DA1F2;
+            color: white;
+            transform: translateY(-3px);
+          }
+        }
+
+        &.linkedin {
+          background: rgba(0, 119, 181, 0.15);
+          border: 1px solid rgba(0, 119, 181, 0.3);
+          color: #0077B5;
+
+          &:hover {
+            background: #0077B5;
+            color: white;
+            transform: translateY(-3px);
+          }
+        }
+
+        &.youtube {
+          background: rgba(255, 0, 0, 0.15);
+          border: 1px solid rgba(255, 0, 0, 0.3);
+          color: #FF0000;
+
+          &:hover {
+            background: #FF0000;
+            color: white;
+            transform: translateY(-3px);
+          }
+        }
+
+        &.instagram {
+          background: rgba(225, 48, 108, 0.15);
+          border: 1px solid rgba(225, 48, 108, 0.3);
+          color: #E1306C;
+
+          &:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+
+  // Copyright Area Enhancement
+  .copyright-area {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px 0 25px;
+    margin-top: 50px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0 0 15px 0;
+      list-style: none;
+
+      li {
+        margin: 0;
+
+        &::before {
+          display: none;
+        }
+
+        a {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 13px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #00ba00;
+          }
+        }
+      }
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .built-by {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+
+      a {
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #00ba00;
+        }
+      }
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Responsive Adjustments
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: 991px) {
+  .footer-area.footer-redesigned {
+    .single-footer-widget {
+      margin-bottom: 30px;
+
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-area.footer-redesigned {
+    padding-top: 40px;
+
+    // Logo section - LEFT align
+    .footer-logo {
+      text-align: left;
+
+      .logo-image {
+        margin: 0;
+      }
+    }
+
+    // Description - LEFT align
+    .footer-description {
+      text-align: left;
+    }
+
+    // Social links - LEFT align
+    .social-links {
+      justify-content: flex-start;
+    }
+
+    // Widget titles - LEFT align with underline on left
+    .single-footer-widget {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        text-align: left;
+
+        &::after {
+          left: 0;
+          transform: none;
+        }
+      }
+    }
+
+    // Footer links - LEFT align
+    .footer-links {
+      text-align: left;
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          padding: 4px 0;
+        }
+      }
+    }
+
+    // Contact items - LEFT align
+    .footer-contact-list {
+      .contact-item {
+        justify-content: flex-start;
+        text-align: left;
+
+        .contact-text a,
+        .contact-text span {
+          word-break: break-all;
+        }
+      }
+    }
+
+    // Copyright area - LEFT align
+    .copyright-area {
+      margin-top: 30px;
+      padding-top: 25px;
+
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

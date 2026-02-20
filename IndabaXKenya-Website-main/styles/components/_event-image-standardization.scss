@@ -1,0 +1,194 @@
+// ═══════════════════════════════════════════════════════════════════════
+// EVENT IMAGE STANDARDIZATION
+// ═══════════════════════════════════════════════════════════════════════
+// Ensures ALL event banner images have consistent, uniform sizing
+// regardless of original image dimensions or aspect ratios
+// ═══════════════════════════════════════════════════════════════════════
+
+// ───────────────────────────────────────────────────────────────────────
+// Global Event Image Standards
+// ───────────────────────────────────────────────────────────────────────
+
+// Standard aspect ratio: 16:9 (wide banner format)
+// Desktop height: 300px
+// Mobile height: 240px
+
+.event-image,
+.event-image-wrapper,
+[class*="event"] img {
+  // Ensure all images use object-fit
+  img {
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Upcoming Events - Homepage
+// ───────────────────────────────────────────────────────────────────────
+.upcoming-events-area {
+  .single-event-card {
+    .event-image {
+      // Uniform container
+      position: relative;
+      width: 100%;
+      height: 300px; // Standard desktop height
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+      }
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Events Grid/List Pages
+// ───────────────────────────────────────────────────────────────────────
+.events-grid-area {
+  .event-card {
+    .event-image-wrapper {
+      // Uniform container
+      position: relative;
+      width: 100%;
+      height: 300px; // Standard desktop height
+      overflow: hidden;
+
+      .event-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+      }
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Event Detail Page (if exists)
+// ───────────────────────────────────────────────────────────────────────
+.event-details-area {
+  .event-main-image,
+  .event-banner {
+    position: relative;
+    width: 100%;
+    height: 400px; // Larger for detail pages
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Responsive - Mobile & Tablet
+// ───────────────────────────────────────────────────────────────────────
+
+// Tablet
+@media (max-width: 991px) {
+  .upcoming-events-area .single-event-card .event-image,
+  .events-grid-area .event-card .event-image-wrapper {
+    height: 270px; // Slightly smaller on tablet
+  }
+
+  .event-details-area .event-main-image,
+  .event-details-area .event-banner {
+    height: 350px;
+  }
+}
+
+// Mobile
+@media (max-width: 767px) {
+  .upcoming-events-area .single-event-card .event-image,
+  .events-grid-area .event-card .event-image-wrapper {
+    height: 240px; // Standard mobile height
+  }
+
+  .event-details-area .event-main-image,
+  .event-details-area .event-banner {
+    height: 280px;
+  }
+}
+
+// Small mobile
+@media (max-width: 575px) {
+  .upcoming-events-area .single-event-card .event-image,
+  .events-grid-area .event-card .event-image-wrapper {
+    height: 220px; // Compact for very small screens
+  }
+
+  .event-details-area .event-main-image,
+  .event-details-area .event-banner {
+    height: 250px;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Fallback for ANY Event Image
+// ───────────────────────────────────────────────────────────────────────
+
+// Catch-all to ensure no event image escapes standardization
+[class*="event"][class*="image"],
+[class*="event"][class*="banner"],
+[class*="event"] .image-container {
+  img {
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Image Loading States
+// ───────────────────────────────────────────────────────────────────────
+
+// Prevent layout shift while images load
+.event-image,
+.event-image-wrapper {
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    z-index: 0;
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Print Styles
+// ───────────────────────────────────────────────────────────────────────
+@media print {
+  .event-image,
+  .event-image-wrapper {
+    height: auto !important;
+
+    img {
+      object-fit: contain !important;
+      max-height: 400px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "headers": [
+    {
+      "source": "/api/noai/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, s-maxage=300, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=600"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/revalidate-noai",
+      "schedule": "0 */6 * * *"
+    }
+  ]
+}

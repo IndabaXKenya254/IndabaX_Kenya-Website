@@ -1,0 +1,138 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - PARTNERS & SPONSORS SECTION STYLES
+// ═══════════════════════════════════════════════════════════════════════
+
+.partner-area {
+  overflow: hidden;
+
+  .partner-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .single-partner-item {
+    background: $background;
+    border-radius: $radius-lg;
+    padding: 30px 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-color: $primary;
+
+      .partner-logo img {
+        filter: grayscale(0%) !important;
+        opacity: 1 !important;
+      }
+
+      .partner-name {
+        color: $primary;
+      }
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .partner-logo {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .partner-name {
+      font-size: 14px;
+      font-weight: $font-weight-semibold;
+      color: $text-secondary;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
+      line-height: 1.4;
+      margin: 0;
+    }
+  }
+
+  .sponsor-cta {
+    font-size: 16px;
+    color: $text-secondary;
+    margin: 0;
+
+    .sponsor-link {
+      color: $primary;
+      font-weight: $font-weight-semibold;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@include tablet {
+  .partner-area {
+    .single-partner-item {
+      padding: 25px 15px;
+
+      .partner-logo {
+        height: 80px;
+      }
+
+      .partner-name {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .partner-area {
+    .single-partner-item {
+      padding: 20px 15px;
+
+      .partner-logo {
+        height: 70px;
+      }
+
+      .partner-name {
+        font-size: 12px;
+      }
+    }
+
+    .sponsor-cta {
+      font-size: 14px;
+    }
+  }
+}

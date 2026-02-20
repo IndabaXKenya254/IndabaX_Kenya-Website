@@ -1,0 +1,1022 @@
+// ═══════════════════════════════════════════════════════════════════════
+// MOBILE RESPONSIVE FIXES - IndabaX Kenya Website
+// ═══════════════════════════════════════════════════════════════════════
+// Created: February 2026
+// Description: Surgical fixes for 50+ mobile responsive issues
+// Based on: Neon Smarta 2 mobile testing screenshots
+// ═══════════════════════════════════════════════════════════════════════
+
+// Import theme for access to variables and mixins
+@import 'theme';
+
+// ───────────────────────────────────────────────────────────────────────
+// BREAKPOINT VARIABLES (Mobile-First)
+// ───────────────────────────────────────────────────────────────────────
+$mobile-xs: 320px;   // Extra small phones
+$mobile-sm: 375px;   // Standard phones (iPhone SE)
+$mobile-md: 480px;   // Large phones
+$mobile-lg: 640px;   // Landscape/small tablets
+$tablet: 768px;      // Tablets
+$desktop: 1024px;    // Desktop
+
+// ═══════════════════════════════════════════════════════════════════════
+// PHASE 2: CRITICAL ISSUES (12 Fixes)
+// ═══════════════════════════════════════════════════════════════════════
+
+// ───────────────────────────────────────────────────────────────────────
+// C1: Hero Font Too Large Below 375px
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $mobile-sm) {
+  .main-banner-content h1 {
+    font-size: clamp(20px, 6vw, 28px) !important;
+    line-height: 1.3 !important;
+  }
+}
+
+@media (max-width: $mobile-xs) {
+  .main-banner-content h1 {
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+  }
+
+  .main-banner-content p,
+  .main-banner-content .hero-description {
+    font-size: 13px !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// C2: Newsletter Email Input INVISIBLE
+// Critical fix: Email input was hidden behind button on mobile
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .newsletter-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    max-width: 100% !important;
+
+    .form-control {
+      width: 100% !important;
+      height: 50px !important;
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      background: #fff !important;
+      border: 2px solid #e0e0e0 !important;
+      border-radius: 8px !important;
+      padding: 12px 16px !important;
+      font-size: 16px !important; // Prevents iOS zoom on focus
+
+      &:focus {
+        border-color: $primary !important;
+        outline: none !important;
+      }
+    }
+
+    .btn {
+      position: static !important;
+      width: 100% !important;
+      height: 50px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+    }
+  }
+
+  // Subscribe area specific fixes
+  .subscribe-area .subscribe-inner {
+    padding: 30px 20px !important;
+
+    h2 {
+      font-size: 24px !important;
+      line-height: 1.3 !important;
+      margin-bottom: 10px !important;
+    }
+
+    span {
+      font-size: 14px !important;
+    }
+
+    .subscribe-description {
+      font-size: 14px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .privacy-note {
+      font-size: 12px !important;
+      margin-top: 15px !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// C3: Gallery Image Tiny with Whitespace
+// Fix: Make gallery images full-width on mobile
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .gallery-grid-area {
+    .row {
+      margin-left: -8px !important;
+      margin-right: -8px !important;
+    }
+
+    .col-md-6,
+    .col-lg-4,
+    .col-xl-3 {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 8px !important;
+      padding-right: 8px !important;
+    }
+
+    .gallery-item {
+      margin-bottom: 20px !important;
+
+      .gallery-image-wrapper {
+        aspect-ratio: 4/3 !important;
+      }
+
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// C4: Footer Alignment (Title LEFT, Content CENTER - needs consistency)
+// Fix: Make everything LEFT aligned on mobile
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .footer-area.footer-redesigned {
+    padding-top: 40px !important;
+
+    // Logo section - left align
+    .footer-logo {
+      text-align: left !important;
+
+      .logo-image {
+        margin: 0 !important;
+      }
+    }
+
+    // Description - left align
+    .footer-description {
+      text-align: left !important;
+    }
+
+    // Social links - left align
+    .social-links {
+      justify-content: flex-start !important;
+    }
+
+    // Widget titles - left align with underline
+    .single-footer-widget h3 {
+      text-align: left !important;
+
+      &::after {
+        left: 0 !important;
+        transform: none !important;
+      }
+    }
+
+    // Footer links - left align
+    .footer-links {
+      text-align: left !important;
+
+      li {
+        text-align: left !important;
+      }
+    }
+
+    // Contact list - left align
+    .footer-contact-list {
+      .contact-item {
+        justify-content: flex-start !important;
+        text-align: left !important;
+      }
+    }
+
+    // Add spacing between footer columns
+    .single-footer-widget {
+      margin-bottom: 35px !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    // Copyright area
+    .copyright-area {
+      margin-top: 30px !important;
+      padding-top: 25px !important;
+
+      ul {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+      }
+
+      p {
+        text-align: left !important;
+      }
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// C6: No Spacing Between Contact & Subscribe Sections
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .subscribe-area {
+    margin-top: 50px !important;
+  }
+
+  .contact-area + .subscribe-area {
+    margin-top: 60px !important;
+  }
+
+  // Ensure sections have proper spacing
+  section,
+  .ptb-120 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  // Reduce excessive section padding on mobile
+  .why-support-area,
+  .impact-area,
+  .payment-methods-area,
+  .donate-contact-area {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// C8: Blog Text Touching Screen Edges
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .post-content,
+  .blog-details,
+  .news-details-area .post-content {
+    padding: 20px 16px !important;
+
+    .post-body {
+      padding: 0 !important;
+
+      p {
+        padding-right: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+      }
+
+      // Ensure images don't overflow
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      // Fix code blocks overflow
+      pre {
+        overflow-x: auto !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+
+  // Post header
+  .post-header {
+    h1 {
+      font-size: 22px !important;
+      line-height: 1.35 !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// C9: Stats Alignment Inconsistency
+// Fix: Center align all stats elements
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .funfacts-area,
+  .fun-facts-area {
+    .section-title {
+      text-align: center !important;
+    }
+
+    .single-funfact,
+    .funfact-item {
+      text-align: center !important;
+      margin-bottom: 30px !important;
+
+      .icon {
+        margin: 0 auto 15px !important;
+      }
+
+      h3 {
+        text-align: center !important;
+      }
+
+      p {
+        text-align: center !important;
+      }
+    }
+
+    // Consistent spacing between elements
+    .funfact-icon,
+    .funfact-number,
+    .funfact-label {
+      display: block !important;
+      text-align: center !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// C12: Footer Text Cut Off
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .footer-description,
+  .copyright-area p,
+  .footer-area p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
+  // Long email addresses
+  .footer-contact-list .contact-text a,
+  .footer-contact-list .contact-text span {
+    word-break: break-all !important;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// PHASE 3: HIGH PRIORITY ISSUES (20 Fixes)
+// ═══════════════════════════════════════════════════════════════════════
+
+// ───────────────────────────────────────────────────────────────────────
+// H1: Newsletter Heading Line Breaks
+// Control typography for better responsive sizing
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $mobile-md) {
+  .subscribe-inner h2 {
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+  }
+}
+
+@media (max-width: $mobile-sm) {
+  .subscribe-inner h2 {
+    font-size: 20px !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H2: Year Tabs Inconsistent Styling
+// Normalize tab styling (all same style)
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .gallery-filters,
+  .year-tabs,
+  .filter-tabs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+
+    .tab-btn,
+    .year-btn,
+    .filter-btn,
+    button {
+      flex: 0 0 auto !important;
+      min-width: 60px !important;
+      padding: 10px 16px !important;
+      font-size: 14px !important;
+      border-radius: 8px !important;
+      border: 2px solid $primary !important;
+      background: transparent !important;
+      color: $primary !important;
+      transition: all 0.3s ease !important;
+
+      &.active,
+      &:hover {
+        background: $primary !important;
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H3: Green Underline Centered but Title Left
+// Align underline with title (both left on mobile)
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .section-title {
+    text-align: left !important;
+
+    .bar {
+      margin: 15px 0 0 0 !important;
+    }
+
+    &::after {
+      left: 0 !important;
+      transform: none !important;
+    }
+
+    // For centered sections, allow override
+    &.text-center {
+      text-align: center !important;
+
+      .bar {
+        margin: 15px auto 0 !important;
+      }
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H4: Footer Links Too Spread Out
+// Reduce vertical spacing
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .footer-links li {
+    margin-bottom: 8px !important;
+
+    a {
+      padding: 4px 0 !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H5: "Welcome to IndabaX Kenya" Cut Off
+// Add proper padding at top of hero
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .main-banner {
+    padding-top: 100px !important;
+    min-height: auto !important;
+  }
+
+  .main-banner-content {
+    padding: 0 16px !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H8: Jarring Section Transitions
+// Add spacing and smooth color transitions
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  // Add consistent section margins
+  .about-area,
+  .speakers-area,
+  .schedule-area,
+  .partner-area,
+  .blog-area,
+  .funfacts-area,
+  .gallery-area,
+  .contact-area,
+  .subscribe-area {
+    margin-bottom: 0 !important;
+  }
+
+  // Smooth transition between light and dark sections
+  section[class*="bg-"] + section:not([class*="bg-"]),
+  section:not([class*="bg-"]) + section[class*="bg-"] {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: inherit;
+      filter: blur(10px);
+      z-index: -1;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H9: Logo Pixelated with White Background
+// Ensure logo renders cleanly
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .navbar-brand img,
+  .footer-logo img,
+  .logo-image {
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    background: transparent !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H10: Hamburger Menu Styling
+// Consistent border/background treatment
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .navbar-toggler {
+    border: 2px solid $primary !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    background: transparent !important;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($primary, 0.2) !important;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23006700' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H12: Map Image Whitespace
+// Make map full-width on mobile
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .contact-area .map-container,
+  .venue-area .map-container,
+  .google-map,
+  iframe[src*="google.com/maps"] {
+    width: 100% !important;
+    height: 300px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H15: Long Email Overflow
+// Add word-break for long email addresses
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  a[href^="mailto:"],
+  .email-link,
+  .contact-email {
+    word-break: break-all !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H16: Donate Page Excessive Whitespace
+// Reduce section padding on mobile
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .donations-page,
+  .donate-page {
+    .ptb-120 {
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+    }
+
+    .section-title {
+      margin-bottom: 25px !important;
+    }
+
+    // Reduce card gaps
+    .row {
+      row-gap: 16px !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H17: "CONTACT US" Poor Contrast
+// Improve text contrast on light backgrounds
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .section-title span,
+  .contact-area .section-title span {
+    color: $primary !important;
+    font-weight: 600 !important;
+  }
+
+  .contact-area h2 {
+    color: $text-primary !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H18: No Visual Containers
+// Add subtle card styling for section grouping
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .contact-info-box,
+  .single-contact-info,
+  .info-card {
+    background: #fff !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// H19: Touch Targets Too Small
+// Ensure minimum 44x44px on all interactive elements
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  a,
+  button,
+  .btn,
+  input[type="submit"],
+  input[type="button"],
+  [role="button"] {
+    min-height: 44px !important;
+    min-width: 44px !important;
+
+    // For inline links, use padding instead
+    &:not(.btn):not(button) {
+      min-height: auto !important;
+      min-width: auto !important;
+      padding: 8px 0 !important;
+    }
+  }
+
+  // Social icons
+  .social-links a,
+  .share-btn,
+  .social-icon {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  // Navigation links
+  .navbar-nav .nav-link {
+    padding: 12px 16px !important;
+  }
+
+  // Form inputs
+  input,
+  select,
+  textarea {
+    min-height: 44px !important;
+    font-size: 16px !important; // Prevent iOS zoom
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// PHASE 4: MEDIUM PRIORITY (15+ Fixes)
+// ═══════════════════════════════════════════════════════════════════════
+
+// ───────────────────────────────────────────────────────────────────────
+// Container Padding Consistency (16px mobile)
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .container,
+  .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Typography Scale with clamp()
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  h1, .h1 {
+    font-size: clamp(24px, 6vw, 36px) !important;
+  }
+
+  h2, .h2 {
+    font-size: clamp(20px, 5vw, 28px) !important;
+  }
+
+  h3, .h3 {
+    font-size: clamp(18px, 4.5vw, 24px) !important;
+  }
+
+  h4, .h4 {
+    font-size: clamp(16px, 4vw, 20px) !important;
+  }
+
+  p, .body-text {
+    font-size: clamp(14px, 3.5vw, 16px) !important;
+    line-height: 1.7 !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Card/Component Spacing Normalization
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .card,
+  .single-box,
+  .feature-box,
+  .service-box,
+  .team-card,
+  .speaker-card {
+    margin-bottom: 20px !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Button Width Standardization
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $mobile-md) {
+  .btn,
+  .button,
+  input[type="submit"] {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  // Button groups should stack
+  .btn-group,
+  .button-group,
+  .about-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+
+    .btn {
+      margin: 0 !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Image Border-Radius Consistency
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .about-image img,
+  .feature-image img,
+  .post-image img,
+  .gallery-image img {
+    border-radius: 12px !important;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// PHASE 5: COMPONENT-SPECIFIC FIXES
+// ═══════════════════════════════════════════════════════════════════════
+
+// ───────────────────────────────────────────────────────────────────────
+// GoTop Button Redesign (Circular with Arrow Icon)
+// ───────────────────────────────────────────────────────────────────────
+.back-to-top {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  background: $primary !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 999 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+  padding: 0 !important;
+
+  // Icon styling
+  i {
+    font-size: 22px !important;
+    color: #fff !important;
+    line-height: 1 !important;
+  }
+
+  &:hover {
+    background: $primary-dark !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-light !important;
+    outline-offset: 2px !important;
+  }
+}
+
+@media (max-width: $tablet - 1) {
+  .back-to-top {
+    width: 48px !important;
+    height: 48px !important;
+    bottom: 16px !important;
+    right: 16px !important;
+
+    i {
+      font-size: 20px !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// FunFact Component Alignment
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .single-funfact {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 25px 15px !important;
+
+    .icon,
+    .funfact-icon {
+      margin-bottom: 15px !important;
+    }
+
+    h3 {
+      margin-bottom: 8px !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Donate Page Contact Boxes Fix (C5: Colored Bars Issue)
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .donate-contact-area,
+  .contact-boxes {
+    .contact-box,
+    .info-box {
+      background: #fff !important;
+      padding: 20px !important;
+      margin-bottom: 16px !important;
+      border-radius: 12px !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+      display: block !important;
+
+      // Reset any colored bar styling
+      &::before,
+      &::after {
+        display: none !important;
+      }
+
+      .icon-wrapper,
+      .contact-icon {
+        background: rgba($primary, 0.1) !important;
+        color: $primary !important;
+      }
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Speaker Cards Mobile Layout
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .speakers-area .row,
+  .speakers-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+
+    .col-lg-3,
+    .col-md-4,
+    .col-sm-6 {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+
+  .single-speakers,
+  .speaker-card {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width: $mobile-md) {
+  .speakers-area .row,
+  .speakers-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Event Cards Mobile Layout
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .events-area .single-event,
+  .event-card {
+    flex-direction: column !important;
+
+    .event-image {
+      width: 100% !important;
+      height: 200px !important;
+    }
+
+    .event-content {
+      padding: 20px !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Previous Editions / Years Section
+// ───────────────────────────────────────────────────────────────────────
+@media (max-width: $tablet - 1) {
+  .previous-editions-area,
+  .years-section {
+    .year-card {
+      padding: 20px !important;
+      margin-bottom: 16px !important;
+    }
+
+    .year-tabs {
+      margin-bottom: 25px !important;
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// UTILITY CLASSES FOR MOBILE
+// ═══════════════════════════════════════════════════════════════════════
+
+@media (max-width: $tablet - 1) {
+  // Hide on mobile
+  .hide-mobile,
+  .desktop-only {
+    display: none !important;
+  }
+
+  // Show on mobile
+  .show-mobile,
+  .mobile-only {
+    display: block !important;
+  }
+
+  // Full width on mobile
+  .full-width-mobile {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  // Center on mobile
+  .center-mobile {
+    text-align: center !important;
+
+    > * {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+  // Stack on mobile (for flex containers)
+  .stack-mobile {
+    flex-direction: column !important;
+
+    > * {
+      width: 100% !important;
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// ACCESSIBILITY IMPROVEMENTS
+// ═══════════════════════════════════════════════════════════════════════
+
+// Focus states for keyboard navigation
+@media (max-width: $tablet - 1) {
+  *:focus {
+    outline: 2px solid $primary !important;
+    outline-offset: 2px !important;
+  }
+
+  // Skip link (for screen readers)
+  .skip-link {
+    position: absolute !important;
+    top: -40px !important;
+    left: 0 !important;
+    background: $primary !important;
+    color: #fff !important;
+    padding: 8px 16px !important;
+    z-index: 10000 !important;
+
+    &:focus {
+      top: 0 !important;
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// END OF MOBILE RESPONSIVE FIXES
+// ═══════════════════════════════════════════════════════════════════════

@@ -1,0 +1,414 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - CALL FOR PAPERS FORM STYLES
+// ═══════════════════════════════════════════════════════════════════════
+
+.cfp-form-area {
+  .section-description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: $text-secondary;
+    font-size: $font-size-lg;
+  }
+
+  .cfp-deadline {
+    background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+    color: $text-white;
+    padding: 20px 30px;
+    border-radius: $radius-lg;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 18px;
+
+    i {
+      font-size: 24px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    strong {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .cfp-form-wrapper {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+  }
+
+  .cfp-form {
+    .form-section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 2px solid #f0f0f0;
+
+      &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:before {
+          content: "";
+          width: 4px;
+          height: 24px;
+          background: $gradient-primary;
+          border-radius: $radius-sm;
+        }
+      }
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-size: 15px;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: 8px;
+
+        .required {
+          color: $secondary;
+        }
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: $radius-md;
+        font-size: 15px;
+        transition: all 0.3s ease;
+
+        &:focus {
+          outline: none;
+          border-color: $primary;
+          box-shadow: 0 0 0 3px rgba(255, 87, 51, 0.1);
+        }
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .form-text {
+        display: block;
+        font-size: 13px;
+        color: $text-secondary;
+        margin-top: 5px;
+      }
+    }
+
+    // Submission Type Selection
+    .submission-types {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      .submission-option {
+        cursor: pointer;
+
+        input[type="radio"] {
+          position: absolute;
+          opacity: 0;
+
+          &:checked + .submission-card {
+            border-color: $primary;
+            background: linear-gradient(
+              135deg,
+              rgba(255, 87, 51, 0.05) 0%,
+              rgba(255, 87, 51, 0.02) 100%
+            );
+            box-shadow: 0 10px 30px rgba(255, 87, 51, 0.15);
+            transform: translateY(-5px);
+
+            i {
+              color: $primary;
+            }
+
+            h4 {
+              color: $primary;
+            }
+          }
+        }
+
+        .submission-card {
+          padding: 30px;
+          border: 2px solid #e0e0e0;
+          border-radius: $radius-lg;
+          text-align: center;
+          transition: all 0.3s ease;
+          background: $background;
+
+          &:hover {
+            border-color: $primary;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          }
+
+          i {
+            font-size: 48px;
+            color: $text-secondary;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+          }
+
+          h4 {
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+            color: $text-primary;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: 14px;
+            color: $text-secondary;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    // File Upload
+    .file-upload-wrapper {
+      position: relative;
+
+      .file-input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .file-label {
+        display: block;
+        padding: 15px 20px;
+        border: 2px dashed #e0e0e0;
+        border-radius: $radius-md;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: #fafafa;
+
+        i {
+          font-size: 24px;
+          color: $primary;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+
+        &:hover {
+          border-color: $primary;
+          background: rgba(255, 87, 51, 0.02);
+        }
+      }
+    }
+
+    .upload-progress {
+      margin-top: 15px;
+      position: relative;
+      height: 30px;
+      background: #f0f0f0;
+      border-radius: $radius-md;
+      overflow: hidden;
+
+      .progress-bar {
+        height: 100%;
+        background: $gradient-primary;
+        transition: width 0.3s ease;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: $font-weight-bold;
+        color: $text-white;
+        mix-blend-mode: difference;
+      }
+    }
+
+    .upload-success {
+      margin-top: 10px;
+      color: #10b981;
+      font-weight: $font-weight-semibold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      i {
+        font-size: 20px;
+      }
+    }
+
+    // Checkbox Label
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      color: $text-secondary;
+
+      input[type="checkbox"] {
+        margin-top: 4px;
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    // Form Actions
+    .form-actions {
+      text-align: center;
+      margin-top: 30px;
+
+      .btn {
+        min-width: 250px;
+        padding: 15px 40px;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        gap: 10px;
+
+        i {
+          font-size: 20px;
+        }
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+
+        .icofont-spin {
+          animation: spin 1s linear infinite;
+        }
+      }
+    }
+  }
+
+  // Success Message
+  .submission-success {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 80px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-top: 50px;
+
+    .success-icon {
+      i {
+        font-size: 100px;
+        color: #10b981;
+        margin-bottom: 20px;
+      }
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $text-secondary;
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .submission-info,
+    .submission-type {
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #f0f0f0;
+      border-radius: $radius-md;
+      display: inline-block;
+      margin-right: 10px;
+
+      strong {
+        color: $primary;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+// Mobile Styles
+@include mobile {
+  .cfp-form-area {
+    .cfp-deadline {
+      padding: 15px 20px;
+      font-size: 16px;
+    }
+
+    .cfp-form-wrapper {
+      padding: 30px 20px;
+    }
+
+    .cfp-form {
+      .form-section h3 {
+        font-size: 20px;
+      }
+
+      .submission-types {
+        grid-template-columns: 1fr;
+        gap: 15px;
+
+        .submission-card {
+          padding: 25px;
+
+          i {
+            font-size: 40px;
+          }
+        }
+      }
+
+      .form-actions .btn {
+        min-width: 100%;
+      }
+    }
+
+    .submission-success {
+      padding: 60px 25px;
+
+      .success-icon i {
+        font-size: 80px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .submission-info,
+      .submission-type {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

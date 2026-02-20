@@ -1,0 +1,106 @@
+[
+  {
+    "id": "team-1",
+    "name": "Dr. Sarah Njenga",
+    "role": "Conference Chair",
+    "organization": "University of Nairobi",
+    "photo": "/images/speakers1.jpg",
+    "bio": "Dr. Njenga is a leading AI researcher specializing in computer vision for agriculture. She has published 50+ papers and leads the AI lab at University of Nairobi.",
+    "linkedin": "https://linkedin.com/in/sarahnjenga",
+    "twitter": "https://twitter.com/sarahnjenga",
+    "email": "sarah.njenga@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-2",
+    "name": "Prof. David Ochieng",
+    "role": "Program Committee Chair",
+    "organization": "Strathmore University",
+    "photo": "/images/speakers2.jpg",
+    "bio": "Professor Ochieng leads the program committee and ensures a high-quality technical program. Expert in NLP and machine translation for African languages.",
+    "linkedin": "https://linkedin.com/in/davidochieng",
+    "twitter": "https://twitter.com/davidochieng",
+    "email": "david.ochieng@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-3",
+    "name": "Grace Wambui",
+    "role": "Logistics Coordinator",
+    "organization": "IndabaX Kenya",
+    "photo": "/images/speakers3.jpg",
+    "bio": "Grace manages all logistics including venue, catering, accommodation, and on-site coordination. She ensures smooth conference operations.",
+    "linkedin": "https://linkedin.com/in/gracewambui",
+    "email": "grace.wambui@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-4",
+    "name": "James Kariuki",
+    "role": "Sponsorship Lead",
+    "organization": "IndabaX Kenya",
+    "photo": "/images/speakers4.jpg",
+    "bio": "James secures sponsorships and partnerships to make IndabaX Kenya possible. He builds relationships with companies and organizations.",
+    "linkedin": "https://linkedin.com/in/jameskariuki",
+    "email": "james.kariuki@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-5",
+    "name": "Dr. Fatima Hassan",
+    "role": "Workshop Coordinator",
+    "organization": "Aga Khan University",
+    "photo": "/images/speakers5.jpg",
+    "bio": "Dr. Hassan coordinates all workshop activities, instructor selection, and hands-on sessions. Expert in healthcare AI applications.",
+    "linkedin": "https://linkedin.com/in/fatimahassan",
+    "twitter": "https://twitter.com/fatimahassan",
+    "email": "fatima.hassan@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-6",
+    "name": "Michael Mwangi",
+    "role": "Communications Lead",
+    "organization": "IndabaX Kenya",
+    "photo": "/images/speakers6.jpg",
+    "bio": "Michael manages all communications, social media, marketing, and public relations for IndabaX Kenya.",
+    "linkedin": "https://linkedin.com/in/michaelmwangi",
+    "twitter": "https://twitter.com/michaelmwangi",
+    "email": "michael.mwangi@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-7",
+    "name": "Lucy Njeri",
+    "role": "Volunteer Coordinator",
+    "organization": "IndabaX Kenya",
+    "photo": "/images/author1.jpg",
+    "bio": "Lucy recruits, trains, and manages the conference volunteer team. She ensures volunteers have a great experience while supporting the event.",
+    "linkedin": "https://linkedin.com/in/lucynjeri",
+    "email": "lucy.njeri@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-8",
+    "name": "Peter Kamau",
+    "role": "Technology Lead",
+    "organization": "IndabaX Kenya",
+    "photo": "/images/author2.jpg",
+    "bio": "Peter manages the conference website, registration system, and all technology infrastructure including WiFi and AV equipment.",
+    "linkedin": "https://linkedin.com/in/peterkamau",
+    "email": "peter.kamau@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-9",
+    "name": "Esther Wanjiku",
+    "role": "Finance Manager",
+    "organization": "IndabaX Kenya",
+    "photo": "/images/author3.jpg",
+    "bio": "Esther manages the conference budget, processes payments, handles reimbursements, and ensures financial compliance.",
+    "linkedin": "https://linkedin.com/in/estherwanjiku",
+    "email": "esther.wanjiku@deeplearningindabaxkenya.com"
+  },
+  {
+    "id": "team-10",
+    "name": "Daniel Kipchirchir",
+    "role": "Student Liaison",
+    "organization": "University of Nairobi",
+    "photo": "/images/author4.jpg",
+    "bio": "Daniel coordinates student participation, manages student pass applications, and serves as the primary contact for student attendees.",
+    "linkedin": "https://linkedin.com/in/danielkipchirchir",
+    "email": "daniel.kipchirchir@deeplearningindabaxkenya.com"
+  }
+]

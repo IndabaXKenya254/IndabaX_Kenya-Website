@@ -1,0 +1,345 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - VENUE INFORMATION STYLES
+// ═══════════════════════════════════════════════════════════════════════
+
+.venue-area {
+  .section-description {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: $text-secondary;
+    font-size: $font-size-lg;
+    line-height: 1.8;
+  }
+
+  .venue-image-wrapper {
+    border-radius: $radius-xl;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+
+    .venue-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .venue-content {
+    h3 {
+      font-size: 28px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 30px;
+    }
+
+    .venue-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .detail-item {
+        display: flex;
+        gap: 15px;
+        padding: 20px;
+        background: #f8f8f8;
+        border-radius: $radius-md;
+
+        i {
+          font-size: 28px;
+          color: $primary;
+          flex-shrink: 0;
+        }
+
+        strong {
+          display: block;
+          font-size: 16px;
+          font-weight: $font-weight-bold;
+          color: $text-primary;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 15px;
+          color: $text-secondary;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Getting There Section
+  .getting-there-section,
+  .amenities-section {
+    margin-top: 80px;
+
+    .section-heading {
+      font-size: 26px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid $primary;
+
+      i {
+        font-size: 30px;
+        color: $primary;
+      }
+    }
+  }
+
+  .transport-card {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    margin-bottom: 30px;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .transport-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: $gradient-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 40px;
+        color: $text-white;
+      }
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 15px;
+      color: $text-secondary;
+      line-height: 1.7;
+      margin-bottom: 10px;
+
+      strong {
+        color: $text-primary;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Amenities
+  .amenity-item {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    i {
+      font-size: 36px;
+      color: $secondary;
+      margin-bottom: 15px;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: 14px;
+        color: $text-secondary;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  // Map Section
+  .map-section {
+    margin-top: 80px;
+
+    .section-heading {
+      font-size: 26px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid $primary;
+
+      i {
+        font-size: 30px;
+        color: $primary;
+      }
+    }
+
+    .map-wrapper {
+      border-radius: $radius-xl;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .map-note {
+      text-align: center;
+      font-size: 14px;
+      color: $text-secondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      i {
+        color: $secondary;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// Mobile
+@include mobile {
+  .venue-area {
+    .section-description {
+      font-size: $font-size-base;
+      margin-bottom: 30px;
+    }
+
+    .venue-content {
+      margin-top: 30px;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      .venue-details .detail-item {
+        padding: 15px;
+
+        i {
+          font-size: 24px;
+        }
+
+        strong {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .getting-there-section,
+    .amenities-section {
+      margin-top: 60px;
+
+      .section-heading {
+        font-size: 22px;
+
+        i {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .transport-card {
+      padding: 25px;
+      margin-bottom: 20px;
+
+      .transport-icon {
+        width: 70px;
+        height: 70px;
+
+        i {
+          font-size: 35px;
+        }
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .amenity-item {
+      padding: 20px;
+      margin-bottom: 20px;
+
+      i {
+        font-size: 32px;
+      }
+
+      h5 {
+        font-size: 16px;
+      }
+
+      ul li {
+        font-size: 13px;
+        padding: 6px 0;
+      }
+    }
+
+    .map-section {
+      margin-top: 60px;
+
+      .section-heading {
+        font-size: 22px;
+
+        i {
+          font-size: 26px;
+        }
+      }
+
+      .map-wrapper iframe {
+        height: 300px;
+      }
+
+      .map-note {
+        font-size: 13px;
+      }
+    }
+  }
+}

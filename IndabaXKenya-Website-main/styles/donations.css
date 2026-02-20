@@ -1,0 +1,525 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   DONATIONS PAGE STYLES
+   ═══════════════════════════════════════════════════════════════════════
+   Issue #20: Custom styling for donations/sponsorship page
+   Design inspired by Deep Learning Indaba donations page
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════════════
+   WHY SUPPORT SECTION
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.why-support-area {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.why-support-area .section-title {
+  margin-bottom: 50px;
+}
+
+.why-support-area .section-title span {
+  color: #e30045;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.why-support-area .section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+
+.why-support-area .section-description {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Why Support Cards */
+.donation-why-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid #f0f0f0;
+}
+
+.donation-why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-color: #e30045;
+}
+
+.donation-why-card .icon-wrapper {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e30045 0%, #ff4d7d 100%);
+  border-radius: 12px;
+  color: #fff !important;
+  font-size: 28px;
+}
+
+/* Force white icons inside the wrapper */
+.donation-why-card .icon-wrapper i,
+.donation-why-card .icon-wrapper i::before {
+  color: #fff !important;
+}
+
+.donation-why-card .content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.donation-why-card .content p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   IMPACT SECTION (Where Support Goes)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.impact-area {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.impact-area .section-title {
+  margin-bottom: 50px;
+}
+
+.impact-area .section-title span {
+  color: #e30045;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.impact-area .section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+
+.impact-area .section-description {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 17px;
+}
+
+/* Impact Cards */
+.donation-impact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.donation-impact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(227, 0, 69, 0.15);
+  border-color: #e30045;
+}
+
+.donation-impact-card .number-badge {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #e30045 0%, #ff4d7d 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.donation-impact-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.donation-impact-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PAYMENT METHODS SECTION
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.payment-methods-area {
+  background: #fff;
+  position: relative;
+}
+
+.payment-methods-area .section-title {
+  margin-bottom: 50px;
+}
+
+.payment-methods-area .section-title span {
+  color: #e30045;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.payment-methods-area .section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+
+.payment-methods-area .section-description {
+  max-width: 500px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 17px;
+}
+
+/* Payment Method Cards */
+.payment-method-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 2px solid #f0f0f0;
+}
+
+.payment-method-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: #e30045;
+}
+
+.payment-method-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 25px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4a 100%);
+  color: #fff;
+}
+
+.payment-method-card .card-header .icon-wrapper {
+  flex-shrink: 0;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-size: 26px;
+}
+
+.payment-method-card .card-header .header-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: #fff;
+}
+
+.payment-method-card .card-header .header-text small {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+}
+
+.payment-method-card .card-body {
+  padding: 25px;
+}
+
+.payment-method-card .payment-details {
+  margin-bottom: 15px;
+}
+
+.payment-method-card .payment-details p {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 15px;
+}
+
+.payment-method-card .payment-details p strong {
+  color: #1a1a2e;
+  display: inline-block;
+  min-width: 140px;
+}
+
+.payment-method-card .payment-instructions {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  border-left: 4px solid #e30045;
+}
+
+.payment-method-card .payment-instructions h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-method-card .payment-instructions h6 i {
+  color: #e30045;
+}
+
+.payment-method-card .payment-instructions p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+  white-space: pre-line;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CONTACT SECTION
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.donate-contact-area {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4a 100%);
+  color: #fff;
+  position: relative;
+}
+
+.donate-contact-area .section-title span {
+  color: #ff4d7d;
+}
+
+.donate-contact-area .section-title h2 {
+  color: #fff;
+}
+
+.donate-contact-area .section-title .bar {
+  background: #e30045;
+}
+
+.donate-contact-area .lead {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.donate-contact-area .btn-primary {
+  background: #e30045;
+  border-color: #e30045;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.donate-contact-area .btn-primary:hover {
+  background: #ff4d7d;
+  border-color: #ff4d7d;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   NO PAYMENT METHODS MESSAGE
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.no-payment-area {
+  background: #f8f9fa;
+}
+
+.no-payment-area .no-results {
+  text-align: center;
+  padding: 60px 40px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.no-payment-area .no-results i {
+  font-size: 60px;
+  color: #e30045;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.no-payment-area .no-results h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+
+.no-payment-area .no-results p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   LOADING & ERROR STATES
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.donations-loading,
+.donations-error {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donations-loading .spinner-border {
+  width: 50px;
+  height: 50px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   DECORATIVE ELEMENTS (African-inspired patterns like DLI page)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.why-support-area::before,
+.why-support-area::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='%23e3004510'/%3E%3C/svg%3E") repeat;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.why-support-area::before {
+  top: 50px;
+  left: 20px;
+}
+
+.why-support-area::after {
+  bottom: 50px;
+  right: 20px;
+}
+
+.why-support-area > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESPONSIVE STYLES
+   ═══════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 991px) {
+  .why-support-area .section-title h2,
+  .impact-area .section-title h2,
+  .payment-methods-area .section-title h2 {
+    font-size: 30px;
+  }
+
+  .donation-why-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .donation-why-card .icon-wrapper {
+    margin: 0 auto;
+  }
+
+  .donation-impact-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-support-area .section-title h2,
+  .impact-area .section-title h2,
+  .payment-methods-area .section-title h2 {
+    font-size: 26px;
+  }
+
+  .donation-why-card {
+    padding: 25px 20px;
+  }
+
+  .donation-why-card .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .donation-why-card .content h3 {
+    font-size: 18px;
+  }
+
+  .payment-method-card .card-header {
+    padding: 20px;
+  }
+
+  .payment-method-card .card-header .icon-wrapper {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .payment-method-card .card-header .header-text h3 {
+    font-size: 18px;
+  }
+
+  .payment-method-card .card-body {
+    padding: 20px;
+  }
+
+  .payment-method-card .payment-details p strong {
+    min-width: auto;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .donate-contact-area .lead {
+    font-size: 16px;
+  }
+
+  /* Hide decorative patterns on mobile */
+  .why-support-area::before,
+  .why-support-area::after {
+    display: none;
+  }
+}

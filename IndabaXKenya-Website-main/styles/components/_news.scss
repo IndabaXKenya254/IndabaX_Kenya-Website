@@ -1,0 +1,512 @@
+// ═══════════════════════════════════════════════════════════════════════
+// INDABAX KENYA - NEWS/BLOG GRID STYLES
+// ═══════════════════════════════════════════════════════════════════════
+
+.news-grid-area {
+  .section-description {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: $text-secondary;
+    font-size: $font-size-lg;
+    line-height: 1.8;
+  }
+
+  // Filters (same as events/speakers)
+  .news-filters {
+    background: $background;
+    border-radius: $radius-xl;
+    padding: 40px 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+
+    .filter-group {
+      margin-bottom: 25px;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: 10px;
+
+        i {
+          color: $primary;
+          font-size: 16px;
+        }
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e8e8e8;
+        border-radius: $radius-md;
+        font-size: 15px;
+        color: $text-primary;
+        transition: all 0.3s ease;
+        background: $background;
+
+        &:focus {
+          outline: none;
+          border-color: $primary;
+          box-shadow: 0 0 0 3px rgba(255, 45, 85, 0.1);
+        }
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      select.form-control {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        padding-right: 40px;
+      }
+    }
+
+    .filter-results {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 2px solid #f0f0f0;
+
+      p {
+        margin: 0;
+        font-size: 15px;
+        color: $text-secondary;
+
+        strong {
+          color: $primary;
+          font-weight: $font-weight-bold;
+        }
+      }
+
+      .btn-text {
+        background: transparent;
+        border: none;
+        color: $primary;
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        border-radius: $radius-md;
+
+        &:hover {
+          background: rgba(255, 45, 85, 0.1);
+          transform: translateX(-3px);
+        }
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  // News Card
+  .news-card {
+    background: $background;
+    border-radius: $radius-xl;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    margin-bottom: 40px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &.featured {
+      border: 2px solid rgba(255, 45, 85, 0.3);
+      box-shadow: 0 15px 50px rgba(255, 45, 85, 0.15);
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+      .news-image {
+        transform: scale(1.1);
+      }
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: $gradient-primary;
+      color: $text-white;
+      padding: 6px 14px;
+      border-radius: $radius-md;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 5px 15px rgba(255, 45, 85, 0.3);
+
+      i {
+        font-size: 13px;
+      }
+    }
+
+    .news-image-wrapper {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: #f0f0f0;
+
+      .news-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      // Badges container for category and external indicator
+      .news-badges {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        z-index: 2;
+      }
+
+      .news-category-badge {
+        background: $secondary;
+        color: $text-white;
+        padding: 8px 16px;
+        border-radius: $radius-md;
+        font-size: 13px;
+        font-weight: $font-weight-bold;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .news-external-badge {
+        background: #17a2b8; // Info blue for external links
+        color: $text-white;
+        padding: 6px 12px;
+        border-radius: $radius-md;
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        i {
+          font-size: 11px;
+        }
+      }
+    }
+
+    // Sauti Yetu (External Link) Card styling
+    &.sauti-yetu-card {
+      border: 2px solid rgba(23, 162, 184, 0.2);
+
+      &:hover {
+        border-color: rgba(23, 162, 184, 0.4);
+        box-shadow: 0 20px 60px rgba(23, 162, 184, 0.15);
+      }
+
+      .news-title a {
+        i {
+          color: #17a2b8;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover i {
+          transform: translateX(3px);
+        }
+      }
+
+      .news-footer .btn-link {
+        color: #17a2b8;
+
+        &:hover {
+          color: darken(#17a2b8, 10%);
+        }
+      }
+    }
+
+    .news-content {
+      padding: 25px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .news-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+
+        .meta-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 13px;
+          color: $text-secondary;
+
+          &.author {
+            font-weight: $font-weight-semibold;
+
+            .author-image {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+
+          &.date {
+            i {
+              color: $primary;
+              font-size: 15px;
+            }
+          }
+
+          &.source {
+            i {
+              color: #17a2b8;
+              font-size: 15px;
+            }
+            color: #17a2b8;
+            font-weight: $font-weight-semibold;
+          }
+        }
+      }
+
+      .news-title {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        margin-bottom: 15px;
+        line-height: 1.4;
+
+        a {
+          color: $text-primary;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      .news-excerpt {
+        font-size: 15px;
+        line-height: 1.7;
+        color: $text-secondary;
+        margin-bottom: 20px;
+        flex: 1;
+      }
+
+      .news-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        border-top: 2px solid #f0f0f0;
+        margin-top: auto;
+
+        .news-tags {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+
+          .tag {
+            font-size: 12px;
+            color: $secondary;
+            font-weight: $font-weight-semibold;
+          }
+        }
+
+        .btn-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          color: $primary;
+          font-size: 14px;
+          font-weight: $font-weight-bold;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+
+          i {
+            transition: transform 0.3s ease;
+          }
+
+          &:hover {
+            color: $secondary;
+
+            i {
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // No Results
+  .no-results {
+    text-align: center;
+    padding: 80px 20px;
+    background: $background;
+    border-radius: $radius-xl;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+
+    i {
+      font-size: 80px;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 26px;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $text-secondary;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+// Mobile
+@include mobile {
+  .news-grid-area {
+    .section-description {
+      font-size: $font-size-base;
+      margin-bottom: 30px;
+    }
+
+    .news-filters {
+      padding: 25px 20px;
+      margin-bottom: 30px;
+
+      .filter-group {
+        margin-bottom: 20px;
+
+        label {
+          font-size: 13px;
+        }
+
+        .form-control {
+          padding: 10px 14px;
+          font-size: 14px;
+        }
+      }
+
+      .filter-results {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+        p {
+          font-size: 14px;
+        }
+
+        .btn-text {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .news-card {
+      margin-bottom: 30px;
+
+      .featured-badge {
+        top: 12px;
+        right: 12px;
+        padding: 5px 12px;
+        font-size: 11px;
+      }
+
+      .news-image-wrapper {
+        height: 220px;
+
+        .news-category-badge {
+          bottom: 12px;
+          left: 12px;
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+
+      .news-content {
+        padding: 20px;
+
+        .news-meta {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+
+          .meta-item {
+            font-size: 12px;
+
+            &.author .author-image {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+
+        .news-title {
+          font-size: 18px;
+        }
+
+        .news-excerpt {
+          font-size: 14px;
+        }
+
+        .news-footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+
+          .btn-link {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .no-results {
+      padding: 60px 20px;
+
+      i {
+        font-size: 60px;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}

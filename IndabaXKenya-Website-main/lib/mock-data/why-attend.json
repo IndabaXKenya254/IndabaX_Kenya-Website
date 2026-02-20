@@ -1,0 +1,44 @@
+[
+  {
+    "id": "why-1",
+    "icon": "icofont-users-alt-4",
+    "title": "World-Class Speakers",
+    "description": "Learn from 50+ leading AI researchers and practitioners from across Africa and around the globe. Get insights from experts at Google, Microsoft, DeepMind, and top African universities.",
+    "color": "#FF2D55"
+  },
+  {
+    "id": "why-2",
+    "icon": "icofont-certificate",
+    "title": "Hands-On Workshops",
+    "description": "Participate in 10+ practical workshops covering deep learning, NLP, computer vision, and AI deployment. Gain skills you can immediately apply to your projects.",
+    "color": "#00ACEE"
+  },
+  {
+    "id": "why-3",
+    "icon": "icofont-network",
+    "title": "Networking Opportunities",
+    "description": "Connect with 500+ attendees from 20+ countries. Build lasting relationships with researchers, students, entrepreneurs, and industry professionals in African AI.",
+    "color": "#FFA500"
+  },
+  {
+    "id": "why-4",
+    "icon": "icofont-ui-file",
+    "title": "Research Presentations",
+    "description": "Discover cutting-edge AI research from African scholars. Present your own work and get feedback from peers. 30+ technical paper presentations across multiple tracks.",
+    "color": "#9C27B0"
+  },
+  {
+    "id": "why-5",
+    "icon": "icofont-rocket-alt-2",
+    "title": "Startup & Career Expo",
+    "description": "Explore opportunities at Africa's leading AI startups and tech companies. Attend the pitch competition with $20,000 in prizes. Access exclusive job postings.",
+    "color": "#4CAF50"
+  },
+  {
+    "id": "why-6",
+    "icon": "icofont-certificate-alt-1",
+    "title": "Certificate of Attendance",
+    "description": "Receive an official IndabaX Kenya certificate to showcase your participation in Africa's premier AI conference. Enhance your professional profile.",
+    "color": "#FF6B6B"
+  }
+]

@@ -1,0 +1,281 @@
+// ═══════════════════════════════════════════════════════════════════════
+// GLOBAL IMAGE STANDARDIZATION
+// ═══════════════════════════════════════════════════════════════════════
+// Ensures ALL images across the site display consistently with proper
+// aspect ratios, regardless of original image orientation (landscape/portrait)
+// Created: December 28, 2025
+// ═══════════════════════════════════════════════════════════════════════
+
+// ───────────────────────────────────────────────────────────────────────
+// Global Image Base Styles
+// ───────────────────────────────────────────────────────────────────────
+
+// Default image behavior - all images should cover their container
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Image Container Base Mixin
+// ───────────────────────────────────────────────────────────────────────
+
+@mixin image-container($aspect-ratio: 1/1, $height: auto) {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+
+  @if $height != auto {
+    height: $height;
+  } @else {
+    aspect-ratio: $aspect-ratio;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Speaker Images - Square/Portrait for professional headshots
+// ───────────────────────────────────────────────────────────────────────
+
+.speaker-image-wrapper,
+.speaker-flip-card .flip-card-front .speaker-image-wrapper,
+.single-speakers {
+  @include image-container(1/1);
+
+  img {
+    object-position: center top !important; // Focus on face
+  }
+}
+
+// Flip card specific
+.speaker-flip-card {
+  .flip-card-front {
+    .speaker-image-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+
+      img,
+      .speaker-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover !important;
+        object-position: center top !important;
+      }
+    }
+  }
+}
+
+// Homepage speakers
+.speakers-area {
+  .single-speakers {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+      object-position: center top !important;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Gallery Images - Uniform landscape for gallery grids
+// ───────────────────────────────────────────────────────────────────────
+
+.gallery-grid,
+.noai-gallery-grid,
+.memories-gallery {
+  .gallery-item,
+  .photo-card,
+  [class*="gallery"] {
+    .image-wrapper,
+    .photo-image-wrapper {
+      @include image-container(4/3); // Landscape ratio for galleries
+    }
+  }
+}
+
+// Gallery modal - contain image fully
+.gallery-modal,
+.image-modal,
+.lightbox {
+  img {
+    object-fit: contain !important; // Show full image in modal
+    max-height: 80vh;
+    max-width: 90vw;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// News/Blog Images - 16:9 for modern card layouts
+// ───────────────────────────────────────────────────────────────────────
+
+.news-card,
+.blog-post-card,
+.post-card,
+.article-card {
+  .image-wrapper,
+  .featured-image,
+  .post-image {
+    @include image-container(16/9);
+  }
+}
+
+// News detail featured image
+.news-details,
+.blog-details,
+.post-details {
+  .featured-image-wrapper,
+  .main-image {
+    @include image-container(16/9, 400px);
+
+    @media (max-width: 767px) {
+      height: 280px;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Team Member Images - Square for consistency with speakers
+// ───────────────────────────────────────────────────────────────────────
+
+.team-member,
+.team-card,
+.organizer-card {
+  .image-wrapper,
+  .member-image,
+  .photo-wrapper {
+    @include image-container(1/1);
+
+    img {
+      object-position: center top !important; // Focus on face
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Event Images - 16:9 banners
+// ───────────────────────────────────────────────────────────────────────
+
+// Already handled in _event-image-standardization.scss
+// Adding fallback for any missed elements
+
+.event-card,
+.event-item {
+  .event-image-wrapper,
+  .image-container {
+    @include image-container(16/9, 300px);
+
+    @media (max-width: 767px) {
+      height: 220px;
+    }
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Admin Panel Images - Consistent thumbnails
+// ───────────────────────────────────────────────────────────────────────
+
+.admin-thumbnail,
+.data-table img,
+[class*="admin"] img:not(.logo) {
+  object-fit: cover !important;
+  border-radius: 4px;
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Utility Classes for Image Containers
+// ───────────────────────────────────────────────────────────────────────
+
+// Use these classes to enforce consistent sizing
+
+.img-square {
+  @include image-container(1/1);
+}
+
+.img-landscape {
+  @include image-container(16/9);
+}
+
+.img-portrait {
+  @include image-container(3/4);
+}
+
+.img-gallery {
+  @include image-container(4/3);
+}
+
+// Fixed height variants
+.img-sm { height: 150px; }
+.img-md { height: 250px; }
+.img-lg { height: 350px; }
+.img-xl { height: 450px; }
+
+// Object position variants
+.img-top { img { object-position: center top !important; } }
+.img-center { img { object-position: center center !important; } }
+.img-bottom { img { object-position: center bottom !important; } }
+
+// ───────────────────────────────────────────────────────────────────────
+// Force Upright/Portrait Display for Any Image
+// ───────────────────────────────────────────────────────────────────────
+
+// This class forces any image to display in a consistent portrait orientation
+// even if the original image is landscape
+
+.force-portrait {
+  @include image-container(3/4);
+
+  img {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+
+.force-square {
+  @include image-container(1/1);
+
+  img {
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Responsive Adjustments
+// ───────────────────────────────────────────────────────────────────────
+
+@media (max-width: 991px) {
+  .img-lg { height: 300px; }
+  .img-xl { height: 380px; }
+}
+
+@media (max-width: 767px) {
+  .img-sm { height: 120px; }
+  .img-md { height: 200px; }
+  .img-lg { height: 250px; }
+  .img-xl { height: 300px; }
+}
+
+// ───────────────────────────────────────────────────────────────────────
+// Print Styles
+// ───────────────────────────────────────────────────────────────────────
+
+@media print {
+  img {
+    object-fit: contain !important;
+    max-height: 400px;
+  }
+}

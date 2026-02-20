@@ -1,0 +1,859 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   INDABAX KENYA - GLOBAL BUTTON VISIBILITY FIXES
+   ═══════════════════════════════════════════════════════════════════════
+   Fix button visibility across entire application
+   Theme Colors: Primary Green #006700
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/*
+   CRITICAL FIX: Override style.scss .btn { border: none; color: $white-color; }
+   This was making all outline buttons invisible (no border, white text on white bg)
+*/
+.btn[class*="btn-outline-"] {
+  border: 1px solid currentColor !important;
+  background-color: transparent !important;
+}
+
+.btn[class*="btn-outline-"] i,
+.btn[class*="btn-outline-"] .bi,
+.btn[class*="btn-outline-"] .icofont,
+.btn[class*="btn-outline-"] svg {
+  color: inherit !important;
+}
+
+/* Specific outline button colors */
+.btn.btn-outline-primary {
+  color: #006700 !important;
+  border-color: #006700 !important;
+}
+
+.btn.btn-outline-secondary {
+  color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+.btn.btn-outline-success {
+  color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.btn.btn-outline-danger {
+  color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+.btn.btn-outline-warning {
+  color: #856404 !important;
+  border-color: #ffc107 !important;
+}
+
+.btn.btn-outline-info {
+  color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+}
+
+.btn.btn-outline-dark {
+  color: #343a40 !important;
+  border-color: #343a40 !important;
+}
+
+.btn.btn-outline-light {
+  color: #6c757d !important;
+  border-color: #dee2e6 !important;
+}
+
+/*
+   HISTORY PAGE CTA SECTION
+   White button and text on green background
+*/
+.history-cta .cta-card {
+  color: #fff !important;
+}
+
+.history-cta .cta-card h3 {
+  color: #fff !important;
+}
+
+.history-cta .cta-card p {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+.history-cta .cta-card p strong {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.history-cta .cta-card .btn-primary,
+.history-cta .btn-primary {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: #006700 !important;
+}
+
+.history-cta .cta-card .btn-primary:hover,
+.history-cta .btn-primary:hover {
+  background-color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
+  color: #004d00 !important;
+}
+
+/*
+   PREVIOUS EDITIONS PAGE - View Full Details button
+*/
+.previous-editions-area .edition-header .btn-outline-primary,
+.edition-content .btn-outline-primary {
+  color: #006700 !important;
+  border: 2px solid #006700 !important;
+  background-color: transparent !important;
+}
+
+.previous-editions-area .edition-header .btn-outline-primary:hover,
+.edition-content .btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #006700 !important;
+  border: 2px solid #006700 !important;
+}
+
+/*
+   ABOUT SECTION BUTTONS (HIGH SPECIFICITY)
+   Override for the about section buttons specifically
+*/
+.about-content .about-buttons .btn-primary,
+.about-area .btn-primary,
+.about-content .btn-primary {
+  background-color: #006700 !important;
+  border-color: #006700 !important;
+  color: #fff !important;
+}
+
+.about-content .about-buttons .btn-primary:hover,
+.about-area .btn-primary:hover,
+.about-content .btn-primary:hover {
+  background-color: #004d00 !important;
+  border-color: #004100 !important;
+  color: #fff !important;
+}
+
+.about-content .about-buttons .btn-outline-primary,
+.about-area .btn-outline-primary,
+.about-content .btn-outline-primary {
+  color: #006700 !important;
+  border: 2px solid #006700 !important;
+  background-color: transparent !important;
+}
+
+.about-content .about-buttons .btn-outline-primary:hover,
+.about-area .btn-outline-primary:hover,
+.about-content .btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #006700 !important;
+  border: 2px solid #006700 !important;
+}
+
+/*
+   BOOTSTRAP OUTLINE BUTTON OVERRIDES
+   Ensure outline buttons have visible colors before hover
+*/
+
+/* Catch-all for ALL outline buttons */
+[class*="btn-outline-"] {
+  background-color: transparent !important;
+}
+
+/* Ensure icons inside outline buttons inherit the button color */
+[class*="btn-outline-"] i,
+[class*="btn-outline-"] .bi,
+[class*="btn-outline-"] .icofont,
+[class*="btn-outline-"] svg {
+  color: inherit !important;
+}
+
+/* When outline buttons are hovered, icons should be white */
+[class*="btn-outline-"]:hover i,
+[class*="btn-outline-"]:hover .bi,
+[class*="btn-outline-"]:hover .icofont,
+[class*="btn-outline-"]:hover svg,
+[class*="btn-outline-"]:focus i,
+[class*="btn-outline-"]:focus .bi,
+[class*="btn-outline-"]:focus .icofont,
+[class*="btn-outline-"]:focus svg {
+  color: inherit !important;
+}
+
+.btn-outline-primary {
+  color: #006700 !important;
+  border: 2px solid #006700 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  color: #fff !important;
+  background-color: #006700 !important;
+  border: 2px solid #006700 !important;
+}
+
+.btn-outline-secondary {
+  color: #6c757d !important;
+  border: 1px solid #6c757d !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-secondary i,
+.btn-outline-secondary .bi,
+.btn-outline-secondary svg {
+  color: #6c757d !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active {
+  color: #fff !important;
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+.btn-outline-secondary:hover i,
+.btn-outline-secondary:hover .bi,
+.btn-outline-secondary:hover svg,
+.btn-outline-secondary:focus i,
+.btn-outline-secondary:focus .bi,
+.btn-outline-secondary:focus svg {
+  color: #fff !important;
+}
+
+.btn-outline-success {
+  color: #28a745 !important;
+  border-color: #28a745 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus,
+.btn-outline-success:active {
+  color: #fff !important;
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.btn-outline-danger {
+  color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus,
+.btn-outline-danger:active {
+  color: #fff !important;
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+.btn-outline-warning {
+  color: #856404 !important;
+  border-color: #ffc107 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:focus,
+.btn-outline-warning:active {
+  color: #212529 !important;
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+}
+
+.btn-outline-info {
+  color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-info:hover,
+.btn-outline-info:focus,
+.btn-outline-info:active {
+  color: #fff !important;
+  background-color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+}
+
+.btn-outline-light {
+  color: #6c757d !important;
+  border-color: #f8f9fa !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active {
+  color: #212529 !important;
+  background-color: #f8f9fa !important;
+  border-color: #f8f9fa !important;
+}
+
+.btn-outline-dark {
+  color: #343a40 !important;
+  border-color: #343a40 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active {
+  color: #fff !important;
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+}
+
+/*
+   SOLID BOOTSTRAP BUTTONS
+   Ensure proper backgrounds and white text
+*/
+
+.btn-primary {
+  background-color: #006700 !important;
+  border-color: #006700 !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #004d00 !important;
+  border-color: #004100 !important;
+  color: #fff !important;
+}
+
+.btn-secondary {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  color: #fff !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: #5a6268 !important;
+  border-color: #545b62 !important;
+  color: #fff !important;
+}
+
+.btn-success {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: #fff !important;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #218838 !important;
+  border-color: #1e7e34 !important;
+  color: #fff !important;
+}
+
+.btn-danger {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active {
+  background-color: #c82333 !important;
+  border-color: #bd2130 !important;
+  color: #fff !important;
+}
+
+.btn-warning {
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active {
+  background-color: #e0a800 !important;
+  border-color: #d39e00 !important;
+  color: #212529 !important;
+}
+
+.btn-info {
+  background-color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+  color: #fff !important;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active {
+  background-color: #138496 !important;
+  border-color: #117a8b !important;
+  color: #fff !important;
+}
+
+.btn-light {
+  background-color: #f8f9fa !important;
+  border-color: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  background-color: #e2e6ea !important;
+  border-color: #dae0e5 !important;
+  color: #212529 !important;
+}
+
+.btn-dark {
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+  color: #fff !important;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+  background-color: #23272b !important;
+  border-color: #1d2124 !important;
+  color: #fff !important;
+}
+
+/*
+   REMOVE THEME CONFLICTS
+   The Evnia theme uses ::before and ::after pseudo-elements
+   that conflict with Bootstrap button behavior
+*/
+
+.btn::before,
+.btn::after {
+  display: none !important;
+}
+
+/*
+   ENSURE BUTTON TEXT IS ALWAYS VISIBLE
+   Override any theme styles that set color to near-white
+*/
+
+.btn {
+  /* Default button text should be white on colored backgrounds */
+  color: #fff !important;
+}
+
+/* Light buttons need dark text */
+.btn-light,
+.btn-outline-light,
+.btn-warning,
+.btn-outline-warning {
+  color: #212529 !important;
+}
+
+/*
+   BTN-LINK - Text-like buttons (Issue #21 FIX)
+   These buttons have no background and need visible text color
+*/
+.btn-link,
+.btn.btn-link {
+  background-color: transparent !important;
+  border: none !important;
+  color: #0d6efd !important;
+  text-decoration: none !important;
+}
+
+.btn-link:hover,
+.btn-link:focus,
+.btn.btn-link:hover,
+.btn.btn-link:focus {
+  color: #0a58ca !important;
+  text-decoration: underline !important;
+}
+
+/* Link button with text-muted class */
+.btn-link.text-muted,
+.btn.btn-link.text-muted {
+  color: #6c757d !important;
+}
+
+.btn-link.text-muted:hover,
+.btn.btn-link.text-muted:hover {
+  color: #495057 !important;
+}
+
+/* Link button with text-danger class */
+.btn-link.text-danger,
+.btn.btn-link.text-danger {
+  color: #dc3545 !important;
+}
+
+.btn-link.text-danger:hover,
+.btn.btn-link.text-danger:hover {
+  color: #bb2d3b !important;
+}
+
+/* Link button with text-primary class */
+.btn-link.text-primary,
+.btn.btn-link.text-primary {
+  color: #006700 !important;
+}
+
+.btn-link.text-primary:hover,
+.btn.btn-link.text-primary:hover {
+  color: #004d00 !important;
+}
+
+/* Ensure icons inside link buttons are visible */
+.btn-link i,
+.btn-link .icofont,
+.btn-link .bi,
+.btn-link svg {
+  color: inherit !important;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-info,
+.btn-outline-dark {
+  background-color: transparent !important;
+}
+
+/* Fix for disabled buttons */
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/*
+   BTN-TEXT VARIANT
+   Text-only button style (link-like) used in NOAI and other components
+*/
+
+.btn-text,
+.btn.btn-text {
+  background-color: transparent !important;
+  border: none !important;
+  color: #0d6efd !important;
+  padding: 0.375rem 0.75rem !important;
+  text-decoration: none !important;
+}
+
+.btn-text:hover,
+.btn-text:focus,
+.btn-text:active,
+.btn.btn-text:hover,
+.btn.btn-text:focus,
+.btn.btn-text:active {
+  color: #0b5ed7 !important;
+  background-color: rgba(13, 110, 253, 0.1) !important;
+  text-decoration: underline !important;
+}
+
+/*
+   NOAI-SPECIFIC BUTTON OVERRIDES
+   Ensure buttons are visible on NOAI pages with their specific backgrounds
+*/
+
+/* NOAI CTA Banner buttons - white text on colored background */
+.noai-cta-banner .btn-light {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: #e30045 !important;
+}
+
+.noai-cta-banner .btn-light:hover,
+.noai-cta-banner .btn-light:focus {
+  background-color: #f8f9fa !important;
+  color: #c5003b !important;
+}
+
+/* NOAI Section buttons - ensure visibility on white/light backgrounds */
+.noai-hero-section .btn-primary,
+.noai-cta-section .btn-primary,
+.noai-cta-compact .btn-primary,
+.ioai-intro-section .btn-primary,
+.ioai-2026-section .btn-primary,
+.kenya-participation-section .btn-primary {
+  background-color: #e30045 !important;
+  border-color: #e30045 !important;
+  color: #fff !important;
+}
+
+.noai-hero-section .btn-primary:hover,
+.noai-cta-section .btn-primary:hover,
+.noai-cta-compact .btn-primary:hover,
+.ioai-intro-section .btn-primary:hover,
+.ioai-2026-section .btn-primary:hover,
+.kenya-participation-section .btn-primary:hover {
+  background-color: #c5003b !important;
+  border-color: #c5003b !important;
+  color: #fff !important;
+}
+
+/* NOAI outline buttons */
+.noai-hero-section .btn-outline-primary,
+.noai-cta-section .btn-outline-primary,
+.ioai-intro-section .btn-outline-primary,
+.ioai-2026-section .btn-outline-primary,
+.kenya-participation-section .btn-outline-primary {
+  background-color: transparent !important;
+  border-color: #e30045 !important;
+  color: #e30045 !important;
+}
+
+.noai-hero-section .btn-outline-primary:hover,
+.noai-cta-section .btn-outline-primary:hover,
+.ioai-intro-section .btn-outline-primary:hover,
+.ioai-2026-section .btn-outline-primary:hover,
+.kenya-participation-section .btn-outline-primary:hover {
+  background-color: #e30045 !important;
+  border-color: #e30045 !important;
+  color: #fff !important;
+}
+
+/* Gallery buttons */
+.noai-gallery-area .btn-primary {
+  background-color: #e30045 !important;
+  border-color: #e30045 !important;
+  color: #fff !important;
+}
+
+.noai-gallery-area .btn-outline-primary {
+  background-color: transparent !important;
+  border-color: #e30045 !important;
+  color: #e30045 !important;
+}
+
+.noai-gallery-area .btn-outline-primary:hover {
+  background-color: #e30045 !important;
+  color: #fff !important;
+}
+
+/* NOAI Apply Page - sidebar buttons */
+.apply-page-content .btn-primary,
+.apply-page-content .sidebar-card .btn-primary {
+  background-color: #e30045 !important;
+  border-color: #e30045 !important;
+  color: #fff !important;
+}
+
+.apply-page-content .btn-primary:hover,
+.apply-page-content .sidebar-card .btn-primary:hover {
+  background-color: #c5003b !important;
+  border-color: #c5003b !important;
+  color: #fff !important;
+}
+
+.apply-page-content .btn-outline-primary,
+.apply-page-content .sidebar-card .btn-outline-primary {
+  background-color: transparent !important;
+  border-color: #e30045 !important;
+  color: #e30045 !important;
+}
+
+.apply-page-content .btn-outline-primary:hover,
+.apply-page-content .sidebar-card .btn-outline-primary:hover {
+  background-color: #e30045 !important;
+  border-color: #e30045 !important;
+  color: #fff !important;
+}
+
+/*
+   SPEAKERS YEAR FILTER TABS
+   Ensure text is visible in btn-group filter buttons
+*/
+.speakers-year-tabs .btn-group .btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+.speakers-year-tabs .btn-group .btn-outline-primary {
+  color: #006700 !important;
+  border: 2px solid #006700 !important;
+  background-color: #fff !important;
+}
+
+.speakers-year-tabs .btn-group .btn-outline-primary i,
+.speakers-year-tabs .btn-group .btn-outline-primary span:not(.badge) {
+  color: #006700 !important;
+}
+
+.speakers-year-tabs .btn-group .btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #006700 !important;
+  border-color: #006700 !important;
+}
+
+.speakers-year-tabs .btn-group .btn-outline-primary:hover i,
+.speakers-year-tabs .btn-group .btn-outline-primary:hover span:not(.badge) {
+  color: #fff !important;
+}
+
+.speakers-year-tabs .btn-group .btn-primary {
+  color: #fff !important;
+  background-color: #006700 !important;
+  border-color: #006700 !important;
+}
+
+.speakers-year-tabs .btn-group .btn-primary i,
+.speakers-year-tabs .btn-group .btn-primary span:not(.badge) {
+  color: #fff !important;
+}
+
+.speakers-year-tabs .btn-group .badge {
+  font-size: 0.75rem !important;
+}
+
+/*
+   SPONSORS YEAR FILTER TABS
+   Ensure text is visible in btn-group filter buttons
+*/
+.sponsors-year-tabs .btn-group .btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+.sponsors-year-tabs .btn-group .btn-outline-primary {
+  color: #006700 !important;
+  border: 2px solid #006700 !important;
+  background-color: #fff !important;
+}
+
+.sponsors-year-tabs .btn-group .btn-outline-primary i,
+.sponsors-year-tabs .btn-group .btn-outline-primary span:not(.badge) {
+  color: #006700 !important;
+}
+
+.sponsors-year-tabs .btn-group .btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #006700 !important;
+  border-color: #006700 !important;
+}
+
+.sponsors-year-tabs .btn-group .btn-outline-primary:hover i,
+.sponsors-year-tabs .btn-group .btn-outline-primary:hover span:not(.badge) {
+  color: #fff !important;
+}
+
+.sponsors-year-tabs .btn-group .btn-primary {
+  color: #fff !important;
+  background-color: #006700 !important;
+  border-color: #006700 !important;
+}
+
+.sponsors-year-tabs .btn-group .btn-primary i,
+.sponsors-year-tabs .btn-group .btn-primary span:not(.badge) {
+  color: #fff !important;
+}
+
+.sponsors-year-tabs .btn-group .badge {
+  font-size: 0.75rem !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   HAMBURGER MENU / NAVBAR TOGGLER FIXES
+   ═══════════════════════════════════════════════════════════════════════
+   Fix hamburger menu visibility on both light and dark backgrounds
+*/
+
+/* Reset hamburger - transparent background, visible border */
+.navbar-toggler {
+  background: transparent !important;
+  border: 2px solid #006700 !important;
+  padding: 8px 10px !important;
+  border-radius: 4px !important;
+}
+
+/* Hamburger icon bars - green color for visibility */
+.navbar-toggler .icon-bar {
+  background: #006700 !important;
+  height: 3px !important;
+  width: 28px !important;
+  display: block !important;
+}
+
+.navbar-toggler .middle-bar {
+  margin: 6px 0 !important;
+}
+
+/* Dark background variant (footer, dark sections) */
+.footer-area .navbar-toggler,
+[class*="bg-dark"] .navbar-toggler,
+.elkevent-nav.is-sticky .navbar-toggler {
+  border-color: #fff !important;
+}
+
+.footer-area .navbar-toggler .icon-bar,
+[class*="bg-dark"] .navbar-toggler .icon-bar,
+.elkevent-nav.is-sticky .navbar-toggler .icon-bar {
+  background: #fff !important;
+}
+
+/* Focus state */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 103, 0, 0.25) !important;
+  outline: none !important;
+}
+
+/* Admin header hamburger - dark icon on light background */
+.admin-header .btn-link {
+  color: #333 !important;
+}
+
+.admin-header .btn-link:hover {
+  color: #006700 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   STRONGER HAMBURGER OVERRIDE - Remove white background completely
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Force transparent background on ALL navbar togglers */
+.navbar-toggler,
+.elkevent-nav .navbar-toggler,
+.elkevent-nav nav .navbar-toggler,
+nav .navbar-toggler,
+button.navbar-toggler {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 2px solid #006700 !important;
+}
+
+/* When on dark/sticky header - use white border */
+.elkevent-nav.is-sticky .navbar-toggler,
+.elkevent-nav.is-sticky nav .navbar-toggler {
+  border-color: #fff !important;
+}
+
+.elkevent-nav.is-sticky .navbar-toggler .icon-bar {
+  background: #fff !important;
+}
+
+/* Mobile view on dark background */
+@media only screen and (max-width: 991px) {
+  .elkevent-nav .navbar-toggler,
+  .elkevent-nav nav .navbar-toggler {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 2px solid #fff !important;
+  }
+  
+  .elkevent-nav .navbar-toggler .icon-bar {
+    background: #fff !important;
+  }
+}
