@@ -60,7 +60,7 @@ async function getUpcomingEventData(): Promise<{
   const { data: upcomingEvents } = await supabase
     .from('events')
     .select('id, title, start_date, end_date, location, theme, slug, registration_enabled, registration_deadline')
-    .eq('status', 'upcoming')
+    .in('status', ['published', 'upcoming', 'ongoing'])
     .eq('registration_enabled', true)
     .order('start_date', { ascending: true })
     .limit(5); // Fetch more, filter client-side

@@ -270,6 +270,7 @@ export async function POST(request: NextRequest) {
           checkedInAt: checkedInTime,
           eventDate,
           eventLocation,
+          ticketId: ticket.id, // Issue #36: for certificate download link
         })
         const text = checkInConfirmationEmailTextTemplate({
           attendeeName,

@@ -68,6 +68,7 @@ export default function ComposeEmailPage() {
   const [csvRowCount, setCsvRowCount] = useState(0) // Number of data rows
   const [subject, setSubject] = useState('')
   const [body, setBody] = useState('')
+  const [editorKey, setEditorKey] = useState(0) // Force QuillEditor remount when template loaded
   const [ccEmails, setCcEmails] = useState('')
   const [bccEmails, setBccEmails] = useState('')
   const [showCsvHelp, setShowCsvHelp] = useState(false)
@@ -266,6 +267,7 @@ alex.johnson@example.com,Alex Johnson,+254734567890,StartupXYZ,ML Researcher,Tan
     if (template) {
       setSubject(template.subject)
       setBody(template.body)
+      setEditorKey(k => k + 1) // Force QuillEditor remount so new content renders
     }
   }
 
@@ -992,6 +994,7 @@ jane.smith@example.com,Jane Smith,+254723456789,Tech Inc</pre>
               <div className="mb-3">
                 <label className="form-label">Body <span className="text-danger">*</span></label>
                 <QuillEditor
+                  key={editorKey}
                   value={body}
                   onChange={setBody}
                   placeholder="Write your email content here. Use {{variables}} for dynamic content."

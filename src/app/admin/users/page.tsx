@@ -219,7 +219,9 @@ export default function UserManagementPage() {
       const link = document.createElement('a')
       link.href = URL.createObjectURL(blob)
       link.download = `users_export_${new Date().toISOString().split('T')[0]}.csv`
+      document.body.appendChild(link)
       link.click()
+      document.body.removeChild(link)
       URL.revokeObjectURL(link.href)
 
       setSuccessMessage(`Exported ${filteredUsers.length} users to CSV`)
@@ -251,7 +253,9 @@ export default function UserManagementPage() {
       const link = document.createElement('a')
       link.href = URL.createObjectURL(blob)
       link.download = `users_export_${new Date().toISOString().split('T')[0]}.json`
+      document.body.appendChild(link)
       link.click()
+      document.body.removeChild(link)
       URL.revokeObjectURL(link.href)
 
       setSuccessMessage(`Exported ${filteredUsers.length} users to JSON`)

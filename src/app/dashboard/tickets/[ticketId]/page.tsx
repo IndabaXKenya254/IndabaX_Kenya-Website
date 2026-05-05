@@ -315,7 +315,7 @@ export default function TicketViewPage() {
                 )}
 
                 {/* Actions */}
-                <div className="mt-4 text-center no-print">
+                <div className="mt-4 text-center no-print d-flex flex-column flex-sm-row gap-3 justify-content-center">
                   <button
                     onClick={handlePrint}
                     className="btn btn-primary btn-lg"
@@ -323,6 +323,17 @@ export default function TicketViewPage() {
                     <i className="icofont-print me-2"></i>
                     Print Ticket
                   </button>
+                  {/* Issue #36 FIX: Certificate download after check-in */}
+                  {ticket.status === 'checked_in' && (
+                    <a
+                      href={`/api/tickets/${ticket.id}/certificate`}
+                      className="btn btn-success btn-lg"
+                      download
+                    >
+                      <i className="icofont-award me-2"></i>
+                      Download Certificate
+                    </a>
+                  )}
                 </div>
 
                 {/* Footer */}

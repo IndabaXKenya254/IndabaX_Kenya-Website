@@ -5,7 +5,7 @@
 // ═══════════════════════════════════════════════════════════════════════
 // Full admin functionality wrapped with permission checks and locking
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert } from '@/components/admin/ui'
@@ -116,6 +116,19 @@ export default function ReviewerApplicationDetailPage() {
       setAlert({ type: 'danger', message: `This application is being reviewed by ${lockedBy}` })
     },
   })
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // Issue #11 FIX: Auto-acquire lock once canReview becomes true after load
+  // canReview is false on mount (no application data yet), so autoAcquire:false
+  // This effect triggers acquisition once the application data is loaded
+  // ═══════════════════════════════════════════════════════════════════════
+  const lockAcquiredOnceRef = useRef(false)
+  useEffect(() => {
+    if (canReview && !hasLock && !lockAcquiredOnceRef.current) {
+      lockAcquiredOnceRef.current = true
+      acquireLock()
+    }
+  }, [canReview, hasLock, acquireLock])
 
   // ═══════════════════════════════════════════════════════════════════════
   // LOAD APPLICATION

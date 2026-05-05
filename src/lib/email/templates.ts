@@ -2585,6 +2585,8 @@ export interface CheckInConfirmationEmailData {
   checkedInAt: string
   eventDate?: string
   eventLocation?: string
+  certificateUrl?: string // Issue #36: link to download certificate
+  ticketId?: string // for building certificate URL
 }
 
 /**
@@ -2592,7 +2594,9 @@ export interface CheckInConfirmationEmailData {
  * Sent when an attendee is checked in at the event
  */
 export function checkInConfirmationEmailTemplate(data: CheckInConfirmationEmailData): string {
-  const { attendeeName, eventTitle, ticketNumber, checkedInAt, eventDate, eventLocation } = data
+  const { attendeeName, eventTitle, ticketNumber, checkedInAt, eventDate, eventLocation, ticketId } = data
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://deeplearningindabaxkenya.com'
+  const certificateUrl = ticketId ? `${siteUrl}/api/tickets/${ticketId}/certificate` : null
 
   return `
 <!DOCTYPE html>
@@ -2764,6 +2768,22 @@ export function checkInConfirmationEmailTemplate(data: CheckInConfirmationEmailD
         attend the sessions, and make the most of this opportunity!
       </p>
     </div>
+
+    ${certificateUrl ? `
+    <div style="background-color: #e8f5e9; border-left: 4px solid #28a745; padding: 20px; margin: 30px 0; border-radius: 4px; text-align: center;">
+      <h3 style="margin-top: 0; color: #1b5e20; font-size: 18px;">🏆 Your Certificate of Attendance</h3>
+      <p style="color: #2e7d32; margin: 10px 0;">
+        Your certificate of attendance is ready! Click the button below to download it.
+      </p>
+      <a href="${certificateUrl}"
+         style="display: inline-block; background-color: #28a745; color: #ffffff; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 15px; margin-top: 10px;">
+        Download Certificate
+      </a>
+      <p style="font-size: 12px; color: #555; margin-top: 12px;">
+        You'll need to be logged in to download your certificate.
+      </p>
+    </div>
+    ` : ''}
 
     <p style="margin-top: 30px;">
       If you have any questions during the event, feel free to ask any of our staff members.
