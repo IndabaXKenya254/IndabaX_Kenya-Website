@@ -92,10 +92,14 @@ export async function GET(request: NextRequest) {
           .maybeSingle()
 
         const tokenVerified = verificationToken?.verified_at !== null && verificationToken?.verified_at !== undefined
+        // Issue #2 FIX: Use Supabase auth email_confirmed_at as primary truth.
+        // user_profiles.email_verified can be stale (admin-created users get it set true incorrectly).
+        // Only mark verified if the user actually clicked the verification link.
+        const authVerified = !!authData?.email_confirmed_at
 
         return {
           ...user,
-          email_verified: tokenVerified || user.email_verified, // true if either source says verified
+          email_verified: tokenVerified || authVerified, // only trust auth system + custom token
           banned_until: authData?.banned_until || null,
           last_sign_in_at: authData?.last_sign_in_at || null,
           email_confirmed_at: authData?.email_confirmed_at || null,
