@@ -19,7 +19,7 @@ import {
   createColumnHelper,
   SortingState,
 } from '@tanstack/react-table'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 
 interface User {
   id: string

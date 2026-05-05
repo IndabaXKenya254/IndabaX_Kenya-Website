@@ -8,7 +8,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { FormBuilder } from '@/components/forms/FormBuilder'
 import { Template, Question } from '@/hooks/useFormBuilder'
 import '@/styles/form-builder.css'

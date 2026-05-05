@@ -9,7 +9,7 @@
 import React, { useState, useEffect } from 'react'
 import { EventComparisonChart } from '@/components/admin/Analytics'
 import { createClient as createBrowserClient } from '@/lib/supabase/client'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 
 interface Event {
   id: string

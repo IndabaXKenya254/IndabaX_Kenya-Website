@@ -8,7 +8,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import Link from 'next/link'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { createClient as createBrowserClient } from '@/lib/supabase/client'
 import { formatDistanceToNow, format } from 'date-fns'
 import { showSuccess, showError, showConfirm } from '@/lib/sweetalert'

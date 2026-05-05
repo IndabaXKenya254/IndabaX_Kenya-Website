@@ -6,7 +6,7 @@
 // Manage pricing tiers with preview and active/inactive toggles
 
 import { useState } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { adminApi } from '@/lib/admin/api-client'
 import { showSuccess, showError, showDeleteConfirmation, showLoading, closeAlert } from '@/lib/sweetalert'
 import type { PricingTier } from '@/app/api/pricing/route'

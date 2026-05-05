@@ -7,7 +7,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { getSwal } from '@/lib/sweetalert';
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout';
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout';
 
 interface Highlight {
   icon: string;

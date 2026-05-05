@@ -5,7 +5,7 @@
 // ═══════════════════════════════════════════════════════════════════════
 
 import { useState, useMemo } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert, Pagination, SearchFilter, FileUpload } from '@/components/admin/ui'
 import { showSuccess, showError, showConfirm } from '@/lib/sweetalert'
 import RichTextEditor from '@/components/admin/RichTextEditor'

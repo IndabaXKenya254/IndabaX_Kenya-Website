@@ -19,7 +19,7 @@ import {
   SortingState,
 } from '@tanstack/react-table'
 import { createClient as createBrowserClient } from '@/lib/supabase/client'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 
 interface Paper {
   id: string

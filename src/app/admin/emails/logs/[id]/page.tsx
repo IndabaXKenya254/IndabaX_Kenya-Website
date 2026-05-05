@@ -7,7 +7,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { EmailViewer } from '@/components/admin/EmailViewer'
 
 interface EmailLog {

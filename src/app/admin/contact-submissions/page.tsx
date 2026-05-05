@@ -6,7 +6,7 @@
 // View and manage contact form submissions
 
 import React, { useState, useMemo } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { adminApi } from '@/lib/admin/api-client'
 import { showSuccess, showError, showConfirm } from '@/lib/sweetalert'
 import { useAdminContactSubmissions } from '@/hooks/useAdminApi'

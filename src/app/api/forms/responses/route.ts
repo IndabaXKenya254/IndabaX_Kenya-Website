@@ -670,7 +670,7 @@ export async function POST(request: NextRequest) {
         // This ensures consistency - emails use the SAME name that was saved
         const finalName = responseData.respondent_name || respondent_email
 
-        // Send email (non-blocking - don't wait for it)
+        // Send email and wait for the result to ensure the SMTP send completes before returning
         // Email is logged to email_logs table for tracking
         console.log('📧 [FormResponse] About to send registration confirmation email to:', respondent_email)
         console.log('📧 [FormResponse] Email data:', {
@@ -684,7 +684,7 @@ export async function POST(request: NextRequest) {
           eventId: event.id,
         })
 
-        sendRegistrationConfirmation(respondent_email, {
+        const emailResult = await sendRegistrationConfirmation(respondent_email, {
           recipientName: finalName,
           eventTitle: event.title,
           eventDate,
@@ -693,15 +693,15 @@ export async function POST(request: NextRequest) {
           responseId: responseData.id,
           submittedAt: submittedDate,
           eventId: event.id, // For email logging
-        }).then((result) => {
-          console.log('📧 [FormResponse] Email result:', result)
-        }).catch((error) => {
-          // Log error but don't fail the request
-          console.error('❌ [FormResponse] Failed to send confirmation email:', error)
-          console.error('❌ [FormResponse] Error details:', error instanceof Error ? error.stack : 'No stack')
         })
 
-        console.log('📧 [FormResponse] Confirmation email queued for:', respondent_email, 'with name:', finalName)
+        console.log('📧 [FormResponse] Email result:', emailResult)
+
+        if (!emailResult.success) {
+          console.error('❌ [FormResponse] Failed to send confirmation email:', emailResult.error)
+        }
+
+        console.log('📧 [FormResponse] Confirmation email sent for:', respondent_email, 'with name:', finalName)
       } catch (emailError) {
         // Log error but don't fail the request
         console.error('Error queuing confirmation email:', emailError)

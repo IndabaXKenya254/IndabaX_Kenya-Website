@@ -300,6 +300,7 @@ export async function sendApplicationReceivedEmail(
       html: rendered.html,
       text: rendered.text,
       accountType: 'applications',
+      category: 'registrations',
     })
   }
 
@@ -316,6 +317,7 @@ export async function sendApplicationReceivedEmail(
     html,
     text,
     accountType: 'applications',
+    category: 'registrations',
   })
 }
 

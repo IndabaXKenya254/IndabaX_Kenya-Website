@@ -212,7 +212,7 @@ const nextConfig = {
     // Fix for @tanstack/react-table ES module issue
     config.module.rules.push({
       test: /\.m?js$/,
-      include: /node_modules\/@tanstack/,
+      include: /[\\/]node_modules[\\/]@tanstack[\\/]/,
       type: 'javascript/auto',
       resolve: {
         fullySpecified: false,

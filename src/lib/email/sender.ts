@@ -68,6 +68,41 @@ async function getEmailRecipients(category: EmailCategory): Promise<EmailRecipie
   }
 }
 
+const MAX_EMAIL_SEND_ATTEMPTS = 3
+const EMAIL_RETRY_DELAY_MS = 500
+
+async function delay(ms: number) {
+  return new Promise<void>(resolve => setTimeout(resolve, ms))
+}
+
+async function sendMailWithRetry(
+  transporter: nodemailer.Transporter,
+  mailOptions: nodemailer.SendMailOptions,
+  maxAttempts: number = MAX_EMAIL_SEND_ATTEMPTS
+): Promise<nodemailer.SentMessageInfo> {
+  let attempt = 0
+  let lastError: unknown
+
+  while (attempt < maxAttempts) {
+    try {
+      attempt += 1
+      if (attempt > 1) {
+        console.log(`📧 Retrying email send (attempt ${attempt}/${maxAttempts}) to: ${mailOptions.to}`)
+      }
+      return await transporter.sendMail(mailOptions)
+    } catch (error) {
+      lastError = error
+      console.error(`❌ Email send attempt ${attempt} failed:`, error)
+      if (attempt >= maxAttempts) {
+        break
+      }
+      await delay(EMAIL_RETRY_DELAY_MS)
+    }
+  }
+
+  throw lastError
+}
+
 interface RegistrationEmailData {
   recipientName: string
   eventTitle: string
@@ -218,7 +253,7 @@ export async function sendRegistrationConfirmation(
     if (recipients.cc.length > 0) console.log('   CC:', recipients.cc.join(', '))
     if (recipients.bcc.length > 0) console.log('   BCC:', recipients.bcc.length, 'recipients')
 
-    const info = await transporter.sendMail(mailOptions)
+    const info = await sendMailWithRetry(transporter, mailOptions)
     emailSent = true
 
     console.log('✅ Email sent successfully:', info.messageId)
@@ -429,7 +464,7 @@ export async function sendEmail(options: SendEmailOptions): Promise<boolean> {
     if (mergedBcc.length > 0) console.log(`   BCC: ${mergedBcc.length} recipients`)
     if (attachments.length > 0) console.log(`   📎 Attachments: ${attachments.map(a => a.filename).join(', ')}`)
 
-    const info = await transporter.sendMail(mailOptions)
+    const info = await sendMailWithRetry(transporter, mailOptions)
 
     console.log('✅ Email sent successfully:', info.messageId)
 

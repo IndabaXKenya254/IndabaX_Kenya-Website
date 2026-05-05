@@ -8,7 +8,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { createClient as createBrowserClient } from '@/lib/supabase/client'
 import { formatDistanceToNow } from 'date-fns'
 import * as XLSX from 'xlsx'

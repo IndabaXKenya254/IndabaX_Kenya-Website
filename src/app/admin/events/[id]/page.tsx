@@ -8,7 +8,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert, FileUpload } from '@/components/admin/ui'
 import RichTextEditor from '@/components/admin/RichTextEditor'
 import { showFormError, showRequiredFieldsError, showSuccess } from '@/lib/sweetalert'

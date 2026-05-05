@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { DataTable, Alert, Pagination } from '@/components/admin/ui'
 import { useAdminSubscribers } from '@/hooks/useAdminApi'
 

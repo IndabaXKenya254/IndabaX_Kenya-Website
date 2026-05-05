@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert } from '@/components/admin/ui'
 import { adminApi } from '@/lib/admin/api-client'
 import { showSuccess, showError } from '@/lib/sweetalert'

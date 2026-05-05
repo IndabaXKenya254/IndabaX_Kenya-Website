@@ -6,7 +6,7 @@
 // Manage admin users and roles
 
 import { useState, useEffect } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert } from '@/components/admin/ui'
 import { adminApi } from '@/lib/admin/api-client'
 import { showSuccess, showError, showConfirm } from '@/lib/sweetalert'

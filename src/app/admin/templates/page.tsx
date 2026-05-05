@@ -7,7 +7,7 @@
 // Phase 3: Form Builder
 
 import { useState, useEffect } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { showConfirmation, showSuccess, showError } from '@/lib/sweetalert'

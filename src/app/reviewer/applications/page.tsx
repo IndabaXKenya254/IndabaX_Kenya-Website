@@ -18,7 +18,7 @@ import {
   type SortingState,
   type RowSelectionState,
 } from '@tanstack/react-table'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert } from '@/components/admin/ui'
 import { formatDistanceToNow } from 'date-fns'
 import * as XLSX from 'xlsx'

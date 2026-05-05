@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import imageCompression from 'browser-image-compression'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert, FileUpload, Modal, Pagination, SearchFilter } from '@/components/admin/ui'
 import { useAdminPhotos } from '@/hooks/useAdminApi'
 import { adminApi } from '@/lib/admin/api-client'

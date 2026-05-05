@@ -18,7 +18,7 @@ import {
   type SortingState,
   type RowSelectionState,
 } from '@tanstack/react-table'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert } from '@/components/admin/ui'
 import { formatDistanceToNow, differenceInDays, differenceInHours } from 'date-fns'
 import { showSuccess, showError, showConfirm } from '@/lib/sweetalert'
@@ -112,7 +112,11 @@ export default function ResponseTrackingPage() {
       const statusParam = trackingMode === 'survey'
         ? 'status=shortlisted,survey_sent,survey_completed'
         : '' // All applications (no status filter)
-      const url = `/api/admin/applications?${statusParam}&limit=1000`
+
+      // Issue #41 FIX: Always filter by current event to prevent showing past responses from different events
+      const eventParam = eventFilter !== 'all' ? `&event_id=${eventFilter}` : ''
+
+      const url = `/api/admin/applications?${statusParam}${eventParam}&limit=1000`
       const response = await fetch(url)
       const result = await response.json()
 
@@ -130,10 +134,11 @@ export default function ResponseTrackingPage() {
   }
 
   // Issue #35 FIX: Re-fetch when tracking mode changes
+  // Issue #41 FIX: Also re-fetch when event filter changes to prevent showing past responses
   useEffect(() => {
     fetchResponses()
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [trackingMode])
+  }, [trackingMode, eventFilter])
 
   // ═══════════════════════════════════════════════════════════════════════
   // FILTER LOGIC

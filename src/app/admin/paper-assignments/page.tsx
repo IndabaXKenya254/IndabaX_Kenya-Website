@@ -12,7 +12,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { createClient as createBrowserClient } from '@/lib/supabase/client'
 import { showSuccess, showError, showLoading, closeAlert } from '@/lib/sweetalert'
 

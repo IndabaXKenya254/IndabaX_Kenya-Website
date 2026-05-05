@@ -7,7 +7,7 @@
 // Created: Admin UI Phase 1 - Foundation
 // Updated: Phase 2 - Role-Based System (using unified DashboardLayout)
 
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { useAdminDashboardStats } from '@/hooks/useAdminApi'
 
 export default function AdminDashboardPage() {

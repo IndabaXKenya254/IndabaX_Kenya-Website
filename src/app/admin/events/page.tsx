@@ -8,7 +8,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { DataTable, Pagination, SearchFilter } from '@/components/admin/ui'
 import { useAdminEvents } from '@/hooks/useAdminApi'
 import { adminApi } from '@/lib/admin/api-client'

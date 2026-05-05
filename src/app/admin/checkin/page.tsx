@@ -6,7 +6,7 @@
 // Check in attendees by scanning QR codes or entering ticket numbers
 
 import { useState, useEffect, useRef } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { showSuccess, showError } from '@/lib/sweetalert'
 import QRScanner from '@/components/admin/QRScanner'
 import TicketSearch from '@/components/admin/TicketSearch'

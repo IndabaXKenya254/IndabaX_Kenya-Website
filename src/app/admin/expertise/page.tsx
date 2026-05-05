@@ -6,7 +6,7 @@
 // Manage speaker expertise areas
 
 import { useState, useMemo } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert, Pagination, SearchFilter } from '@/components/admin/ui'
 import { adminApi } from '@/lib/admin/api-client'
 import { showSuccess, showError, showConfirm } from '@/lib/sweetalert'

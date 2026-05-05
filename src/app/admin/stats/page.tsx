@@ -6,7 +6,7 @@
 // Manage homepage stats/fun facts with preview and active/inactive toggles
 
 import { useState } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { adminApi } from '@/lib/admin/api-client'
 import { showSuccess, showError, showDeleteConfirmation, showLoading, closeAlert } from '@/lib/sweetalert'
 import type { Stat } from '@/app/api/stats/route'

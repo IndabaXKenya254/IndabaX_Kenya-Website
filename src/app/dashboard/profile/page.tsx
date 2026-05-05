@@ -6,7 +6,7 @@
 // View and edit user profile information
 
 import { useState, useEffect } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { useAuth } from '@/contexts/AuthContext'
 import { validatePhone } from '@/lib/validations/form-validation'
 

@@ -18,7 +18,7 @@ import {
   type SortingState,
   type RowSelectionState,
 } from '@tanstack/react-table'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert } from '@/components/admin/ui'
 import { useAdminApplications } from '@/hooks/useAdminApi'
 import { adminApi } from '@/lib/admin/api-client'
@@ -182,10 +182,10 @@ export default function AdminApplicationsPage() {
         ),
         size: 50,
       },
-      // Applicant column
+      // Applicant column (merged info)
       {
-        accessorKey: 'respondent_name',
-        header: 'Applicant',
+        id: 'applicant_info',
+        header: 'Applicant Information',
         cell: ({ row }) => (
           <div>
             <strong>{row.original.respondent_name || 'N/A'}</strong>
@@ -193,11 +193,24 @@ export default function AdminApplicationsPage() {
           </div>
         ),
       },
-      // Event column
+      // Application column (merged timing info)
       {
-        accessorKey: 'event.title',
-        header: 'Event',
-        cell: ({ row }) => row.original.event?.title || 'N/A',
+        id: 'application_info',
+        header: 'Application Information',
+        cell: ({ row }) => (
+          <div>
+            <div><strong>Event:</strong> {row.original.event?.title || 'N/A'}</div>
+            <div className="text-muted small">
+              <strong>Submitted:</strong> {new Date(row.original.created_at).toLocaleDateString()}
+              {row.original.completed_at && (
+                <>
+                  <br />
+                  <strong>Completed:</strong> {new Date(row.original.completed_at).toLocaleDateString()}
+                </>
+              )}
+            </div>
+          </div>
+        ),
       },
       // Status column
       {
@@ -229,12 +242,6 @@ export default function AdminApplicationsPage() {
             </div>
           </div>
         ),
-      },
-      // Submitted column
-      {
-        accessorKey: 'created_at',
-        header: 'Submitted',
-        cell: ({ row }) => new Date(row.original.created_at).toLocaleDateString(),
       },
       // Actions column
       {

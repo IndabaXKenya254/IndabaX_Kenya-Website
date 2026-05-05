@@ -7,7 +7,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { Alert } from '@/components/admin/ui'
 import { LockIndicator } from '@/components/admin/LockIndicator'
 import { ApplicationTimeline } from '@/components/admin/ApplicationTimeline'
@@ -1155,10 +1155,19 @@ export default function ApplicationDetailPage() {
                     const resolveOptionLabel = (question: any, value: string): string => {
                       const options = question.options || question.config?.options
                       if (!options || !Array.isArray(options)) return value
-                      const option = options.find((o: any) =>
-                        o.id === value || o.value === value || o.key === value
+
+                      // Handle normalized options (objects with value/label)
+                      const normalizedOptions = options.map((opt: any) => {
+                        if (typeof opt === 'string') {
+                          return { value: opt, label: opt }
+                        }
+                        return { value: opt.value || opt.key || opt.id, label: opt.label || opt.text || opt.title || opt.value }
+                      })
+
+                      const option = normalizedOptions.find((o: any) =>
+                        o.value === value || o.key === value || o.id === value
                       )
-                      return option?.label || option?.text || option?.title || value
+                      return option?.label || value
                     }
 
                     // Issue #3, #6, #7, #47 FIX: Detect file upload objects and render as downloadable links
@@ -1222,19 +1231,39 @@ export default function ApplicationDetailPage() {
                       if (typeof answer !== 'object' || answer === null || Array.isArray(answer)) return null
                       const rows = Object.entries(answer)
                       if (rows.length === 0) return null
+
+                      // Get row labels from question config
+                      const config = question.config || {}
+                      const rowLabels = config.rows || []
+
                       return (
                         <table className="table table-sm table-bordered mb-0">
                           <tbody>
-                            {rows.map(([rowKey, rowValue]) => (
-                              <tr key={rowKey}>
-                                <td className="fw-bold text-muted" style={{ width: '40%' }}>
-                                  {rowKey}
-                                </td>
-                                <td>
-                                  <strong>{Array.isArray(rowValue) ? rowValue.join(', ') : String(rowValue)}</strong>
-                                </td>
-                              </tr>
-                            ))}
+                            {rows.map(([rowKey, rowValue]) => {
+                              // Try to get the display label for the row
+                              const rowIndex = rowLabels.indexOf(rowKey)
+                              const rowDisplay = rowIndex >= 0 ? rowLabels[rowIndex] : rowKey
+
+                              // For the value, if it's an array (checkbox grid), show all selected columns
+                              // If it's a string (radio grid), show the single selected column
+                              let valueDisplay = ''
+                              if (Array.isArray(rowValue)) {
+                                valueDisplay = rowValue.join(', ')
+                              } else {
+                                valueDisplay = String(rowValue)
+                              }
+
+                              return (
+                                <tr key={rowKey}>
+                                  <td className="fw-bold text-muted" style={{ width: '40%' }}>
+                                    {rowDisplay}
+                                  </td>
+                                  <td>
+                                    <strong>{valueDisplay}</strong>
+                                  </td>
+                                </tr>
+                              )
+                            })}
                           </tbody>
                         </table>
                       )
@@ -1313,16 +1342,24 @@ export default function ApplicationDetailPage() {
                                 </ul>
                               ) : Array.isArray(value) ? (
                                 <ul className="mb-0">
-                                  {value.map((item, i) => (
-                                    <li key={i}><strong>{String(item)}</strong></li>
-                                  ))}
+                                  {value.map((item, i) => {
+                                    // Try to find the question for this response key to resolve option labels
+                                    const questionForKey = questions.find(q => q.id === key)
+                                    return (
+                                      <li key={i}><strong>{questionForKey ? resolveOptionLabel(questionForKey, String(item)) : String(item)}</strong></li>
+                                    )
+                                  })}
                                 </ul>
                               ) : typeof value === 'object' && value !== null ? (
                                 <pre className="bg-light p-2 rounded small mb-0">
                                   {JSON.stringify(value, null, 2)}
                                 </pre>
                               ) : (
-                                <p className="mb-0"><strong>{String(value)}</strong></p>
+                                <p className="mb-0"><strong>{(() => {
+                                  // Try to find the question for this response key to resolve option labels
+                                  const questionForKey = formQuestions.find(q => q.id === key)
+                                  return questionForKey ? resolveOptionLabel(questionForKey, String(value)) : String(value)
+                                })()}</strong></p>
                               )}
                             </div>
                           </div>
@@ -1454,8 +1491,15 @@ export default function ApplicationDetailPage() {
                         const surveyOptions = question.options || question.config?.options
                         const resolveSurveyLabel = (val: string): string => {
                           if (!surveyOptions || !Array.isArray(surveyOptions)) return val
-                          const opt = surveyOptions.find((o: any) => o.id === val || o.value === val || o.key === val)
-                          return opt?.label || opt?.text || val
+                          // Handle normalized options (objects with value/label)
+                          const normalizedOptions = surveyOptions.map((opt: any) => {
+                            if (typeof opt === 'string') {
+                              return { value: opt, label: opt }
+                            }
+                            return { value: opt.value || opt.key || opt.id, label: opt.label || opt.text || opt.title || opt.value }
+                          })
+                          const opt = normalizedOptions.find((o: any) => o.value === val || o.key === val || o.id === val)
+                          return opt?.label || val
                         }
                         // Issue #6, #7, #47: Use improved file detection
                         const isFile = isFileUploadValueSurvey(answer, question.type)

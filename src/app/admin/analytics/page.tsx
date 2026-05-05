@@ -8,7 +8,7 @@
 
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 
 // Dynamically import Chart components to reduce initial bundle size
 // Charts are only loaded when the analytics page is visited

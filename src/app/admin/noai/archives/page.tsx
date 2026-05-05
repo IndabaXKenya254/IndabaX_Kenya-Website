@@ -7,7 +7,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { showSuccess, showError, showConfirm } from '@/lib/sweetalert'
 
 interface Archive {
@@ -133,18 +133,17 @@ export default function NOAIArchivesAdminPage() {
   }
 
   // Get milestones that don't have an archive yet
-  const getUnlinkedMilestones = () => {
-    return milestones.filter(m => {
-      // Check if any archive has this milestone's year or is linked via URL
-      const hasArchive = archives.some(a => {
-        // Match by year
-        if (a.year === m.year) return true
-        // Match by slug in milestone's link_url
-        if (m.link_url && m.link_url.includes(`/noai/archive/${a.slug}`)) return true
-        return false
-      })
-      return !hasArchive
+  const isMilestoneLinkedToArchive = (milestone: TimelineMilestone) => {
+    return archives.some(a => {
+      if (milestone.link_url && milestone.link_url.includes(`/noai/archive/${a.slug}`)) return true
+      // If the milestone already points to a known archive slug, treat it as linked
+      if (milestone.link_type === 'archive' && milestone.link_url && milestone.link_url.includes(`/noai/archive/`)) return true
+      return false
     })
+  }
+
+  const getUnlinkedMilestones = () => {
+    return milestones.filter(m => !isMilestoneLinkedToArchive(m))
   }
 
   // Pre-fill form from a timeline milestone
@@ -510,11 +509,7 @@ export default function NOAIArchivesAdminPage() {
                         >
                           <option value="">-- Select a timeline milestone --</option>
                           {milestones.map((m) => {
-                            // Check if this milestone already has an archive
-                            const hasArchive = archives.some(a =>
-                              a.year === m.year ||
-                              (m.link_url && m.link_url.includes(`/noai/archive/${a.slug}`))
-                            )
+                            const hasArchive = isMilestoneLinkedToArchive(m)
                             return (
                               <option key={m.id} value={m.id} disabled={hasArchive}>
                                 [{m.year}] {m.subtitle} {hasArchive ? '(Already has archive)' : ''}

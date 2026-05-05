@@ -6,7 +6,7 @@
 // View submitted papers, check review status, and see feedback
 
 import { useState, useEffect, useRef } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'
 import { createClient as createBrowserClient } from '@/lib/supabase/client'

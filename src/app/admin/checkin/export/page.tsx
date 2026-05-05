@@ -6,7 +6,7 @@
 // View and export checked-in attendees per event
 
 import { useState, useEffect } from 'react'
-import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { DashboardLayout } from '@/components/Dashboard/DashboardLayout'
 
 interface Event {
   id: string
