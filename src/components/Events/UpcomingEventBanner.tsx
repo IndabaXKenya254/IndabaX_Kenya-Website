@@ -53,11 +53,13 @@ async function getUpcomingEventData(): Promise<{
   const settingsResult = settingsData as { value: any } | null;
   const bannerSettings = settingsResult?.value as BannerSettings | null;
 
-  // Also check for upcoming events in the events table
+  // Fetch the next upcoming event — filter at DB level so past events are never returned
+  const today = new Date().toISOString().split('T')[0]
   const { data: upcomingEvents } = await supabase
     .from('events')
     .select('id, title, start_date, end_date, location, theme, slug, registration_enabled')
     .in('status', ['published', 'upcoming', 'ongoing'])
+    .gte('start_date', today)
     .order('start_date', { ascending: true })
     .limit(1);
 
@@ -97,7 +99,7 @@ async function getUpcomingEventData(): Promise<{
     };
   }
 
-  if (upcomingEvent) {
+  if (upcomingEvent && hasUpcoming) {
     return {
       hasUpcoming: true,
       eventTitle: upcomingEvent.title,

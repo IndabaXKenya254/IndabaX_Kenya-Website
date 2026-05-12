@@ -54,34 +54,17 @@ async function getUpcomingEventData(): Promise<{
   const settingsResult = settingsData as { value: any } | null;
   const bannerSettings = settingsResult?.value as BannerSettings | null;
 
-  // Also check for upcoming events in the events table
-  // Issue #4 FIX: Filter by registration_deadline (or end_date if deadline not set)
+  // Check for upcoming/current events — no registration requirement, filtered by date at DB level
   const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
   const { data: upcomingEvents } = await supabase
     .from('events')
     .select('id, title, start_date, end_date, location, theme, slug, registration_enabled, registration_deadline')
     .in('status', ['published', 'upcoming', 'ongoing'])
-    .eq('registration_enabled', true)
+    .gte('start_date', today)
     .order('start_date', { ascending: true })
-    .limit(5); // Fetch more, filter client-side
+    .limit(5);
 
-  // Filter client-side: show events where:
-  // 1. registration_deadline >= today, OR
-  // 2. registration_deadline is null AND (end_date >= today OR start_date >= today)
-  const filteredEvents = (upcomingEvents || []).filter((event: any) => {
-    const deadline = event.registration_deadline?.split('T')[0] || event.registration_deadline;
-    const endDate = event.end_date;
-    const startDate = event.start_date;
-
-    if (deadline) {
-      return deadline >= today;
-    }
-    // No deadline set - use end_date, or start_date if no end_date
-    const effectiveEndDate = endDate || startDate;
-    return effectiveEndDate >= today;
-  });
-
-  const upcomingEvent = filteredEvents[0] as UpcomingEvent | undefined;
+  const upcomingEvent = (upcomingEvents?.[0]) as UpcomingEvent | undefined;
 
   // Issue #4 FIX: Compare dates only (ignore time) so events starting TODAY are shown
   const now = new Date();
