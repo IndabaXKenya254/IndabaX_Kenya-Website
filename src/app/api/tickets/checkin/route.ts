@@ -125,7 +125,7 @@ export async function POST(request: NextRequest) {
     // CRITICAL: Check is_valid flag first
     if (ticket.is_valid === false) {
       const invalidatedTime = ticket.invalidated_at
-        ? new Date(ticket.invalidated_at).toLocaleString()
+        ? new Date(ticket.invalidated_at).toLocaleString('en-KE', { timeZone: 'Africa/Nairobi' })
         : 'Unknown'
 
       return NextResponse.json({

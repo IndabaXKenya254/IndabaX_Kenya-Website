@@ -26,7 +26,7 @@
   "crons": [
     {
       "path": "/api/cron/revalidate-noai",
-      "schedule": "0 */6 * * *"
+      "schedule": "0 0 * * *"
     }
   ]
 }

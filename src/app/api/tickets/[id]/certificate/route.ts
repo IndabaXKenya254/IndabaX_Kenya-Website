@@ -104,7 +104,7 @@ export async function GET(
 
     const filename = `certificate-${(ticket as any).ticket_number}.pdf`
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(new Uint8Array(pdfBuffer), {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',

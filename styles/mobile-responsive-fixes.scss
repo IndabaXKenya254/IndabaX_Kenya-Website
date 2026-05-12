@@ -812,6 +812,12 @@ $desktop: 1024px;    // Desktop
     outline: 2px solid $primary-light !important;
     outline-offset: 2px !important;
   }
+
+  &::before,
+  &::after {
+    display: none !important;
+    content: none !important;
+  }
 }
 
 @media (max-width: $tablet - 1) {

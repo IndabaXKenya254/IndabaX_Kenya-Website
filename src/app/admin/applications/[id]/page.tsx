@@ -1148,27 +1148,27 @@ export default function ApplicationDetailPage() {
                     )
                   }
 
+                  // Issue #26 FIX: Helper to resolve option internal keys to display labels
+                  // Options live in question.config.options (DB) or question.options (snapshot)
+                  const resolveOptionLabel = (question: any, value: string): string => {
+                    const options = question.options || question.config?.options
+                    if (!options || !Array.isArray(options)) return value
+
+                    const normalizedOptions = options.map((opt: any) => {
+                      if (typeof opt === 'string') {
+                        return { value: opt, label: opt }
+                      }
+                      return { value: opt.value || opt.key || opt.id, label: opt.label || opt.text || opt.title || opt.value }
+                    })
+
+                    const option = normalizedOptions.find((o: any) =>
+                      o.value === value || o.key === value || o.id === value
+                    )
+                    return option?.label || value
+                  }
+
                   // Questions and answers match - show them properly
                   if (answeredQuestions.length > 0) {
-                    // Issue #26 FIX: Helper to resolve option internal keys to display labels
-                    // Options live in question.config.options (DB) or question.options (snapshot)
-                    const resolveOptionLabel = (question: any, value: string): string => {
-                      const options = question.options || question.config?.options
-                      if (!options || !Array.isArray(options)) return value
-
-                      // Handle normalized options (objects with value/label)
-                      const normalizedOptions = options.map((opt: any) => {
-                        if (typeof opt === 'string') {
-                          return { value: opt, label: opt }
-                        }
-                        return { value: opt.value || opt.key || opt.id, label: opt.label || opt.text || opt.title || opt.value }
-                      })
-
-                      const option = normalizedOptions.find((o: any) =>
-                        o.value === value || o.key === value || o.id === value
-                      )
-                      return option?.label || value
-                    }
 
                     // Issue #3, #6, #7, #47 FIX: Detect file upload objects and render as downloadable links
                     // Check for various file properties (url, fileName, originalName, path)
@@ -1344,7 +1344,7 @@ export default function ApplicationDetailPage() {
                                 <ul className="mb-0">
                                   {value.map((item, i) => {
                                     // Try to find the question for this response key to resolve option labels
-                                    const questionForKey = questions.find(q => q.id === key)
+                                    const questionForKey = formQuestions.find(q => q.id === key)
                                     return (
                                       <li key={i}><strong>{questionForKey ? resolveOptionLabel(questionForKey, String(item)) : String(item)}</strong></li>
                                     )
