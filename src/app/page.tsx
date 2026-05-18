@@ -1,65 +1,111 @@
-// ═══════════════════════════════════════════════════════════════════════
-// HOMEPAGE - FULLY OPTIMIZED WITH SSR/SSG (November 29, 2025)
-// ═══════════════════════════════════════════════════════════════════════
-// PERFORMANCE OPTIMIZATIONS:
-// 1. Static Site Generation (SSG) with 1-minute revalidation
-// 2. All data-fetching components are Server Components
-// 3. Client components only for interactivity (countdown, modals)
-// 4. Parallel data fetching (all server components fetch simultaneously)
-// 5. Optimized images with blur placeholders
-// ═══════════════════════════════════════════════════════════════════════
-
-import Navbar from "@/components/Layouts/Navbar";
-import MainBanner from "@/components/HomeDefault/MainBanner";
-import AboutUsContent from "@/components/HomeDefault/AboutUsContent";
-import FunFact from "@/components/Common/FunFact";
-import UpcomingEvents from "@/components/HomeDefault/UpcomingEvents";
-import WhyUs from "@/components/Common/WhyUs";
-import BuyTicket from "@/components/Common/BuyTicket";
-import Subscribe from "@/components/Common/Subscribe";
-import RegistrationPopup from "@/components/Common/RegistrationPopup";
-import Footer from "@/components/Layouts/Footer";
-
-// ═══════════════════════════════════════════════════════════════════════
-// CACHING STRATEGY FOR PUBLIC PAGE
-// ═══════════════════════════════════════════════════════════════════════
-// NO CACHING - Always fetch fresh data (especially for sponsors)
-// This ensures sponsors data is always live and up-to-date
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
-
-export default function Home() {
+export default function RenovationPage() {
   return (
-    <>
-      <Navbar />
+    <main style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'linear-gradient(135deg, #003300 0%, #006700 50%, #004d00 100%)',
+      fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif",
+      color: '#ffffff',
+      textAlign: 'center',
+      padding: '40px 20px',
+    }}>
+      {/* Logo / Icon */}
+      <div style={{
+        width: 90,
+        height: 90,
+        background: 'rgba(255,255,255,0.15)',
+        borderRadius: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 32,
+        fontSize: 40,
+        border: '2px solid rgba(255,255,255,0.3)',
+      }}>
+        🔧
+      </div>
 
-      {/* Registration Popup - Shows after delay */}
-      <RegistrationPopup />
+      {/* Brand */}
+      <h1 style={{
+        fontSize: 'clamp(28px, 5vw, 48px)',
+        fontWeight: 800,
+        margin: '0 0 8px',
+        letterSpacing: '-0.5px',
+      }}>
+        IndabaX Kenya
+      </h1>
 
-      {/* Main content landmark for accessibility */}
-      <main id="main-content">
-        {/* Section 1: Hero/Banner */}
-        <MainBanner />
+      <p style={{
+        fontSize: 'clamp(13px, 2vw, 16px)',
+        opacity: 0.75,
+        margin: '0 0 40px',
+        letterSpacing: 3,
+        textTransform: 'uppercase',
+      }}>
+        Deep Learning Indaba — Kenya Chapter
+      </p>
 
-        {/* Section 2: About IndabaX */}
-        <AboutUsContent />
+      {/* Divider */}
+      <div style={{
+        width: 60,
+        height: 3,
+        background: 'rgba(255,255,255,0.4)',
+        borderRadius: 2,
+        marginBottom: 40,
+      }} />
 
-        {/* Section 3: Quick Stats */}
-        <FunFact />
+      {/* Message */}
+      <h2 style={{
+        fontSize: 'clamp(20px, 3.5vw, 32px)',
+        fontWeight: 700,
+        margin: '0 0 16px',
+      }}>
+        Closed for Renovations
+      </h2>
 
-        {/* Section 4: Upcoming Events */}
-        <UpcomingEvents />
+      <p style={{
+        fontSize: 'clamp(14px, 2vw, 18px)',
+        opacity: 0.85,
+        maxWidth: 480,
+        lineHeight: 1.7,
+        margin: '0 0 48px',
+      }}>
+        We are working hard to bring you a brand new experience.
+        Our website will be back shortly — bigger and better than ever.
+      </p>
 
-        {/* Section 5: Why IndabaX */}
-        <WhyUs />
+      {/* Contact */}
+      <a
+        href="mailto:info@deeplearningindabaxkenya.com"
+        style={{
+          display: 'inline-block',
+          background: 'rgba(255,255,255,0.15)',
+          border: '1.5px solid rgba(255,255,255,0.4)',
+          color: '#ffffff',
+          textDecoration: 'none',
+          padding: '12px 32px',
+          borderRadius: 50,
+          fontSize: 15,
+          fontWeight: 500,
+          backdropFilter: 'blur(4px)',
+        }}
+      >
+        Contact Us
+      </a>
 
-        {/* Section 6: Registration CTA */}
-        <BuyTicket />
-
-        <Subscribe />
-      </main>
-
-      <Footer />
-    </>
-  );
+      {/* Footer */}
+      <p style={{
+        position: 'absolute',
+        bottom: 24,
+        fontSize: 12,
+        opacity: 0.45,
+        margin: 0,
+      }}>
+        © {new Date().getFullYear()} IndabaX Kenya. All rights reserved.
+      </p>
+    </main>
+  )
 }
