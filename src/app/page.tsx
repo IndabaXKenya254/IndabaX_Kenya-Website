@@ -98,11 +98,9 @@ export default function RenovationPage() {
 
       {/* Footer */}
       <p style={{
-        position: 'absolute',
-        bottom: 24,
         fontSize: 12,
         opacity: 0.45,
-        margin: 0,
+        margin: '48px 0 0',
       }}>
         © {new Date().getFullYear()} IndabaX Kenya. All rights reserved.
       </p>
